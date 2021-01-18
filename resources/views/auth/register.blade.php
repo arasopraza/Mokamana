@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="{{ asset('css/login.css') }}">
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     <link rel="stylesheet" href="{{ asset('css/template.css') }}">
+    <link rel="icon" href="{{ asset('assets/icon/logo_title.png') }}" type="image/icon type">
 
 
     <title>Mokamana</title>
