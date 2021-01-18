@@ -60,6 +60,14 @@
     font-size: 32px
 }
 
+.font-34{
+    font-size: 34px;
+}
+
+.font-36{
+    font-size: 36px;
+}
+
 .font-40{
     font-size :40px
 }
@@ -76,7 +84,6 @@
     color: black;
 }
 
-
 .primary-text-color{
     color: white;
 }
@@ -89,10 +96,9 @@
     background-color: white;
 }
 
-.second-box-color{
-    background-color: black;
+.third-box-color{
+    background-color: #FFDDDD;
 }
-
 .opacity-0{
     opacity: 0;
 }
@@ -104,3 +110,33 @@
 .ahref-no-decor:hover{
     text-decoration: none;
 }
+
+.position-relative{
+    position: relative;
+}
+
+.postition-absolute{
+    position: absolute;
+}
+
+.position-fixed{
+    position: fixed;
+}
+
+.position-sticky{
+    position:sticky;
+}
+
+.position-static{
+    position: static;
+}
+
+.margin-bottom-40{
+    margin-bottom: 40px;
+}
+
+.margin-bottom-35{
+    margin-bottom: 35px;
+}
+
+

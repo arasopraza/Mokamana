@@ -21,6 +21,15 @@ Route::get('populer', function(){
     return view('destinasi-populer');
 });
 
+Route::get('login', function(){
+    return view('login');
+});
+
+Route::get('regist', function(){
+    return view('register');
+});
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

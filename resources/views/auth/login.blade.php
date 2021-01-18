@@ -65,7 +65,7 @@
                         <label class="form-check-label" for="exampleCheck1">Ingat saya</label>
                     </div>
                     <button type="submit" class="btn btn-block">Masuk</button>
-                    <p>Belum punya akun? <a href="">Daftar disini</a></p>
+                    <p>Belum punya akun? <a href="regist">Daftar disini</a></p>
                     @if (Route::has('password.request'))
                     <div class="lupa-password"><a href="{{ route('password.request') }}">Lupa password?</a></div>
                     @endif
