@@ -24,13 +24,13 @@ body,html{
 
 
 
-
 /* //*UTILITIES PAKAI BERULANG */
+
+
 .btn{
     background-color: #F62065;
     border: 0;
     color: white;
-    font-weight: 600;
     border-radius: 10px;
 }
 
@@ -40,13 +40,22 @@ body,html{
     box-shadow: 0 5px 18px #F62065;
 }
 
+.clear-btn{
+    display: none;  
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: #a0a0a0;
+    border: 0;
+}
 
 
- /* //*DESTINASI POPULER PAGE */
+
+
 /* //*navbar */
 
-.logo-navbar{
-    width: 150px;
+.navbar{
+    transition: top 600ms;
 }
 
  .profile-icon img{
@@ -63,67 +72,27 @@ body,html{
 
 /* //* content */
 
-.title-destinasi-populer p{
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
 
 .card{
     position: relative;
-    color: black;
-    width:330px;
-    border-radius: 30px;
-    border: 1px solid #dadada;
-    box-shadow: 0 5px 10px #dadada;
-    transition-duration: 700ms;
+    border: 0px solid #dadada;
 }
 
-.card:hover{
-    color: black;
-    width:330px;
-    border-radius: 30px;
-    border: 1px solid #dadada;
-    box-shadow: 0 0 0 #ededed;
+.card-body-custom{
+    padding-bottom: 0;
 }
 
 .border-image img{
-    border-top-right-radius: 30px;
-    border-top-left-radius: 30px;
+    border-radius: 16px;
+    transition-duration: 500ms;
 }
 
-.pulau p{
-    margin-top: -12px;
+.border-image img:hover{
+    margin-left: 5px;
+    box-shadow: 0 5px 5px #dadada;
 }
 
-.warna-harga{
-    color: #F62065;
-}
-
-.text-tebal span.kecil{
-    font-size: 12px;
-}
-
-.rating img{
-    position: absolute;
-    right: 50px;
-    bottom: 97px;
-    width: 28px;
-}
-
-.rating p{
-    position: absolute;
-    right: 20px;
-    bottom: 82px;
-}
-
-.btn-card a{
-    right: 20px;
-    bottom: 20px;
-    position: absolute;
-}
-
-/* //*footer */
-
+/* //* footer */
 .margin-footer{
     margin-top: 120px;
 }
@@ -175,27 +144,177 @@ body,html{
 }
 
 .icon-footer:hover{
+
     margin: 5px;
     width: 30px;
     transform: rotate(-20deg);
 }
 
+/* //* INDEX PAGE */
 
-/* //*END DESTINASI POPULER PAGE */
 
 .jumbotron{
+    padding-top: 100px;
     background-color: #DAEFFF;
+}
+
+.form-margin{
+    margin-top: 70px;
 }
 
 .box-form{
     border-radius: 25px;
-    padding: 24px;
     margin-top: 60px;
-
 }
 
+.clear-btn-index{
+    width: 24px;
+    height: 24px;    
+    bottom: 0;
+    margin-left: 365px;
+    margin-bottom: 42px;
+}
+
+.clear-btn img{
+    width: 10px;
+    height: 10px;
+}
+
+.search-box-btn{
+    bottom: 0;
+    position: absolute;
+    height: 45px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-left: 408px;
+    margin-bottom: 32px;
+    z-index: 1;
+}
+
+.row-tab img.grayscale{ 
+    filter: grayscale(100%) !important;
+    opacity: 50% !important;
+}
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tabone{
+    border-top-left-radius: 25px;
+    width: 175px;   
+}
+
+.tabtwo{
+    border-top-right-radius: 25px;
+    width: 175px;
+    left: 170px;
+}
+
+.row-tab{
+    margin-top: 2px;
+    margin-left: 5px;
+}
+
+.row-tab img{
+    margin-left: 10px;
+    width: 25px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.tabs label {
+    order: 1;
+    display: block;
+    padding: 1rem 2rem;
+    padding-bottom: 0;
+    margin-top: 16px;
+    margin-right: 0;
+    margin-bottom: 0;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background ease 0.2s;
+    position: absolute;
+    z-index: 0;
+}
+
+.tabs label{
+    background: #F3F5F9;
+    color: #a0a0a0;
+}
+
+
+.tabs .tab {
+    order: 99;
+    flex-grow: 1;
+    width: 100%;
+    display: none;
+    padding: 1rem;
+    background: #fff;
+    margin-top: 68px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;  
+    border-top-right-radius: 25px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 25px;
+    z-index: 1;
+    position: relative;
+}
+
+.tabs input[type="radio"] {
+    display: none;
+}
+
+.tabs input[type="radio"]:checked+label{
+    background: #fff;
+    color: black;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;  
+    position: absolute;
+    z-index: 1;    
+}
+
+.tabs input[type="radio"]:checked+label+.tab {
+    display: block;
+}
+
+@media (max-width: 45em) {
+
+    .tabs .tab,
+    .tabs label {
+        order: initial;
+    }
+
+    .tabs label {
+        width: 100%;
+        margin-right: 0;
+        margin-top: 0.2rem;
+    }
+}
+
+.inputwith_icon span{
+    background-color:  #F3F5F9;
+    border: none;
+}
+
+.inputwith_icon img{
+    width: 20px;
+    position: absolute;
+    z-index: 1;
+    margin-left: 13px;
+    margin-top: 12px;
+}
+
+.inputwith_icon input[type="text"]{
+    position: relative;
+    padding-left: 45px;
+}
+
+
 input[type="email"]:focus,input[type="password"]:focus,input[type="text"]:focus{
-    border: 2px solid #F62065;
+    border: 1px solid #F62065;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
     outline: 0 none;
 }
@@ -220,41 +339,6 @@ input[type="email"], input[type="password"],input[type="text"]{
 
 }
 
-
-select{
-    background-color: #F3F5F9;
-    border: 0;
-    border-radius: 10px;
-    color: black;
-    padding-left: 24px;
-    height: 45px;
-    
-   
-}
-
-select.transportasi{
-    width: 153px;
-    position: absolute;
-    top: 32px;
-    left: 0;
-    padding-right: 24px;
-}
-
-select.tamukamar{
-    width: 235px;
-    position: absolute;
-    left: 47px;
-    top: 455px;
-    padding-left: 24px;
-}
-
-.btn-form-index{
-    position: absolute;
-    top: 455px;
-    height: 45px;
-    margin-left: 323px;
-    width: 153px;
-}
 
 .grid-hero{
     display: grid;
@@ -352,10 +436,6 @@ select.tamukamar{
     left: 985px;
 }
 
-.selengkapnya:hover{
-    color: #F62065;
-}
-
 .galery-box{
     background-color: #ffdddd;
     margin-top: 80px;
@@ -386,3 +466,276 @@ select.tamukamar{
     margin-left: 110px;
     width: 140px;
 }
+
+/* //*SINGLE DESTINASI PAGE */
+
+.cont-single-destinasi{
+    padding-top: 100px;
+}
+
+.gambar img{
+    border-radius: 15px;
+}
+.gambar img:nth-child(1){
+    height: 400px;
+    object-fit: cover;
+}
+
+.grid-many-img{
+    padding-top: 20px;
+    display: grid;
+    grid-gap: 20px;
+}
+
+.gird-many-img img{
+    object-fit: cover;
+}
+
+.grid-many-img img:nth-child(1){
+    width: 140px;
+    height: 100px;
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.grid-many-img img:nth-child(2){
+    width: 140px;
+    height: 100px;
+    grid-row: 1;
+    grid-column: 2;
+}
+.grid-many-img img:nth-child(3){
+    width: 140px;
+    height: 100px;
+    grid-row: 1;
+    grid-column: 3;
+}
+.grid-many-img img:nth-child(4){
+    width: 140px;
+    height: 100px;
+    grid-row: 1;
+    grid-column: 4;
+}
+
+.small-img{
+    cursor: pointer;
+}
+/* .active{
+    box-shadow: 0 5px 18px rgb(179, 179, 179);
+} */
+
+
+
+/* //* Galery page */
+.grid-galery{
+    margin-top: 50px;
+    display: grid;
+    grid-gap: 10px;
+}
+
+.grid-galery img{
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.grid-galery .gede{
+    width: 550px;
+    height: 380px;
+}
+
+.grid-galery .galeri-kecil{
+    width: 270px;
+    height: 185px;
+}
+
+.grid-galery .panjang{
+    width: 270px;
+    height: 380px;
+}
+.grid-galery img:nth-child(1){
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 2;
+}
+
+.grid-galery img:nth-child(2){
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.grid-galery img:nth-child(3){
+    grid-column: 4;
+    grid-row: 1;
+}
+
+.grid-galery img:nth-child(4){
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.grid-galery img:nth-child(5){
+    grid-column: 2 / span 2;
+    grid-row: 3 / span 2;
+}
+
+.grid-galery img:nth-child(6){
+    grid-column: 4;
+    grid-row: 2 / span 2;
+}
+
+.grid-galery img:nth-child(7){
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.grid-galery img:nth-child(8){
+    grid-column: 4;
+    grid-row: 4;
+}
+
+.grid-galery img:nth-child(9){
+    grid-column: 1;
+    grid-row: 4 / span 2;
+}
+
+.grid-galery img:nth-child(10){
+    grid-column: 2;
+    grid-row: 6;
+}
+
+.grid-galery img:nth-child(11){
+    grid-column: 1;
+    grid-row: 6;
+}
+
+.grid-galery img:nth-child(12){
+    grid-column: 3 / span 2;
+    grid-row: 5 / span 2;
+}
+
+.grid-galery img:nth-child(13){
+    grid-column: 2;
+    grid-row: 5;
+}
+
+ /* //*Search_hotel PAGE */
+.form-container-search-hotel{
+    width: 500px;
+    position: relative;
+}
+
+.clear-btn-search{
+    width: 24px;
+    height: 24px;
+    margin-left: 460px;
+    bottom: 0;
+    margin-bottom: 11px;
+}
+
+input[type="text"]#search_hotel{
+    height: 45px;
+    background-color: white;
+    box-shadow: 0 4px 10px #dadada;
+}
+
+.tabs-search {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tabone-hotel{
+    left: 440px;
+}
+
+.tabtwo-wisata{
+    right: 440px;
+}
+
+
+.tabs-search label {
+    text-align: center;
+    width: 100px;
+    order: 1;
+    display: block;
+    padding: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background ease 0.2s;
+    position: absolute;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.tabs-search label{
+    background: none;
+    color: #a0a0a0;
+}
+
+.tabs-search .tab-search {
+    order: 99;
+    flex-grow: 1;
+    width: 100%;
+    display: none;
+    padding: 1rem;
+    background: #fff;
+    margin-top: 100px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;  
+    border-top-right-radius: 25px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 25px;
+    z-index: 1;
+    position: relative;
+}
+
+.tabs-search input[type="radio"] {
+    display: none;
+}
+
+.tabs-search input[type="radio"]:checked+label{
+    background: #F62065;
+    color: white;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1;    
+}
+
+.tabs-search input[type="radio"]:checked+label+.tab-search {
+    display: block;
+}
+
+@media (max-width: 45em) {
+
+    .tabs-search .tab-search,
+    .tabs-search label {
+        order: initial;
+    }
+
+    .tabs-search label {
+        width: 100%;
+        margin-right: 0;
+        margin-top: 0.2rem;
+    }
+}
+
+
+
+/* //*TAB HOTEL */
+.card-hotel{
+    border: 0   px solid black;
+    border-radius: 25px;
+    position: relative;
+    box-shadow: 0 5px 10px #dadada;
+}
+
+.card-hotel img{
+    border-radius: 25px;
+    object-fit: cover;
+}
+
+
+
+
+
+
+

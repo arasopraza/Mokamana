@@ -11,20 +11,20 @@
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
 
+    <link rel="stylesheet" href="{{ asset('css/template.css') }}">
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/template.css')}}">
     <link rel="icon" href="{{ asset('assets/icon/logo_title.png') }}" type="image/icon type">
-    <title>serunya liburan</title>
+    <title>Liburan kuy</title>
 </head>
 
 <body>
 
     <!-- //*navbar -->
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-white position-fixed z-index-1 full-width">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="assets/img/logo.png" class="logo-navbar" alt="">
+                <img src="{{ asset('assets/img/logo.png') }}" style="width: 150px;" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,7 +35,7 @@
                     <a class="nav-link pl-4" href="#">Galeri<span class="sr-only">(current)</span></a>
                     <a class="nav-link pl-4" href="#">Kontak</a>
                     <a class="nav-link pl-4" href="#">Tentang Kami</a>
-                    <a class="nav-link pl-4 profile-icon" href="login" tabindex="-1" aria-disabled="true">
+                    <a class="nav-link pl-4 profile-icon" href="#" tabindex="-1" aria-disabled="true">
                         <button type="submit" class="btn btn-block text-biasa mt-n1">Masuk</button>
                     </a>
                 </div>
@@ -53,47 +53,77 @@
                     <h1 class="text-tebal font-40 mt-lg-5">EH <span class="accent-text-color">Kamu</span>,<br>Mau kemana
                         nih?
                     </h1>
-                    <div class="box-form primary-box-color p-4">
-                        <form class="p-2">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Tujuan</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1"
-                                    aria-describedby="emailHelp" placeholder="Cari Destinasi">
+                    <form class="form-margin">
+                        <div class="tabs" id="tabs">
+                            <input type="radio" class="tabs-radio" id="hotel" name="tabs" checked="checked">
+                            <label for="hotel" class="tabone text-biasa clicktab" id="">
+                                <section class="row row-tab">
+                                    <img src="{{ asset('assets/icon/hotel.png') }}" class="grayscale" id="icontab" alt="">
+                                    <p class="">Hotel</p>
+                                </section>
+
+                            </label>
+                            <div class="tab">
+                                <div class="form-group">
+                                    <p class="text-sedang accent-text-color font-18">Cari Hotel</p>
+                                    <div class="inputwith_icon">
+                                        <Span>
+                                            <img src="{{ asset('assets/icon/search_icon.png') }}" alt="">
+                                        </Span>
+                                        {{-- #FIXME FIX Ketika value diclear tidak mau autofocus  --}}
+                                        <input type="text" class="form-control search-box searchinput"
+                                            aria-describedby="emailHelp" placeholder="Mau nginep dimana nih?" autofocus>
+                                    </div>
+                                    <button type="button" class="clear-btn clear-btn-index rounded-circle del">
+                                        <img src="{{ asset('assets/icon/clear.png') }}" alt="">
+                                    </button>
+
+                                    <button type="submit"
+                                        class="btn accent-box-color search-box-btn text-sedang">Cari</button>
+                                </div>
 
                             </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Check In - Check Out</label>
-                                <input type="password" class="form-control checkIN-form" id="exampleInputPassword1">
-                            </div>
-                            <div class="form-group-transportasi">
-                                <label for="exampleInputPassword1">Transportasi</label>
-                                <select name="" id="" class="transportasi">
-                                    <option value="Pesawat">Pesawat</option>
-                                    <option value="kereta">Kereta</option>
-                                    <option value="Bus">Bus</option>
-                                </select>
-                            </div>
-                            <div class="form-group margin-bottom-35">
-                                <label for="exampleInputPassword1">Tamu & Kamar</label>
-                                <select name="" id="" class="tamukamar">
-                                    <option value="">1 tamu, 1 kamar</option>
-                                    <option value="">1 tamu, 2 kamar</option>
-                                    <option value="">1 tamu, 4 kamar</option>
-                                    <option value="">2 tamu, 5 kamar</option>
-                                </select>                              
-                            </div>
-                            <button type="submit" class="btn btn-block text-biasa btn-form-index">Pesan</button>
-                        </form>
 
-                    </div>
+                            <input type="radio" class="tabs-radio" name="tabs" id="wisata">
+                            <label for="wisata" class="tabtwo text-biasa clicktab" id="clicktab">
+                                <section class="row row-tab">
+                                    <img src="{{ asset('assets/icon/wisata.png') }}" class="grayscale" id="icontab" alt="">
+                                    <p>Wisata</p>
+                                </section>
+                            </label>
+                            <div class="tab">
+                                <div class="form-group">
+                                    <p class="text-sedang accent-text-color font-18">Cari Wisata</p>
+                                    <div class="inputwith_icon">
+                                        <Span>
+                                            <img src="{{ asset('assets/icon/search_icon.png') }}" alt="">
+                                        </Span>
+                                        {{-- #FIXME FIX Ketika value diclear tidak mau autofocus  --}}
+                                        <input type="text" class="form-control searchinput" aria-describedby="emailHelp"
+                                            placeholder="Mau liburan kemana?" autofocus>
+                                    </div>
+                                    <button type="button" class="clear-btn clear-btn-index rounded-circle del">
+                                        <img src="{{ asset('assets/icon/clear.png') }}" alt="">
+                                    </button>
+
+                                    <button type="submit"
+                                        class="btn accent-box-color search-box-btn text-sedang">Cari</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- <div class="box-form primary-box-color p-4">
+
+
+                    </div> -->
                 </section>
 
 
                 <section class="col-lg-6 pl-4">
                     <div class="grid-hero pt-lg-4">
-                        <img src="assets/img/labuan-bajo.png" alt="">
-                        <img src="assets/img/bali.png" alt="">
-                        <img src="assets/img/raja-ampat.png  " alt="">
+                        <img src="{{ asset('assets/img/labuan-bajo.png') }}" alt="">
+                        <img src="{{ asset('assets/img/bali.png') }}" alt="">
+                        <img src="{{ asset('assets/img/raja-ampat.png') }}" alt="">
                     </div>
                     <div class="location-box">
                         <div class="font-20 text-biasa position-absolute accent-text-color primary-box-color pl-4 pr-4">
@@ -108,8 +138,6 @@
                     </div>
                 </section>
             </section>
-            <!-- <h1 class="display-4">Fluid jumbotron</h1>
-            <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> -->
         </div>
     </div>
 
@@ -122,9 +150,7 @@
         <!-- //*Destinasi Populer -->
         <section class="row">
             <section class="col-lg-12 mt-lg-5 mb-lg-5">
-                <p class="judul text-tebal font-30">Destinasi Populer</p>
-                <a href="populer"
-                    class=" accent-text-color mr-5 font-20 position-absolute selengkapnya">Selengkapnya</a>
+                <p class="judul text-tebal font-30">Destinasi Pilihan</p>
             </section>
         </section>
         <section class="row pb-xl-5">
@@ -132,22 +158,14 @@
                 <a href="#" class="ahref-no-decor second-text-color ">
                     <div class="card">
                         <div class="border-image">
-                            <img src="assets/img/labuan-bajo.png" class="card-img-top" alt="..."></div>
-                        <div class="card-body">
-                            <h5 class="card-title text-sedang">Labuan Bajo</h5>
+                            <img src="{{ asset('assets/img/labuan-bajo.png') }}" class="card-img-top" alt="..."></div>
+                        <div class="card-body-custom">
+                            <h5 class="card-title text-tebal mt-lg-3 mb-0">Labuan Bajo</h5>
                             <div class="pulau">
-                                <p class="card-text text-biasa font-14">Nusa Tenggara Timur</p>
-                            </div>
-                            <p class="text-kecil font-12 mt-4 mb-n1">Mulai dari</p>
-                            <p class="text-tebal mb-0">Rp <span class="warna-harga">600.000</span><span
-                                    class="text-biasa kecil">/org</span>
-                            </p>
-                            <div class="rating">
-                                <img src="assets/icon/rating-icon.png" alt="">
-                                <p class="text-sedang">4.9</p>
-                            </div>
-                            <div class="text-right btn-card">
-                                <a href="#" class="btn btn-primary text-biasa">Pesan</a>
+                                <p class="unactived-text-color text-biasa margin-top-5 font-14 mb-0">
+                                    1.439
+                                    Tempat
+                                    wisata & hotel</p>
                             </div>
                         </div>
                     </div>
@@ -158,22 +176,14 @@
             <section class="col-lg-4">
                 <a href="#" class="ahref-no-decor second-text-color ">
                     <div class="card border-image">
-                        <img src="assets/img/raja-ampat.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Raja Ampat</h5>
+                        <img src="{{ asset('assets/img/raja-ampat.png') }}" class="card-img-top" alt="...">
+                        <div class="card-body-custom">
+                            <h5 class="card-title text-tebal mt-lg-3 mb-0">Raja Ampat</h5>
                             <div class="pulau">
-                                <p class="card-text text-biasa">Papua Barat</p>
-                            </div>
-                            <p class="text-kecil font-12 mt-4 mb-n1">Mulai dari</p>
-                            <p class="text-tebal mb-0">Rp <span class="warna-harga">600.000</span><span
-                                    class="text-biasa kecil">/org</span>
-                            </p>
-                            <div class="rating">
-                                <img src="assets/icon/rating-icon.png" alt="">
-                                <p class="text-sedang">4.9</p>
-                            </div>
-                            <div class="text-right btn-card">
-                                <a href="#" class="btn btn-primary text-biasa">Pesan</a>
+                                <p class="unactived-text-color text-biasa margin-top-5 font-14 mb-0">
+                                    576
+                                    Tempat
+                                    wisata & hotel</p>
                             </div>
                         </div>
                     </div>
@@ -183,22 +193,70 @@
             <section class="col-lg-4">
                 <a href="#" class="ahref-no-decor second-text-color">
                     <div class="card border-image">
-                        <img src="assets/img/bali.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Bali</h5>
+                        <img src="{{ asset('assets/img/bali.png') }}" class="card-img-top" alt="...">
+                        <div class="card-body-custom">
+                            <h5 class="card-title text-tebal mt-lg-3 mb-0">Bali</h5>
                             <div class="pulau">
-                                <p class="card-text text-biasa">Bali</p>
+                                <p class="unactived-text-color text-biasa margin-top-5 font-14 mb-0">
+                                    1.573
+                                    Tempat
+                                    wisata & hotel</p>
                             </div>
-                            <p class="text-kecil font-12 mt-4 mb-n1">Mulai dari</p>
-                            <p class="text-tebal mb-0">Rp <span class="warna-harga">600.000</span><span
-                                    class="text-biasa kecil">/org</span>
-                            </p>
-                            <div class="rating">
-                                <img src="assets/icon/rating-icon.png" alt="">
-                                <p class="text-sedang">4.9</p>
+                        </div>
+                    </div>
+                </a>
+
+            </section>
+        </section>
+
+        <section class="row pb-xl-5">
+            <section class="col-lg-4">
+                <a href="#" class="ahref-no-decor second-text-color ">
+                    <div class="card">
+                        <div class="border-image">
+                            <img src="{{ asset('assets/img/bandung.png') }}" class="card-img-top" alt="..."></div>
+                        <div class="card-body-custom">
+                            <h5 class="card-title text-tebal mt-lg-3 mb-0">Bandung</h5>
+                            <div class="pulau">
+                                <p class="unactived-text-color text-biasa margin-top-5 font-14 mb-0">
+                                    1.895
+                                    Tempat
+                                    wisata & hotel</p>
                             </div>
-                            <div class="text-right btn-card">
-                                <a href="#" class="btn btn-primary text-biasa">Pesan</a>
+                        </div>
+                    </div>
+                </a>
+
+
+            </section>
+            <section class="col-lg-4">
+                <a href="#" class="ahref-no-decor second-text-color ">
+                    <div class="card border-image">
+                        <img src="{{ asset('assets/img/bogor.png') }}" class="card-img-top" alt="...">
+                        <div class="card-body-custom">
+                            <h5 class="card-title text-tebal mt-lg-3 mb-0">Bogor</h5>
+                            <div class="pulau">
+                                <p class="unactived-text-color text-biasa margin-top-5 font-14 mb-0">
+                                    1.532
+                                    Tempat
+                                    wisata & hotel</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+            </section>
+            <section class="col-lg-4">
+                <a href="#" class="ahref-no-decor second-text-color">
+                    <div class="card border-image">
+                        <img src="{{ asset('assets/img/yogyakarta.png') }}" class="card-img-top" alt="...">
+                        <div class="card-body-custom">
+                            <h5 class="card-title text-tebal mt-lg-3 mb-0">Yogyakarta</h5>
+                            <div class="pulau">
+                                <p class="unactived-text-color text-biasa margin-top-5 font-14 mb-0">
+                                    1.645
+                                    Tempat
+                                    wisata & hotel</p>
                             </div>
                         </div>
                     </div>
@@ -217,11 +275,11 @@
                         class="accent-text-color text-tebal">Mokamana</span></p>
             </section>
             <section class="col-lg-3 text-center">
-                <img src="assets/img/villa.png" alt="" class="img-villa">
+                <img class="img-villa" src="{{ asset('assets/img/villa.png') }}" alt="">
                 <p class="text-biasa font-18 mt-2">17.000 lebih Villa</p>
             </section>
             <section class="col-lg-4 text-center">
-                <img src="assets/img/apartemen.png" alt="" class="img-apartemen">
+                <img src="{{ asset('assets/img/apartemen.png') }}" alt="" class="img-apartemen">
                 <p class="text-biasa font-18 mt-2">25.000 lebih Apartemen</p>
             </section>
         </section>
@@ -235,7 +293,7 @@
     <div class="jumbotron jumbotron-fluid galery-box">
         <section class="row">
             <section class="col-lg-6">
-                <img src="assets/img/galery.png" class="img-galery" alt="">
+                <img src="{{ ('assets/img/galery.png') }}" class="img-galery" alt="">
             </section>
             <section class="col-lg-6">
                 <h1 class="galery-title font-34 text-tebal">Serunya liburan bersama <span
@@ -255,7 +313,7 @@
     <div class="container justify-content-center">
         <section class="row margin-footer">
             <section class="col-lg-4">
-                <img src="assets/img/logo.png" class="logo-footer" alt="">
+                <img src="{{ asset('assets/img/logo.png') }}" class="logo-footer" alt="">
                 <p class="accent-text-color text-tebal font-18">2021 © Copyright</p>
             </section>
             <section class="col-lg-2 mt-2">
@@ -279,10 +337,10 @@
             <section class="col-lg-4 mt-2">
                 <p class="font-16 text-sedang">Ikuti kami</p>
                 <a href="#" class="ahref-no-decor">
-                    <img src="assets/icon/fb.png" alt="" class="icon-footer">
+                    <img src="{{ asset('assets/icon/fb.png') }}" alt="" class="icon-footer">
                 </a>
                 <a href="https://www.instagram.com/gya.af/" target="blank" class="ahref-no-decor">
-                    <img src="assets/icon/ig.png" alt="" class="icon-footer">
+                    <img src="{{ asset('assets/icon/ig.png') }}" alt="" class="icon-footer">
                 </a>
 
             </section>
@@ -309,11 +367,14 @@
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
     </script>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
     <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
     -->
+    <script src="{{ asset('js/main.js') }}"></script>
 </body>
 
 </html>
