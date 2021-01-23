@@ -13,23 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-
-Route::get('populer', function(){
-    return view('destinasi-populer');
-});
-
-Route::get('login', function(){
-    return view('login');
-});
-
-Route::get('regist', function(){
-    return view('register');
-});
-
+Route::get('/', 'PagesController@home')->name('index');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
