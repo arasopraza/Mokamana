@@ -643,17 +643,17 @@ input[type="text"]#search_hotel{
 }
 
 .tabone-hotel{
-    left: 440px;
+    left: 465px;
 }
 
 .tabtwo-wisata{
-    right: 440px;
+    right: 465px;
 }
 
 
 .tabs-search label {
     text-align: center;
-    width: 100px;
+    width: 80px;
     order: 1;
     display: block;
     padding: 8px;
@@ -677,7 +677,7 @@ input[type="text"]#search_hotel{
     display: none;
     padding: 1rem;
     background: #fff;
-    margin-top: 100px;
+    margin-top: 80px;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;  
     border-top-right-radius: 25px;
@@ -722,18 +722,145 @@ input[type="text"]#search_hotel{
 
 /* //*TAB HOTEL */
 .card-hotel{
-    border: 0   px solid black;
+    border: 0px solid black;
     border-radius: 25px;
     position: relative;
     box-shadow: 0 5px 10px #dadada;
 }
 
-.card-hotel img{
+.card-hotel img.card-img    {
     border-radius: 25px;
     object-fit: cover;
 }
 
+.rating-hotel{
+    position: absolute;
+    right: 65px;
+    top: 20px;
+}
 
+.fasilitas img{
+    filter: grayscale(100%) !important;
+    opacity: 50% !important;
+}
+
+.fasilitas img:hover{
+    filter: none !important;
+    opacity: 100% !important;
+}
+
+.fasilitas img:nth-child(3){
+    width: 25px;
+    height: 20px;
+}
+
+.fasilitas img:nth-child(5){
+    margin-top: 3px;
+    width: 25px;
+    height: 14px;
+}
+
+.fasilitas-icon{
+    width: 20px;
+    height: 20px;
+}
+
+.rating-hotel-iconn{
+    background-color: #F62065;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 7px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.bs-tooltip-top {
+    top: -10px !important;
+}
+
+.more-fasilitas{
+    border-radius: 2px;
+    background-color: #F3F5F9;
+    padding: 2px 4px;
+}
+
+.card-body button{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+/* //* FILTER DI KIRI */
+
+/* //*checkbox */
+.container-check-filter{
+    display: block !important   ;
+    position: relative !important;
+    text-align: left !important;
+    margin-bottom: 14px !important;
+    width: 200px !important;
+    padding: 2px 0 0 45px !important;
+    cursor: pointer !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container-check-filter input {
+    position: absolute !important;
+    opacity: 0 !important;
+    cursor: pointer !important;
+    height: 0 !important;
+    width: 0 !important;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    height: 25px !important;
+    width: 25px !important;
+    background-color: #eee !important;
+  } 
+  
+  /* On mouse-over, add a grey background color */
+  .container-check-filter:hover input ~ .checkmark {
+    background-color: #ccc !important;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container-check-filter input:checked ~ .checkmark {
+    background-color: #2196F3 !important;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "" !important;
+    position: absolute !important;
+    display: none !important;
+  }
+  
+  /* Show the checkmark when checked */
+  .container-check-filter input:checked ~ .checkmark:after {
+    display: block !important; 
+  }
+  
+  /* Style the checkmark/indicator */
+  .container-check-filter .checkmark:after {
+    left: 9px !important;
+    top: 5px !important;
+    width: 5px !important;
+    height: 10px !important;
+    border: solid white !important;
+    border-width: 0 3px 3px 0 !important;
+    -webkit-transform: rotate(45deg) !important;
+    -ms-transform: rotate(45deg) !important;
+    transform: rotate(45deg) !important;
+  }
 
 
 

@@ -64,6 +64,12 @@ $('.searchinput').on('input', function(e){
 })
 
 
+//* tooltips
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+  });
+
+
 
 
 
