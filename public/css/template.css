@@ -122,6 +122,10 @@
 .no-border{
     border: none;
 }
+
+.height-20{
+    height: 20px;
+}
 .opacity-0{
     opacity: 0;
 }
@@ -180,6 +184,10 @@
     z-index: 1;
 }
 
+.width-content{
+    width: fit-content;
+}
+
 .full-width{
     width: 100%;
 }
@@ -199,6 +207,10 @@
 
 .margin-top-2{
     margin-top: 2px;
+}
+
+.object-cover{
+    object-fit: cover;
 }
 
 

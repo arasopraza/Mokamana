@@ -9,8 +9,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ asset('css/template.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+    <link rel="stylesheet" href="css/template.css">
+    <link rel="stylesheet" href="css/main.css">
     <title>Hello, world!</title>
 </head>
 
@@ -79,8 +79,186 @@
                         <section class="row">
 
                             <!-- //* ISI FILTER DI KIRI -->
-                            <section class="col-lg-4">
-                                <div class="card" style="width: 18rem;">
+                            <section class="col-lg-6">
+                                <!-- #TODO four points -->
+                                <div class="card mb-3 full-width card-hotel">
+                                    <div class="row no-gutters">
+                                        <div class="col-md-4">
+                                            <img src="/assets/img/hotel/four-points.png" class="card-img full-height"
+                                                alt="...">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-tebal font-16 mb-0">Four Points by <br>
+                                                    Sheraton
+                                                    Bandung</h5>
+                                                <section class="row padding-left-18">
+                                                    <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
+                                                    <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
+                                                    <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
+                                                    <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
+                                                </section>
+                                                <p class="card-text text-biasa font-14 unactived-text-color mt-1">
+                                                    Bandung,
+                                                    Jawa Barat
+                                                </p>
+                                                <div class="rating-hotel">
+                                                    <p class="accent-text-color text-biasa mb-0 font-14 text-right">
+                                                        Terkesan
+                                                    </p>
+                                                    <p class="unactived-text-color text-biasa font-12 text-right">229
+                                                        review</p>
+
+                                                </div>
+                                                <p class="primary-text-color text-biasa font-16 rating-hotel-iconn">8.4
+                                                </p>
+
+                                                <p class="text-biasa mb-lg-1">Fasilitas</p>
+                                                <section class="row padding-left-18 fasilitas height-20">
+                                                    <img class="margin-right-15 fasilitas-icon" data-toggle="tooltip"
+                                                        data-placement="top" title="Lift"
+                                                        src="assets/icon/lift-pink.png" alt="">
+                                                    <img class="margin-right-15 fasilitas-icon" data-toggle="tooltip"
+                                                        data-placement="top" title="Parkir"
+                                                        src="assets/icon/parkir-pink.png" alt="">
+                                                    <img class="margin-right-15" data-toggle="tooltip"
+                                                        data-placement="top" title="Wifi"
+                                                        src="assets/icon/wifi-pink.png" alt="">
+                                                    <img class="margin-right-15 fasilitas-icon" data-toggle="tooltip"
+                                                        data-placement="top" title="24 jam Resepsionis"
+                                                        src="assets/icon/24h-pink.png" alt="">
+                                                    <p class="unactived-text-color text-tebal more-fasilitas font-12"
+                                                        data-toggle="tooltip" data-placement="top" data-html="true"
+                                                        title="Restoran <br> AC <br> Kolam renang <br> TV <br> Single Bed <br> Large Bed">
+                                                        6+
+                                                    </p>
+                                                </section>
+                                                <button class="btn btn-card-hotel">Lihat harga</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- #TODO Jayakarta -->
+                                <div class="card mb-3 full-width card-hotel">
+                                    <div class="row no-gutters">
+                                        <div class="col-md-4">
+                                            <img src="/assets/img/hotel/jayakarta.png" class="card-img full-height"
+                                                alt="...">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-tebal font-16 mb-0">The Jayakarta Suites <br>
+                                                    Bandung</h5>
+                                                <section class="row padding-left-18">
+                                                    <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
+                                                    <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
+                                                    <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
+                                                    <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
+                                                </section>
+                                                <p class="card-text text-biasa font-14 unactived-text-color mt-1">
+                                                    Bandung,
+                                                    Jawa Barat
+                                                </p>
+                                                <div class="rating-hotel">
+                                                    <p class="accent-text-color text-biasa mb-0 font-14 text-right">
+                                                        Mantap
+                                                    </p>
+                                                    <p class="unactived-text-color text-biasa font-12 text-right">1310
+                                                        review</p>
+
+                                                </div>
+                                                <p class="primary-text-color text-biasa font-16 rating-hotel-iconn">7.7
+                                                </p>
+
+                                                <p class="text-biasa mb-lg-1">Fasilitas</p>
+                                                <section class="row padding-left-18 fasilitas height-20">
+                                                    <img class="margin-right-15 fasilitas-icon" data-toggle="tooltip"
+                                                        data-placement="top" title="Lift"
+                                                        src="assets/icon/lift-pink.png" alt="">
+                                                    <img class="margin-right-15 fasilitas-icon" data-toggle="tooltip"
+                                                        data-placement="top" title="Parkir"
+                                                        src="assets/icon/parkir-pink.png" alt="">
+                                                    <img class="margin-right-15" data-toggle="tooltip"
+                                                        data-placement="top" title="Wifi"
+                                                        src="assets/icon/wifi-pink.png" alt="">
+                                                    <img class="margin-right-15 fasilitas-icon" data-toggle="tooltip"
+                                                        data-placement="top" title="24 jam Resepsionis"
+                                                        src="assets/icon/24h-pink.png" alt="">
+                                                    <p class="unactived-text-color text-tebal more-fasilitas font-12"
+                                                        data-toggle="tooltip" data-placement="top" data-html="true"
+                                                        title="Restoran <br> AC <br> Kolam renang <br> TV <br> Single Bed <br> Large Bed">
+                                                        6+
+                                                    </p>
+                                                </section>
+                                                <button class="btn btn-card-hotel">Lihat harga</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- #TODO Hilton -->
+                                <div class="card mb-3 full-width card-hotel">
+                                    <div class="row no-gutters">
+                                        <div class="col-md-4">
+                                            <img src="/assets/img/hotel/hilton.png" class="card-img full-height"
+                                                alt="...">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-tebal font-16 mb-0">Hilton Bandung</h5>
+                                                <section class="row padding-left-18">
+                                                    <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
+                                                    <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
+                                                    <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
+                                                    <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
+                                                </section>
+                                                <p class="card-text text-biasa font-14 unactived-text-color mt-1">
+                                                    Bandung,
+                                                    Jawa Barat
+                                                </p>
+                                                <div class="rating-hotel">
+                                                    <p class="accent-text-color text-biasa mb-0 font-14 text-right">
+                                                        Terkesan
+                                                    </p>
+                                                    <p class="unactived-text-color text-biasa font-12 text-right">667
+                                                        review</p>
+
+                                                </div>
+                                                <p class="primary-text-color text-biasa font-16 rating-hotel-iconn">8.9
+                                                </p>
+
+                                                <p class="text-biasa mb-lg-1">Fasilitas</p>
+                                                <section class="row padding-left-18 fasilitas height-20">
+                                                    <img class="margin-right-15 fasilitas-icon" data-toggle="tooltip"
+                                                        data-placement="top" title="Lift"
+                                                        src="assets/icon/lift-pink.png" alt="">
+                                                    <img class="margin-right-15 fasilitas-icon" data-toggle="tooltip"
+                                                        data-placement="top" title="Parkir"
+                                                        src="assets/icon/parkir-pink.png" alt="">
+                                                    <img class="margin-right-15" data-toggle="tooltip"
+                                                        data-placement="top" title="Wifi"
+                                                        src="assets/icon/wifi-pink.png" alt="">
+                                                    <img class="margin-right-15 fasilitas-icon" data-toggle="tooltip"
+                                                        data-placement="top" title="24 jam Resepsionis"
+                                                        src="assets/icon/24h-pink.png" alt="">
+                                                    <p class="unactived-text-color text-tebal more-fasilitas font-12"
+                                                        data-toggle="tooltip" data-placement="top" data-html="true"
+                                                        title="Restoran <br> AC <br> Kolam renang <br> TV <br> Single Bed <br> Large Bed">
+                                                        6+
+                                                    </p>
+                                                </section>
+                                                <button class="btn btn-card-hotel">Lihat harga</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <!-- <div class="card" style="width: 18rem;">
                                     <div class="card-body">
                                         <h5 class="card-title text-tebal">Filter Berdasarkan:</h5>
                                         <hr>
@@ -133,22 +311,22 @@
                                             </label>
                                         </form>
                                     </div>
-                                </div>
+                                </div> -->
                             </section>
 
                             <!-- //*ISI CARD HOTEL -->
-                            <section class="col-lg-8">
+                            <section class="col-lg-6">
 
                                 <!-- #TODO aryaduta -->
                                 <div class="card mb-4 full-width card-hotel">
                                     <div class="row no-gutters">
-                                        <div class="col-md-5">
+                                        <div class="col-md-4">
                                             <img src="/assets/img/hotel/aryaduta.png" class="card-img full-height"
                                                 alt="...">
                                         </div>
-                                        <div class="col-md-7">
+                                        <div class="col-md-8">
                                             <div class="card-body">
-                                                <h5 class="card-title text-tebal font-18 mb-0">Aryaduta Bandung</h5>
+                                                <h5 class="card-title text-tebal font-16 mb-0">Aryaduta Bandung</h5>
                                                 <section class="row padding-left-18">
                                                     <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
                                                     <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
@@ -170,8 +348,8 @@
                                                 <p class="primary-text-color text-biasa font-16 rating-hotel-iconn">8.4
                                                 </p>
 
-                                                <p class="text-biasa">Fasilitas</p>
-                                                <section class="row padding-left-18 fasilitas">
+                                                <p class="text-biasa mb-lg-1">Fasilitas</p>
+                                                <section class="row padding-left-18 fasilitas height-20">
                                                     <img class="margin-right-15 fasilitas-icon" data-toggle="tooltip"
                                                         data-placement="top" title="Lift"
                                                         src="assets/icon/lift-pink.png" alt="">
@@ -184,13 +362,10 @@
                                                     <img class="margin-right-15 fasilitas-icon" data-toggle="tooltip"
                                                         data-placement="top" title="24 jam Resepsionis"
                                                         src="assets/icon/24h-pink.png" alt="">
-                                                    <img class="margin-right-15" data-toggle="tooltip"
-                                                        data-placement="top" title="AC" src="assets/icon/ac-pink.png"
-                                                        alt="">
                                                     <p class="unactived-text-color text-tebal more-fasilitas font-12"
                                                         data-toggle="tooltip" data-placement="top" data-html="true"
-                                                        title="Restoran <br> Kolam renang <br> TV <br> Single Bed <br> Large Bed">
-                                                        5+
+                                                        title="Restoran <br> AC <br> Kolam renang <br> TV <br> Single Bed <br> Large Bed">
+                                                        6+
                                                     </p>
                                                 </section>
                                                 <button class="btn btn-card-hotel">Lihat harga</button>
@@ -202,15 +377,15 @@
                                 <!-- #TODO courtyard by Mariot -->
                                 <div class="card mb-4 full-width card-hotel">
                                     <div class="row no-gutters">
-                                        <div class="col-md-5">
+                                        <div class="col-md-4">
                                             <img src="/assets/img/hotel/courtyard.png" class="card-img full-height"
                                                 alt="...">
                                         </div>
-                                        <div class="col-md-7">
+                                        <div class="col-md-8">
                                             <div class="card-body">
-                                                <h5 class="card-title text-tebal font-18 mb-0">Courtyard by Marriott
-                                                    <br>
-                                                    Bandung Dago</h5>
+                                                <h5 class="card-title text-tebal font-16 mb-0">Courtyard by <br>
+                                                    Marriott
+                                                    Bandung</h5>
                                                 <section class="row padding-left-18">
                                                     <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
                                                     <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
@@ -232,8 +407,8 @@
                                                 <p class="primary-text-color text-biasa font-16 rating-hotel-iconn">8.6
                                                 </p>
 
-                                                <p class="text-biasa">Fasilitas</p>
-                                                <section class="row padding-left-18 fasilitas">
+                                                <p class="text-biasa mb-lg-1">Fasilitas</p>
+                                                <section class="row padding-left-18 fasilitas height-20">
                                                     <img class="margin-right-15 fasilitas-icon" data-toggle="tooltip"
                                                         data-placement="top" title="Lift"
                                                         src="assets/icon/lift-pink.png" alt="">
@@ -246,13 +421,10 @@
                                                     <img class="margin-right-15 fasilitas-icon" data-toggle="tooltip"
                                                         data-placement="top" title="24 jam Resepsionis"
                                                         src="assets/icon/24h-pink.png" alt="">
-                                                    <img class="margin-right-15" data-toggle="tooltip"
-                                                        data-placement="top" title="AC" src="assets/icon/ac-pink.png"
-                                                        alt="">
                                                     <p class="unactived-text-color text-tebal more-fasilitas font-12"
                                                         data-toggle="tooltip" data-placement="top" data-html="true"
-                                                        title="Restoran <br> Kolam renang <br> TV <br> Single Bed <br> Large Bed">
-                                                        5+
+                                                        title="Restoran <br> AC <br> Kolam renang <br> TV <br> Single Bed <br> Large Bed">
+                                                        6+
                                                     </p>
                                                 </section>
                                                 <button class="btn btn-card-hotel">Lihat harga</button>
@@ -264,13 +436,13 @@
                                 <!-- #TODO Swiss belresort -->
                                 <div class="card mb-3 full-width card-hotel">
                                     <div class="row no-gutters">
-                                        <div class="col-md-5">
+                                        <div class="col-md-4">
                                             <img src="/assets/img/hotel/swiss-belresort.png"
                                                 class="card-img full-height" alt="...">
                                         </div>
-                                        <div class="col-md-7">
+                                        <div class="col-md-8">
                                             <div class="card-body">
-                                                <h5 class="card-title text-tebal font-18 mb-0">Swiss-Belresort <br>
+                                                <h5 class="card-title text-tebal font-16 mb-0">Swiss-Belresort <br>
                                                     Bandung
                                                     Dago</h5>
                                                 <section class="row padding-left-18">
@@ -294,8 +466,8 @@
                                                 <p class="primary-text-color text-biasa font-16 rating-hotel-iconn">8.0
                                                 </p>
 
-                                                <p class="text-biasa">Fasilitas</p>
-                                                <section class="row padding-left-18 fasilitas">
+                                                <p class="text-biasa mb-lg-1">Fasilitas</p>
+                                                <section class="row padding-left-18 fasilitas height-20">
                                                     <img class="margin-right-15 fasilitas-icon" data-toggle="tooltip"
                                                         data-placement="top" title="Lift"
                                                         src="assets/icon/lift-pink.png" alt="">
@@ -308,75 +480,10 @@
                                                     <img class="margin-right-15 fasilitas-icon" data-toggle="tooltip"
                                                         data-placement="top" title="24 jam Resepsionis"
                                                         src="assets/icon/24h-pink.png" alt="">
-                                                    <img class="margin-right-15" data-toggle="tooltip"
-                                                        data-placement="top" title="AC" src="assets/icon/ac-pink.png"
-                                                        alt="">
                                                     <p class="unactived-text-color text-tebal more-fasilitas font-12"
                                                         data-toggle="tooltip" data-placement="top" data-html="true"
-                                                        title="Restoran <br> Kolam renang <br> TV <br> Single Bed <br> Large Bed">
-                                                        5+
-                                                    </p>
-                                                </section>
-                                                <button class="btn btn-card-hotel">Lihat harga</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- #TODO four points -->
-                                <div class="card mb-3 full-width card-hotel">
-                                    <div class="row no-gutters">
-                                        <div class="col-md-5">
-                                            <img src="/assets/img/hotel/four-points.png" class="card-img full-height"
-                                                alt="...">
-                                        </div>
-                                        <div class="col-md-7">
-                                            <div class="card-body">
-                                                <h5 class="card-title text-tebal font-18 mb-0">Four Points by <br>
-                                                    Sheraton
-                                                    Bandung</h5>
-                                                <section class="row padding-left-18">
-                                                    <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
-                                                    <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
-                                                    <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
-                                                    <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
-                                                </section>
-                                                <p class="card-text text-biasa font-14 unactived-text-color mt-1">
-                                                    Bandung,
-                                                    Jawa Barat
-                                                </p>
-                                                <div class="rating-hotel">
-                                                    <p class="accent-text-color text-biasa mb-0 font-14 text-right">
-                                                        Terkesan
-                                                    </p>
-                                                    <p class="unactived-text-color text-biasa font-12 text-right">229
-                                                        review</p>
-
-                                                </div>
-                                                <p class="primary-text-color text-biasa font-16 rating-hotel-iconn">8.4
-                                                </p>
-
-                                                <p class="text-biasa">Fasilitas</p>
-                                                <section class="row padding-left-18 fasilitas">
-                                                    <img class="margin-right-15 fasilitas-icon" data-toggle="tooltip"
-                                                        data-placement="top" title="Lift"
-                                                        src="assets/icon/lift-pink.png" alt="">
-                                                    <img class="margin-right-15 fasilitas-icon" data-toggle="tooltip"
-                                                        data-placement="top" title="Parkir"
-                                                        src="assets/icon/parkir-pink.png" alt="">
-                                                    <img class="margin-right-15" data-toggle="tooltip"
-                                                        data-placement="top" title="Wifi"
-                                                        src="assets/icon/wifi-pink.png" alt="">
-                                                    <img class="margin-right-15 fasilitas-icon" data-toggle="tooltip"
-                                                        data-placement="top" title="24 jam Resepsionis"
-                                                        src="assets/icon/24h-pink.png" alt="">
-                                                    <img class="margin-right-15" data-toggle="tooltip"
-                                                        data-placement="top" title="AC" src="assets/icon/ac-pink.png"
-                                                        alt="">
-                                                    <p class="unactived-text-color text-tebal more-fasilitas font-12"
-                                                        data-toggle="tooltip" data-placement="top" data-html="true"
-                                                        title="Restoran <br> Kolam renang <br> TV <br> Single Bed <br> Large Bed">
-                                                        5+
+                                                        title="Restoran <br> AC <br> Kolam renang <br> TV <br> Single Bed <br> Large Bed">
+                                                        6+
                                                     </p>
                                                 </section>
                                                 <button class="btn btn-card-hotel">Lihat harga</button>
@@ -386,127 +493,6 @@
                                 </div>
 
 
-                                <!-- #TODO Jayakarta -->
-                                <div class="card mb-3 full-width card-hotel">
-                                    <div class="row no-gutters">
-                                        <div class="col-md-5">
-                                            <img src="/assets/img/hotel/jayakarta.png" class="card-img full-height"
-                                                alt="...">
-                                        </div>
-                                        <div class="col-md-7">
-                                            <div class="card-body">
-                                                <h5 class="card-title text-tebal font-18 mb-0">The Jayakarta Suites <br>
-                                                    Bandung</h5>
-                                                <section class="row padding-left-18">
-                                                    <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
-                                                    <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
-                                                    <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
-                                                    <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
-                                                </section>
-                                                <p class="card-text text-biasa font-14 unactived-text-color mt-1">
-                                                    Bandung,
-                                                    Jawa Barat
-                                                </p>
-                                                <div class="rating-hotel">
-                                                    <p class="accent-text-color text-biasa mb-0 font-14 text-right">
-                                                        Mantap
-                                                    </p>
-                                                    <p class="unactived-text-color text-biasa font-12 text-right">1310
-                                                        review</p>
-
-                                                </div>
-                                                <p class="primary-text-color text-biasa font-16 rating-hotel-iconn">7.7
-                                                </p>
-
-                                                <p class="text-biasa">Fasilitas</p>
-                                                <section class="row padding-left-18 fasilitas">
-                                                    <img class="margin-right-15 fasilitas-icon" data-toggle="tooltip"
-                                                        data-placement="top" title="Lift"
-                                                        src="assets/icon/lift-pink.png" alt="">
-                                                    <img class="margin-right-15 fasilitas-icon" data-toggle="tooltip"
-                                                        data-placement="top" title="Parkir"
-                                                        src="assets/icon/parkir-pink.png" alt="">
-                                                    <img class="margin-right-15" data-toggle="tooltip"
-                                                        data-placement="top" title="Wifi"
-                                                        src="assets/icon/wifi-pink.png" alt="">
-                                                    <img class="margin-right-15 fasilitas-icon" data-toggle="tooltip"
-                                                        data-placement="top" title="24 jam Resepsionis"
-                                                        src="assets/icon/24h-pink.png" alt="">
-                                                    <img class="margin-right-15" data-toggle="tooltip"
-                                                        data-placement="top" title="AC" src="assets/icon/ac-pink.png"
-                                                        alt="">
-                                                    <p class="unactived-text-color text-tebal more-fasilitas font-12"
-                                                        data-toggle="tooltip" data-placement="top" data-html="true"
-                                                        title="Restoran <br> Kolam renang <br> TV <br> Single Bed <br> Large Bed">
-                                                        5+
-                                                    </p>
-                                                </section>
-                                                <button class="btn btn-card-hotel">Lihat harga</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <!-- #TODO Hilton -->
-                                <div class="card mb-3 full-width card-hotel">
-                                    <div class="row no-gutters">
-                                        <div class="col-md-5">
-                                            <img src="/assets/img/hotel/hilton.png" class="card-img full-height"
-                                                alt="...">
-                                        </div>
-                                        <div class="col-md-7">
-                                            <div class="card-body">
-                                                <h5 class="card-title text-tebal font-18 mb-0">Hilton Bandung</h5>
-                                                <section class="row padding-left-18">
-                                                    <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
-                                                    <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
-                                                    <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
-                                                    <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
-                                                </section>
-                                                <p class="card-text text-biasa font-14 unactived-text-color mt-1">
-                                                    Bandung,
-                                                    Jawa Barat
-                                                </p>
-                                                <div class="rating-hotel">
-                                                    <p class="accent-text-color text-biasa mb-0 font-14 text-right">
-                                                        Terkesan
-                                                    </p>
-                                                    <p class="unactived-text-color text-biasa font-12 text-right">667
-                                                        review</p>
-
-                                                </div>
-                                                <p class="primary-text-color text-biasa font-16 rating-hotel-iconn">8.9
-                                                </p>
-
-                                                <p class="text-biasa">Fasilitas</p>
-                                                <section class="row padding-left-18 fasilitas">
-                                                    <img class="margin-right-15 fasilitas-icon" data-toggle="tooltip"
-                                                        data-placement="top" title="Lift"
-                                                        src="assets/icon/lift-pink.png" alt="">
-                                                    <img class="margin-right-15 fasilitas-icon" data-toggle="tooltip"
-                                                        data-placement="top" title="Parkir"
-                                                        src="assets/icon/parkir-pink.png" alt="">
-                                                    <img class="margin-right-15" data-toggle="tooltip"
-                                                        data-placement="top" title="Wifi"
-                                                        src="assets/icon/wifi-pink.png" alt="">
-                                                    <img class="margin-right-15 fasilitas-icon" data-toggle="tooltip"
-                                                        data-placement="top" title="24 jam Resepsionis"
-                                                        src="assets/icon/24h-pink.png" alt="">
-                                                    <img class="margin-right-15" data-toggle="tooltip"
-                                                        data-placement="top" title="AC" src="assets/icon/ac-pink.png"
-                                                        alt="">
-                                                    <p class="unactived-text-color text-tebal more-fasilitas font-12"
-                                                        data-toggle="tooltip" data-placement="top" data-html="true"
-                                                        title="Restoran <br> Kolam renang <br> TV <br> Single Bed <br> Large Bed">
-                                                        5+
-                                                    </p>
-                                                </section>
-                                                <button class="btn btn-card-hotel">Lihat harga</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </section>
                         </section>
                     </div>
@@ -560,6 +546,80 @@
                                             </div>
                                         </div>
                                     </div>
+
+                                    <!-- #TODO Isi Deskripsi -->
+                                    <!-- //*asia afrika -->
+                                    <div class="card mb-3 full-width card-hotel">
+                                        <div class="row no-gutters">
+                                            <div class="col-md-6">
+                                                <img src="/assets/img/wisata/asia-afrika.png"
+                                                    class="card-img full-height" alt="...">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="card-body">
+                                                    <h5 class="card-title text-tebal font-18 mb-0">The Great Asia Afrika
+                                                    </h5>
+                                                    <section class="row padding-left-18">
+                                                        <img src="assets/icon/rating-icon.png" class="rating-icon "
+                                                            alt="">
+                                                        <img src="assets/icon/rating-icon.png" class="rating-icon "
+                                                            alt="">
+                                                        <img src="assets/icon/rating-icon.png" class="rating-icon "
+                                                            alt="">
+                                                        <img src="assets/icon/rating-icon.png" class="rating-icon "
+                                                            alt="">
+                                                        <img src="assets/icon/rating-half.png" class="rating-icon "
+                                                            alt="">
+                                                        <p class="text-biasa font-14 unactived-text-color margin-top-2">
+                                                            (7.551)</p>
+                                                    </section>
+                                                    <p
+                                                        class="card-text text-biasa font-14 unactived-text-color mt-lg-n2">
+                                                        Bandung,
+                                                        Jawa Barat
+                                                    </p>
+                                                    <p class="text-biasa"></p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- #TODO Isi Deskripsi -->
+                                    <!-- //*taman hutan raya -->
+                                    <div class="card mb-3 full-width card-hotel">
+                                        <div class="row no-gutters">
+                                            <div class="col-md-6">
+                                                <img src="/assets/img/wisata/taman-hutan.png"
+                                                    class="card-img full-height" alt="...">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="card-body">
+                                                    <h5 class="card-title text-tebal font-18 mb-0">Taman Hutan Raya</h5>
+                                                    <section class="row padding-left-18">
+                                                        <img src="assets/icon/rating-icon.png" class="rating-icon "
+                                                            alt="">
+                                                        <img src="assets/icon/rating-icon.png" class="rating-icon "
+                                                            alt="">
+                                                        <img src="assets/icon/rating-icon.png" class="rating-icon "
+                                                            alt="">
+                                                        <img src="assets/icon/rating-icon.png" class="rating-icon "
+                                                            alt="">
+                                                        <img src="assets/icon/rating-half.png" class="rating-icon "
+                                                            alt="">
+                                                        <p class="text-biasa font-14 unactived-text-color margin-top-2">
+                                                            (11.393)</p>
+                                                    </section>
+                                                    <p
+                                                        class="card-text text-biasa font-14 unactived-text-color mt-lg-n2">
+                                                        Bandung,
+                                                        Jawa Barat
+                                                    </p>
+                                                    <p class="text-biasa"></p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </section>
 
                                 <section class="col-lg-6">
@@ -599,50 +659,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                </section>
-                            </section>
-
-                            <section class="row">
-                                <section class="col-lg-6">
-                                    <!-- #TODO Isi Deskripsi -->
-                                    <!-- //*asia afrika -->
-                                    <div class="card mb-3 full-width card-hotel">
-                                        <div class="row no-gutters">
-                                            <div class="col-md-6">
-                                                <img src="/assets/img/wisata/asia-afrika.png"
-                                                    class="card-img full-height" alt="...">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="card-body">
-                                                    <h5 class="card-title text-tebal font-18 mb-0">The Great Asia Afrika
-                                                    </h5>
-                                                    <section class="row padding-left-18">
-                                                        <img src="assets/icon/rating-icon.png" class="rating-icon "
-                                                            alt="">
-                                                        <img src="assets/icon/rating-icon.png" class="rating-icon "
-                                                            alt="">
-                                                        <img src="assets/icon/rating-icon.png" class="rating-icon "
-                                                            alt="">
-                                                        <img src="assets/icon/rating-icon.png" class="rating-icon "
-                                                            alt="">
-                                                        <img src="assets/icon/rating-half.png" class="rating-icon "
-                                                            alt="">
-                                                        <p class="text-biasa font-14 unactived-text-color margin-top-2">
-                                                            (7.551)</p>
-                                                    </section>
-                                                    <p
-                                                        class="card-text text-biasa font-14 unactived-text-color mt-lg-n2">
-                                                        Bandung,
-                                                        Jawa Barat
-                                                    </p>
-                                                    <p class="text-biasa"></p>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-                                <section class="col-lg-6">
                                     <!-- #TODO Isi Deskripsi -->
                                     <!-- //*Dago dreampark-->
                                     <div class="card mb-3 full-width card-hotel">
@@ -679,49 +695,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                </section>
-                            </section>
-
-                            <section class="row">
-                                <section class="col-lg-6">
-                                    <!-- #TODO Isi Deskripsi -->
-                                    <!-- //*taman hutan raya -->
-                                    <div class="card mb-3 full-width card-hotel">
-                                        <div class="row no-gutters">
-                                            <div class="col-md-6">
-                                                <img src="/assets/img/wisata/taman-hutan.png"
-                                                    class="card-img full-height" alt="...">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="card-body">
-                                                    <h5 class="card-title text-tebal font-18 mb-0">Taman Hutan Raya</h5>
-                                                    <section class="row padding-left-18">
-                                                        <img src="assets/icon/rating-icon.png" class="rating-icon "
-                                                            alt="">
-                                                        <img src="assets/icon/rating-icon.png" class="rating-icon "
-                                                            alt="">
-                                                        <img src="assets/icon/rating-icon.png" class="rating-icon "
-                                                            alt="">
-                                                        <img src="assets/icon/rating-icon.png" class="rating-icon "
-                                                            alt="">
-                                                        <img src="assets/icon/rating-half.png" class="rating-icon "
-                                                            alt="">
-                                                        <p class="text-biasa font-14 unactived-text-color margin-top-2">
-                                                            (11.393)</p>
-                                                    </section>
-                                                    <p
-                                                        class="card-text text-biasa font-14 unactived-text-color mt-lg-n2">
-                                                        Bandung,
-                                                        Jawa Barat
-                                                    </p>
-                                                    <p class="text-biasa"></p>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-                                <section class="col-lg-6">
                                     <!-- #TODO Isi Deskripsi -->
                                     <!-- //*Kampung Tulip -->
                                     <div class="card mb-3 full-width card-hotel">
@@ -818,6 +791,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
     </script>

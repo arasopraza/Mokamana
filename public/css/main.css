@@ -1,3 +1,4 @@
+@import "https://use.fontawesome.com/releases/v5.12.1/css/all.css";
 @font-face{
     font-family: Poppins-Light;
     src: url(../assets/font/Poppins-Light.ttf);
@@ -476,8 +477,25 @@ input[type="email"], input[type="password"],input[type="text"]{
 .gambar img{
     border-radius: 15px;
 }
-.gambar img:nth-child(1){
-    height: 400px;
+
+
+.btn-slide-right{
+    border: none;
+    top: 35%;
+    right: 3%;
+    padding: 5px 10px;
+}
+
+.btn-slide-left{
+    border: none;
+    top: 35%;
+    right: 3%;
+    left: 3%;
+    padding: 5px 10px;
+}
+
+.gambar img#product_img{
+    height: 350px !important;
     object-fit: cover;
 }
 
@@ -492,27 +510,31 @@ input[type="email"], input[type="password"],input[type="text"]{
 }
 
 .grid-many-img img:nth-child(1){
-    width: 140px;
-    height: 100px;
+    width: 120px;
+    height: 80px;
+    border-radius: 10px;
     grid-row: 1;
     grid-column: 1;
 }
 
 .grid-many-img img:nth-child(2){
-    width: 140px;
-    height: 100px;
+    width: 120px;
+    height: 80px;
+    border-radius: 10px;
     grid-row: 1;
     grid-column: 2;
 }
 .grid-many-img img:nth-child(3){
-    width: 140px;
-    height: 100px;
+    width: 120px;
+    height: 80px;
+    border-radius: 10px;
     grid-row: 1;
     grid-column: 3;
 }
 .grid-many-img img:nth-child(4){
-    width: 140px;
-    height: 100px;
+    width: 120px;
+    height: 80px;
+    border-radius: 10px;
     grid-row: 1;
     grid-column: 4;
 }
@@ -520,9 +542,61 @@ input[type="email"], input[type="password"],input[type="text"]{
 .small-img{
     cursor: pointer;
 }
-/* .active{
+.active{
     box-shadow: 0 5px 18px rgb(179, 179, 179);
-} */
+}
+
+.card-detail-hotel{
+    width: 100% !important;
+    padding: 20px;
+    border: 0px solid black;
+    border-radius: 25px;
+    position: relative;
+    box-shadow: 0 5px 10px #dadada;
+}
+
+.rating-detail-hotel{
+    position: absolute;
+    right: 65px;
+    top: 20px;
+}
+
+.fasilitas-wifi{
+    width: 28px;
+    height: 22px;
+}
+
+.fasilitas-ac{
+    margin-top: 3px;
+    width: 30px;
+    height: 16px;
+}
+
+.fasilitas-restoran{
+    width: 31px;
+    height: 24px;
+}
+
+.fasilitas-tv{
+    width: 29px;
+    height: 24px;
+}
+
+.fasilitas-detail-hotel img{
+    filter: grayscale(100%) !important;
+    opacity: 50% !important;
+}
+
+.fasilitas-detail-hotel img:hover{
+    filter: none !important;
+    opacity: 100% !important;
+}
+
+.fasilitas-icon-detail{
+    width: 24px;
+    height: 24px;
+}
+
 
 
 
@@ -861,6 +935,9 @@ input[type="text"]#search_hotel{
     -ms-transform: rotate(45deg) !important;
     transform: rotate(45deg) !important;
   }
+
+
+
 
 
 

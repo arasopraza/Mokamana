@@ -65,9 +65,58 @@ $('.searchinput').on('input', function(e){
 
 
 //* tooltips
-$(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip();   
-  });
+// $(document).ready(function(){
+//     $('[data-toggle="tooltip"]').tooltip();   
+//   });
+
+
+$(document).ready(function() {
+    $("body").tooltip({ selector: '[data-toggle=tooltip]' });
+});
+// $(function(){
+// $('body').tooltip({ selector: '[data-toggle="tooltip"]' });
+// });
+
+
+//* Detail page Hotel & wisata
+let position_img = 0;
+
+$('div.img-bawah > img').on('click', function(e){                
+    $('#product_img').attr('src', $(e)[0].target.src);        
+    for (const x of $('div.img-bawah > img')) {    
+        $(x).removeClass('active');        
+    }
+    $(this).addClass('active');       
+    set_position();         
+});
+
+function set_position(){
+    for (const x of $('div.img-bawah > img')) {    
+        position_img++;
+        if($(x).hasClass('active')){
+            break;            
+        }                
+    }   
+}
+
+$('#btn_slide_right').on('click', function(){
+    position_img++;        
+    set_img(position_img);
+})
+
+function set_img(i){    
+    var i = i;
+    if(i >= $('div.img-bawah > img').length){
+        i = 0;
+        position_img = 0;
+    }
+    $('#product_img').attr('src', $($('div.img-bawah > img')[i]).attr('src'));
+}
+
+$('#btn_slide_left').on('click', function(){
+    position_img--;        
+    set_img(position_img);
+})
 
 
 
