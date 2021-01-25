@@ -197,6 +197,12 @@
                 color: black;
             }
 
+            .container-scroll{
+                padding-right: 80px;
+                margin-right: -80px;
+                overflow-y: scroll !important;
+            }
+
             
 
         

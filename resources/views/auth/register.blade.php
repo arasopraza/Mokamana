@@ -20,7 +20,8 @@
 </head>
 
 <body>
-    <section class="container-fluid">
+    {{-- #FIXME fix scroll nya pake js --}}
+    <section class="overflow-auto">
         <section class="row justify-content-center">
 
             <section class="col-lg-7" style="padding: 0;">
@@ -38,53 +39,56 @@
             <section class="col-lg-5">
                 <form method="POST" action="{{ route('register') }}" class="form-container-regist">
                 @csrf
-                    <div class="text-center atas-form">
+                    <div class="text-center atas-form mt-n3 mb-5">
                         <img src="assets/img/logo.png" alt="">
                         <p>Selamat datang</p>
                     </div>
-                    <div class="form-group">
-                        <label for="name">Username</label>
-                        <input id="name" type="text" class="form-control" name="name" aria-describedby="emailHelp" required autofocus>
-                        @error('name')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                    </div>
 
-                    <div class="form-group">
-                        <label for="email">E-mail Address</label>
-                        <input id="email" type="email" class="form-control" name="email" aria-describedby="emailHelp" required>
-                        @error('email')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
+                    <div class="container-scroll">
+                        <div class="form-group">
+                            <label for="name">Username</label>
+                            <input id="name" type="text" class="form-control" name="name" aria-describedby="emailHelp" required autofocus>
+                            @error('name')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">E-mail Address</label>
+                            <input id="email" type="email" class="form-control" name="email" aria-describedby="emailHelp" required>
+                            @error('email')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input id="password" type="password" class="form-control" name="password" required>
+                            @error('password')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+                        <div class="form-group">
+                            <label for="password-confirm">Confirm Password</label>
+                            <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                            @error('password')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Ingat saya</label>
+                        </div>
+                        <button type="submit" class="btn btn-block">Daftar</button>
+                        <p>Sudah punya akun? <a href="login.html">Masuk disini</a></p>
                     </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input id="password" type="password" class="form-control" name="password" required>
-                        @error('password')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                    </div>
-                    <div class="form-group">
-                        <label for="password-confirm">Password</label>
-                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
-                        @error('password')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                    </div>
-                    <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Ingat saya</label>
-                    </div>
-                    <button type="submit" class="btn btn-block">Daftar</button>
-                    <p>Sudah punya akun? <a href="login.html">Masuk disini</a></p>
                 </form>
 
             </section>

@@ -78,7 +78,7 @@ $(document).ready(function() {
 // });
 
 
-//* Detail page Hotel & wisata
+//* Detail page Hotel & wisata //SLIDER PRODUCT IMAGE
 let position_img = 0;
 
 $('div.img-bawah > img').on('click', function(e){                
@@ -118,6 +118,14 @@ $('#btn_slide_left').on('click', function(){
     set_img(position_img);
 })
 
+//* DATE RANGE PICKER
+$(function() {
+    $('input[name="daterange"]').daterangepicker({
+      opens: 'left'
+    }, function(start, end, label) {
+      console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+    });
+  });
 
 
 

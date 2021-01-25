@@ -53,26 +53,20 @@
                     <h1 class="text-tebal font-40 mt-lg-5">EH <span class="accent-text-color">Kamu</span>,<br>Mau kemana
                         nih?
                     </h1>
+
+                    {{--  #TODO search box index blom selesai --}}
                     <form class="form-margin">
                         <div class="tabs" id="tabs">
-                            <input type="radio" class="tabs-radio" id="hotel" name="tabs" checked="checked">
-                            <label for="hotel" class="tabone text-biasa clicktab" id="">
-                                <section class="row row-tab">
-                                    <img src="{{ asset('assets/icon/hotel.png') }}" class="grayscale" id="icontab" alt="">
-                                    <p class="">Hotel</p>
-                                </section>
-
-                            </label>
-                            <div class="tab">
+                            <div class="container-search-box pb-0">
                                 <div class="form-group">
-                                    <p class="text-sedang accent-text-color font-18">Cari Hotel</p>
+                                    {{-- <p class="text-sedang accent-text-color font-18">Cari Hotel</p> --}}
                                     <div class="inputwith_icon">
                                         <Span>
                                             <img src="{{ asset('assets/icon/search_icon.png') }}" alt="">
                                         </Span>
                                         {{-- #FIXME FIX Ketika value diclear tidak mau autofocus  --}}
                                         <input type="text" class="form-control search-box searchinput"
-                                            aria-describedby="emailHelp" placeholder="Mau nginep dimana nih?" autofocus>
+                                            aria-describedby="emailHelp" placeholder="Mau liburan kemana?" autofocus>
                                     </div>
                                     <button type="button" class="clear-btn clear-btn-index rounded-circle del">
                                         <img src="{{ asset('assets/icon/clear.png') }}" alt="">
@@ -84,32 +78,7 @@
 
                             </div>
 
-                            <input type="radio" class="tabs-radio" name="tabs" id="wisata">
-                            <label for="wisata" class="tabtwo text-biasa clicktab" id="clicktab">
-                                <section class="row row-tab">
-                                    <img src="{{ asset('assets/icon/wisata.png') }}" class="grayscale" id="icontab" alt="">
-                                    <p>Wisata</p>
-                                </section>
-                            </label>
-                            <div class="tab">
-                                <div class="form-group">
-                                    <p class="text-sedang accent-text-color font-18">Cari Wisata</p>
-                                    <div class="inputwith_icon">
-                                        <Span>
-                                            <img src="{{ asset('assets/icon/search_icon.png') }}" alt="">
-                                        </Span>
-                                        {{-- #FIXME FIX Ketika value diclear tidak mau autofocus  --}}
-                                        <input type="text" class="form-control searchinput" aria-describedby="emailHelp"
-                                            placeholder="Mau liburan kemana?" autofocus>
-                                    </div>
-                                    <button type="button" class="clear-btn clear-btn-index rounded-circle del">
-                                        <img src="{{ asset('assets/icon/clear.png') }}" alt="">
-                                    </button>
-
-                                    <button type="submit"
-                                        class="btn accent-box-color search-box-btn text-sedang">Cari</button>
-                                </div>
-                            </div>
+                         
                         </div>
                     </form>
                     <!-- <div class="box-form primary-box-color p-4">

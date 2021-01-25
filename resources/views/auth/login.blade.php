@@ -38,9 +38,9 @@
                 <form method="POST" action="{{ route('login') }}" class="form-container">
                     @csrf
 
-                    <div class="text-center atas-form">
+                    <div class="text-center atas-form mt-n4">
                         <img src="assets/img/logo.png" alt="">
-                        <p>Selamat datang</p>
+                        <p class="mb-5">Selamat datang</p>
                     </div>
 
                     <div class="form-group">

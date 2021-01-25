@@ -9,8 +9,10 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        
     <link rel="stylesheet" href="{{ asset('css/template.css') }}">
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <title>Hello, world!</title>
 </head>
 
@@ -82,62 +84,99 @@
                         </p>
 
                         <p class="text-biasa">Fasilitas</p>
-                        <section class="row padding-left-18 fasilitas-detail-hotel">
-                            <section class="col-lg-10">
-                                <section class="row">
-                                    <section class="width-content col text-center">
-                                        <img class="fasilitas-icon-detail" src="assets/icon/lift-pink.png" alt="">
-                                        <p class="text-biasa mt-2">Lift</p>
-                                    </section>
-                                    <section class="width-content col text-center">
-                                        <img class="fasilitas-icon-detail" src="assets/icon/parkir-pink.png" alt="">
-                                        <p class="text-biasa mt-2">Parkir</p>
-                                    </section>
-                                    <section class="width-content col text-center">
-                                        <img class="fasilitas-wifi" src="assets/icon/wifi-pink.png" alt="">
-                                        <p class="text-biasa text-center mt-2">Wifi</p>
-                                    </section>
-                                    <section class="width-content col text-center">
-                                        <img class="fasilitas-icon-detail" src="assets/icon/24h-pink.png" alt="">
-                                        <p class="text-biasa text-center mt-2">24 jam</p>
-                                    </section>
-                                    <section class="width-content col text-center">
-                                        <img class="fasilitas-ac" src="assets/icon/ac-pink.png" alt="">
-                                        <p class="text-biasa mt-2">AC</p>
-                                    </section>
-                                    <section class="width-content col text-center">
-                                        <img class="fasilitas-restoran" src="assets/icon/restoran.png" alt="">
-                                        <p class="text-biasa mt-2">Restoran</p>
-                                    </section>
-                                    <section class="width-content col text-center">
-                                        <img class="fasilitas-icon-detail" src="assets/icon/kolam-renang.png" alt="">
-                                        <p class="text-biasa mt-2">Kolam renang</p>
-                                    </section>
-                                    <section class="width-content col text-center">
-                                        <img class="fasilitas-tv" src="assets/icon/tv.png" alt="">
-                                        <p class="text-biasa mt-2">TV</p>
-                                    </section>
-                                    <section class="width-content col text-center">
-                                        <img class="fasilitas-icon-detail" src="assets/icon/single-bed.png" alt="">
-                                        <p class="text-biasa mt-2">Single Bed</p>
-                                    </section>
-                                    <section class="width-content col text-center">
-                                        <img class="fasilitas-icon-detail" src="assets/icon/large-bed.png" alt="">
-                                        <p class="text-biasa mt-2">Large Bed</p>
-                                    </section>
-                                </section>
-                            </section>
 
+                        {{-- CAROUSEL ICON --}}
+                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
 
+                                <!-- //*slider 1 -->
+                                <div class="carousel-item active">
+                                    <section class="row pl-4 pr-4">
+                                        <section class="width-content col text-center fasilitas-detail-hotel card-icon">
+                                            <img class="fasilitas-icon-detail" src="assets/icon/lift-pink.png" alt="">
+                                            <p class="text-biasa mt-2">Lift</p>
+                                        </section>
+                                        <section class="width-content col text-center fasilitas-detail-hotel card-icon">
+                                            <img class="fasilitas-icon-detail" src="assets/icon/parkir-pink.png" alt="">
+                                            <p class="text-biasa mt-2">Parkir</p>
+                                        </section>
+                                        <section class="width-content col text-center fasilitas-detail-hotel card-icon">
+                                            <img class="fasilitas-wifi" src="assets/icon/wifi-pink.png" alt="">
+                                            <p class="text-biasa mt-2">Wifi</p>
+                                        </section>
+                                        <section class="width-content col text-center fasilitas-detail-hotel card-icon">
+                                            <img class="fasilitas-icon-detail" src="assets/icon/24h-pink.png" alt="">
+                                            <p class="text-biasa mt-2">24 jam</p>
+                                        </section>
+                                        <section class="width-content col text-center fasilitas-detail-hotel card-icon">
+                                            <img class="fasilitas-ac" src="assets/icon/ac-pink.png" alt="">
+                                            <p class="text-biasa mt-2">AC</p>
+                                        </section>
 
+                                    </section>
+                                </div>
 
+                                <!-- //*slider 2 -->
+                                <div class="carousel-item">
+                                    <section class="row  pl-4 pr-4">
+                                        <section class="width-content col text-center fasilitas-detail-hotel card-icon">
+                                            <img class="fasilitas-restoran" src="assets/icon/restoran.png" alt="">
+                                            <p class="text-biasa mt-2">Restoran</p>
+                                        </section>
+                                        <section class="width-content col text-center fasilitas-detail-hotel card-icon">
+                                            <img class="fasilitas-icon-detail" src="assets/icon/kolam-renang.png"
+                                                alt="">
+                                            <p class="text-biasa mt-2">Kolam renang</p>
+                                        </section>
+                                        <section class="width-content col text-center fasilitas-detail-hotel card-icon">
+                                            <img class="fasilitas-tv" src="assets/icon/tv.png" alt="">
+                                            <p class="text-biasa mt-2">TV</p>
+                                        </section>
+                                        <section class="width-content col text-center fasilitas-detail-hotel card-icon">
+                                            <img class="fasilitas-icon-detail" src="assets/icon/single-bed.png" alt="">
+                                            <p class="text-biasa mt-2">Single Bed</p>
+                                        </section>
+                                        <section class="width-content col text-center fasilitas-detail-hotel card-icon">
+                                            <img class="fasilitas-icon-detail" src="assets/icon/large-bed.png" alt="">
+                                            <p class="text-biasa mt-2">Large Bed</p>
+                                        </section>
 
-                            <!-- <p class="unactived-text-color text-tebal more-fasilitas font-12" data-toggle="tooltip"
-                                data-placement="top" data-html="true"
-                                title="Restoran <br> Kolam renang <br> TV <br> Single Bed <br> Large Bed">
-                                5+
-                            </p> -->
-                        </section>
+                                    </section>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev nav-prev-btn mt-2 ml-n2" href="#carouselExampleControls"
+                                role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next nav-next-btn mt-2 mr-n2" href="#carouselExampleControls"
+                                role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+
+                        <form action="">
+
+                            <label class="mt-lg-3 text-tebal font-16" for="daterange">Check in - Check out</label>
+                            <div class="inputwith_icon mb-5">
+                                <Span>
+                                    <img src="{{ asset('assets/icon/calendar.png') }}" alt="">
+                                </Span>
+                                <input id="daterange"type="text" class="form-control searchinput" aria-describedby="emailHelp"
+                                     name="daterange" value="01/25/2021 - 02/14/2021">
+                            </div>
+                            {{-- #TODO ubah selectnya --}}
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Open this select menu</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                              </select>
+                            <p class="text-biasa font-16 mb-0">Harga</p>
+                            <p class="text-tebal font-18 mb-0">Rp. <span class="accent-text-color">1.000.000</span> <span class="text-sedang font-14">/malam</span></p>
+                            <button type="submit" class="btn text-sedang font-18 position-absolute pl-3 pr-3">Pesan</button>
+                        </form>
                     </div>
                 </div>
             </section>
@@ -174,10 +213,10 @@
             <section class="col-lg-4 mt-2">
                 <p class="font-16 text-sedang">Ikuti kami</p>
                 <a href="#" class="ahref-no-decor">
-                    <img src="asset/icon/fb.png" alt="" class="icon-footer">
+                    <img src="assets/icon/fb.png" alt="" class="icon-footer">
                 </a>
                 <a href="https://www.instagram.com/gya.af/" target="blank" class="ahref-no-decor">
-                    <img src="asset/icon/ig.png" alt="" class="icon-footer">
+                    <img src="assets/icon/ig.png" alt="" class="icon-footer">
                 </a>
 
             </section>
@@ -206,6 +245,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
     -->
     <script type="text/javaScript" src="{{ asset('js/main.js') }}"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 </body>
 
 </html>
