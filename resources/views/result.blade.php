@@ -59,8 +59,9 @@
                 <div class="tab-search">
                     <section class="row">
 
-                        <!-- //* ISI FILTER DI KIRI -->
-                        <section class="col-lg-6">
+                        {{-- //*CONTAINER GRID --}}
+                        <div class="grid-result-container">
+
                             <!-- #TODO four points -->
                             <button type="submit" class="card mb-3 full-width card-hotel">
                                 <div class="row no-gutters">
@@ -69,9 +70,26 @@
                                     </div>
                                     <div class="col-md-8">
                                         <div class="card-body position-relative">
-                                            <h5 class="card-title text-tebal font-16 mb-0 text-left">Four Points by <br>
-                                                Sheraton
-                                                Bandung</h5>
+                                            <section class="row">
+                                                <section class="col-lg-7">
+                                                    <h5 class="card-title text-tebal font-16 mb-0 text-left">Four Points by
+                                                    Sheraton
+                                                    Bandung</h5>
+                                                </section>
+                                                <section class="col-lg-5">
+                                                    <div class="rating-hotel">
+                                                        <p class="accent-text-color text-biasa mb-0 font-14 text-right">
+                                                            Terkesan
+                                                        </p>
+                                                        <p class="unactived-text-color text-biasa font-12 text-right">229
+                                                            review</p>
+        
+                                                    </div>
+                                                    <p class="primary-text-color text-biasa font-16 rating-hotel-iconn">8.4
+                                                    </p>
+                                                </section>
+                                            </section>
+                                            
                                             <section class="row padding-left-18">
                                                 <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
                                                 <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
@@ -82,16 +100,7 @@
                                                 Bandung,
                                                 Jawa Barat
                                             </p>
-                                            <div class="rating-hotel">
-                                                <p class="accent-text-color text-biasa mb-0 font-14 text-right">
-                                                    Terkesan
-                                                </p>
-                                                <p class="unactived-text-color text-biasa font-12 text-right">229
-                                                    review</p>
-
-                                            </div>
-                                            <p class="primary-text-color text-biasa font-16 rating-hotel-iconn">8.4
-                                            </p>
+                                            
 
                                             <p class="text-biasa mb-lg-1 text-left">Fasilitas</p>
                                             <section class="row padding-left-18 fasilitas height-20">
@@ -118,8 +127,24 @@
                                     </div>
                                     <div class="col-md-8">
                                         <div class="card-body">
-                                            <h5 class="card-title text-tebal font-16 mb-0 text-left">The Jayakarta Suites <br>
-                                                Bandung</h5>
+                                            <section class="row">
+                                                <section class="col-lg-7">
+                                                    <h5 class="card-title text-tebal font-16 mb-0 text-left">The Jayakarta Suites
+                                                        Bandung</h5>
+                                                </section>
+                                                <section class="col-lg-5">
+                                                    <div class="rating-hotel">
+                                                        <p class="accent-text-color text-biasa mb-0 font-14 text-right">
+                                                            Mantap
+                                                        </p>
+                                                        <p class="unactived-text-color text-biasa font-12 text-right">1310
+                                                            review</p>
+        
+                                                    </div>
+                                                    <p class="primary-text-color text-biasa font-16 rating-hotel-iconn">7.7
+                                                    </p>
+                                                </section>
+                                            </section>
                                             <section class="row padding-left-18">
                                                 <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
                                                 <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
@@ -130,17 +155,6 @@
                                                 Bandung,
                                                 Jawa Barat
                                             </p>
-                                            <div class="rating-hotel">
-                                                <p class="accent-text-color text-biasa mb-0 font-14 text-right">
-                                                    Mantap
-                                                </p>
-                                                <p class="unactived-text-color text-biasa font-12 text-right">1310
-                                                    review</p>
-
-                                            </div>
-                                            <p class="primary-text-color text-biasa font-16 rating-hotel-iconn">7.7
-                                            </p>
-
                                             <p class="text-biasa mb-lg-1 text-left">Fasilitas</p>
                                             <section class="row padding-left-18 fasilitas height-20">
                                                 <img class="margin-right-15 fasilitas-icon" data-toggle="tooltip" data-placement="top" title="Lift" src="assets/icon/lift-pink.png" alt="">
@@ -166,28 +180,35 @@
                                     </div>
                                     <div class="col-md-8">
                                         <div class="card-body">
-                                            <h5 class="card-title text-tebal font-16 mb-0 text-left">Hilton Bandung</h5>
+                                            <section class="row">
+                                                <section class="col-lg-7">
+                                                    <h5 class="card-title text-tebal font-16 mb-0 text-left">Hilton Bandung</h5>
+                                                </section>
+                                                <section class="col-lg-5">
+                                                    
+                                                    <div class="rating-hotel">
+                                                        <p class="accent-text-color text-biasa mb-0 font-14 text-right">
+                                                            Terkesan
+                                                        </p>
+                                                        <p class="unactived-text-color text-biasa font-12 text-right">667
+                                                            review</p>
+        
+                                                    </div>
+                                                    <p class="primary-text-color text-biasa font-16 rating-hotel-iconn">8.9
+                                                    </p>
+                                                </section>
+                                            </section>
+                                            <p class="card-text text-biasa font-14 unactived-text-color mt-1 text-left">
+                                                Bandung,
+                                                Jawa Barat
+                                            </p>
                                             <section class="row padding-left-18">
                                                 <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
                                                 <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
                                                 <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
                                                 <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
                                             </section>
-                                            <p class="card-text text-biasa font-14 unactived-text-color mt-1 text-left">
-                                                Bandung,
-                                                Jawa Barat
-                                            </p>
-                                            <div class="rating-hotel">
-                                                <p class="accent-text-color text-biasa mb-0 font-14 text-right">
-                                                    Terkesan
-                                                </p>
-                                                <p class="unactived-text-color text-biasa font-12 text-right">667
-                                                    review</p>
-
-                                            </div>
-                                            <p class="primary-text-color text-biasa font-16 rating-hotel-iconn">8.9
-                                            </p>
-
+                                            
                                             <p class="text-biasa mb-lg-1 text-left">Fasilitas</p>
                                             <section class="row padding-left-18 fasilitas height-20">
                                                 <img class="margin-right-15 fasilitas-icon" data-toggle="tooltip" data-placement="top" title="Lift" src="assets/icon/lift-pink.png" alt="">
@@ -260,10 +281,8 @@
                                         </form>
                                     </div>
                                 </div> -->
-                        </section>
 
-                        <!-- //*ISI CARD HOTEL -->
-                        <section class="col-lg-6">
+                            <!-- //*ISI CARD HOTEL -->
 
                             <!-- #TODO aryaduta -->
                             <button type="submit" class="card mb-4 full-width card-hotel">
@@ -273,7 +292,23 @@
                                     </div>
                                     <div class="col-md-8">
                                         <div class="card-body">
-                                            <h5 class="card-title text-tebal font-16 mb-0 text-left">Aryaduta Bandung</h5>
+                                            <section class="row">
+                                                <section class="col-lg-7">
+                                                    <h5 class="card-title text-tebal font-16 mb-0 text-left">Aryaduta Bandung</h5>
+                                                </section>
+                                                <section class="col-lg-5">
+                                                    <div class="rating-hotel">
+                                                        <p class="accent-text-color text-biasa mb-0 font-14 text-right">
+                                                            Terkesan
+                                                        </p>
+                                                        <p class="unactived-text-color text-biasa font-12 text-right">1310
+                                                            review</p>
+        
+                                                    </div>
+                                                    <p class="primary-text-color text-biasa font-16 rating-hotel-iconn">8.4
+                                                    </p>
+                                                </section>
+                                            </section>
                                             <section class="row padding-left-18">
                                                 <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
                                                 <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
@@ -284,16 +319,7 @@
                                                 Bandung,
                                                 Jawa Barat
                                             </p>
-                                            <div class="rating-hotel">
-                                                <p class="accent-text-color text-biasa mb-0 font-14 text-right">
-                                                    Terkesan
-                                                </p>
-                                                <p class="unactived-text-color text-biasa font-12 text-right">1310
-                                                    review</p>
-
-                                            </div>
-                                            <p class="primary-text-color text-biasa font-16 rating-hotel-iconn">8.4
-                                            </p>
+                                            
 
                                             <p class="text-biasa mb-lg-1 text-left">Fasilitas</p>
                                             <section class="row padding-left-18 fasilitas height-20">
@@ -319,9 +345,26 @@
                                     </div>
                                     <div class="col-md-8">
                                         <div class="card-body">
-                                            <h5 class="card-title text-tebal font-16 mb-0 text-left">Courtyard by <br>
-                                                Marriott
-                                                Bandung</h5>
+                                            <section class="row">
+                                                <section class="col-lg-7">
+                                                    <h5 class="card-title text-tebal font-16 mb-0 text-left">Courtyard by
+                                                        Marriott
+                                                        Bandung</h5>
+                                                </section>
+                                                <section class="col-lg-5">
+                                                    <div class="rating-hotel">
+                                                        <p class="accent-text-color text-biasa mb-0 font-14 text-right">
+                                                            Terkesan
+                                                        </p>
+                                                        <p class="unactived-text-color text-biasa font-12 text-right">363
+                                                            review</p>
+        
+                                                    </div>
+                                                    <p class="primary-text-color text-biasa font-16 rating-hotel-iconn">8.6
+                                                    </p>
+                                                </section>
+                                            </section>
+                                            
                                             <section class="row padding-left-18">
                                                 <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
                                                 <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
@@ -332,16 +375,7 @@
                                                 Bandung,
                                                 Jawa Barat
                                             </p>
-                                            <div class="rating-hotel">
-                                                <p class="accent-text-color text-biasa mb-0 font-14 text-right">
-                                                    Terkesan
-                                                </p>
-                                                <p class="unactived-text-color text-biasa font-12 text-right">363
-                                                    review</p>
-
-                                            </div>
-                                            <p class="primary-text-color text-biasa font-16 rating-hotel-iconn">8.6
-                                            </p>
+                                            
 
                                             <p class="text-biasa mb-lg-1 text-left">Fasilitas</p>
                                             <section class="row padding-left-18 fasilitas height-20">
@@ -367,9 +401,27 @@
                                     </div>
                                     <div class="col-md-8">
                                         <div class="card-body">
-                                            <h5 class="card-title text-tebal font-16 mb-0 text-left">Swiss-Belresort <br>
-                                                Bandung
-                                                Dago</h5>
+                                            <section class="row">
+                                                <section class="col-lg-7">
+                                                    <h5 class="card-title text-tebal font-16 mb-0 text-left">Swiss-Belresort
+                                                        Bandung
+                                                        Dago</h5>
+                                                </section>
+                                                <section class="col-lg-5">
+                                                    
+                                                    <div class="rating-hotel">
+                                                        <p class="accent-text-color text-biasa mb-0 font-14 text-right">
+                                                            Terkesan
+                                                        </p>
+                                                        <p class="unactived-text-color text-biasa font-12 text-right">317
+                                                            review</p>
+        
+                                                    </div>
+                                                    <p class="primary-text-color text-biasa font-16 rating-hotel-iconn">8.0
+                                                    </p>
+                                                </section>
+                                            </section>
+                                            
                                             <section class="row padding-left-18">
                                                 <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
                                                 <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
@@ -380,16 +432,7 @@
                                                 Bandung,
                                                 Jawa Barat
                                             </p>
-                                            <div class="rating-hotel">
-                                                <p class="accent-text-color text-biasa mb-0 font-14 text-right">
-                                                    Terkesan
-                                                </p>
-                                                <p class="unactived-text-color text-biasa font-12 text-right">317
-                                                    review</p>
-
-                                            </div>
-                                            <p class="primary-text-color text-biasa font-16 rating-hotel-iconn">8.0
-                                            </p>
+                                            
 
                                             <p class="text-biasa mb-lg-1 text-left">Fasilitas</p>
                                             <section class="row padding-left-18 fasilitas height-20">
@@ -406,7 +449,7 @@
                                     </div>
                                 </div>
                             </button>
-                        </section>
+                        </div>
                     </section>
                 </div>
 
@@ -422,7 +465,8 @@
 
 
                         <section class="row">
-                            <section class="col-lg-6">
+                            <div class="grid-result-container">
+
                                 <!-- #TODO Isi Deskripsi -->
                                 <!-- //*Kawah Putih -->
                                 <button type="submit" class="card mb-3 full-width card-hotel">
@@ -512,9 +556,7 @@
                                         </div>
                                     </div>
                                 </button>
-                            </section>
 
-                            <section class="col-lg-6">
                                 <!-- #TODO Isi Deskripsi -->
                                 <!-- //*Tangkuban Perahu -->
                                 <button type="submit" class="card mb-3 full-width card-hotel">
@@ -602,7 +644,7 @@
                                         </div>
                                     </div>
                                 </button>
-                            </section>
+                            </div>
                         </section>
                     </div>
                 </div>

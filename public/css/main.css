@@ -923,6 +923,11 @@ input[type="text"]#search_hotel{
 
 
 /* //*TAB HOTEL */
+.grid-result-container{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 25px;
+}
 .card-hotel{
     padding: 0;
     border-radius: 25px;
@@ -958,8 +963,6 @@ input[type="text"]#search_hotel{
 }
 .rating-hotel{
     position: absolute;
-    right: 65px;
-    top: 20px;
 }
 
 .fasilitas img{
@@ -995,7 +998,6 @@ input[type="text"]#search_hotel{
     border-radius: 7px;
     position: absolute;
     right: 20px;
-    top: 20px;
 }
 
 .bs-tooltip-top {
