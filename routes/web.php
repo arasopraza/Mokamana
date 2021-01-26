@@ -14,19 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'PagesController@home')->name('index');
+Route::post('/hasil_pencarian', 'HotelController@searchHotel');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
-Route::get('/detail-hotel', function(){
-    return view('detail_hotel');
-});
-
-Route::get('/result', function(){
-    return view('result');
-});
-
-Route::get('/detail-wisata', function(){
-    return view('detail_wisata');
-});

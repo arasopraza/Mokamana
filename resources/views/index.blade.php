@@ -55,7 +55,8 @@
                     </h1>
 
                     {{--  #TODO search box index blom selesai --}}
-                    <form class="form-margin">
+                    <form class="form-margin" method="POST" action="/hasil_pencarian">
+                    @csrf
                         <div class="tabs" id="tabs">
                             <div class="container-search-box pb-0">
                                 <div class="form-group">
@@ -65,7 +66,7 @@
                                             <img src="{{ asset('assets/icon/search_icon.png') }}" alt="">
                                         </Span>
                                         {{-- #FIXME FIX Ketika value diclear tidak mau autofocus  --}}
-                                        <input type="text" class="form-control search-box searchinput"
+                                        <input type="text" name="cari" class="form-control search-box searchinput"
                                             aria-describedby="emailHelp" placeholder="Mau liburan kemana?" autofocus>
                                     </div>
                                     <button type="button" class="clear-btn clear-btn-index rounded-circle del">

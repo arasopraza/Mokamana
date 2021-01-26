@@ -61,7 +61,7 @@
 
     </section>
     <section class="row justify-content-center">
-        <p class="text-tebal font-26 mt-lg-4 mb-lg-n4">Hasil Pencarian "Bandung"</p>
+        <p class="text-tebal font-26 mt-lg-4 mb-lg-n4">Hasil Pencarian {{ $data->cari }}</p>
     </section>
     <section class="container justify-content-center">
         <section class="col-lg-12 pl-0 pr-0">
