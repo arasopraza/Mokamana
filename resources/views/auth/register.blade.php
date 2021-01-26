@@ -83,7 +83,7 @@
                             @enderror
                         </div>
                         <button type="submit" class="btn btn-block mt-5">Daftar</button>
-                        <p>Sudah punya akun? <a href="login.html">Masuk disini</a></p>
+                        <p>Sudah punya akun? <a href="/login">Masuk disini</a></p>
                     </div>
                 </form>
 
