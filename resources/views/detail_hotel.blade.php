@@ -19,7 +19,7 @@
 <body>
     <!-- //*navbar -->
 
-    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-white position-fixed z-index-1 full-width">
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-white position-fixed z-index-3 full-width">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="assets/img/logo.png" style="width: 150px;" alt="">

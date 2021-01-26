@@ -59,8 +59,6 @@
             </section>
         </section>
 
-
-
         <hr class="accent-box-color mt-5">
     </div>
     <!-- //* END FOOTER -->
