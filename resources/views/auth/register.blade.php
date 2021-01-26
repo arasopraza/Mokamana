@@ -82,11 +82,7 @@
                             </span>
                             @enderror
                         </div>
-                        <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Ingat saya</label>
-                        </div>
-                        <button type="submit" class="btn btn-block">Daftar</button>
+                        <button type="submit" class="btn btn-block mt-5">Daftar</button>
                         <p>Sudah punya akun? <a href="login.html">Masuk disini</a></p>
                     </div>
                 </form>

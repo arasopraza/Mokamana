@@ -65,17 +65,9 @@ $('.searchinput').on('input', function(e){
 
 
 //* tooltips
-// $(document).ready(function(){
-//     $('[data-toggle="tooltip"]').tooltip();   
-//   });
-
-
-$(document).ready(function() {
-    $("body").tooltip({ selector: '[data-toggle=tooltip]' });
-});
-// $(function(){
-// $('body').tooltip({ selector: '[data-toggle="tooltip"]' });
-// });
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+  });
 
 
 //* Detail page Hotel & wisata //SLIDER PRODUCT IMAGE
@@ -126,6 +118,35 @@ $(function() {
       console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
     });
   });
+
+
+
+
+//* FILTER GALERI
+const categoryTitle = document.querySelectorAll('.category-title');
+const allCategoryPosts = document.querySelectorAll('.all');
+
+for(let i = 0; i < categoryTitle.length; i++){
+    categoryTitle[i].addEventListener('click', filterPosts.bind(this, categoryTitle[i]));
+}
+
+function filterPosts(item){
+    changeActivePosition(item);
+    for(let i = 0; i < allCategoryPosts.length; i++){
+        if(allCategoryPosts[i].classList.contains(item.attributes.id.value)){
+            allCategoryPosts[i].style.display = "block";
+        } else {
+            allCategoryPosts[i].style.display = "none";
+        }
+    }
+}
+
+function changeActivePosition(activeItem){
+    for(let i = 0; i < categoryTitle.length; i++){
+        categoryTitle[i].classList.remove('active-filter');
+    }
+    activeItem.classList.add('active-filter');
+};
 
 
 

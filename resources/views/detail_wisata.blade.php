@@ -48,7 +48,7 @@
         <section class="row">
             <section class="col-lg-6 gambar">
                 <button class="btn-slide-right position-absolute rounded-circle primary-box-color"
-                    id="btn_slide_right"><span class="fa fa-chevron-right accent-text-color"></span></button>
+                        id="btn_slide_right"><span class="fa fa-chevron-right accent-text-color"></span></button>
                 <button class="btn-slide-left position-absolute rounded-circle primary-box-color"
                     id="btn_slide_left"><span class="fa fa-chevron-left accent-text-color"></span></button>
                 <img src="assets/img/wisata/kampung-tulip.png" class="full-width object-cover" id="product_img" alt="">

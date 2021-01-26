@@ -62,14 +62,14 @@
                         <!-- //* ISI FILTER DI KIRI -->
                         <section class="col-lg-6">
                             <!-- #TODO four points -->
-                            <div class="card mb-3 full-width card-hotel">
+                            <button type="submit" class="card mb-3 full-width card-hotel">
                                 <div class="row no-gutters">
                                     <div class="col-md-4">
                                         <img src="/assets/img/hotel/four-points.png" class="card-img full-height" alt="...">
                                     </div>
                                     <div class="col-md-8">
-                                        <div class="card-body">
-                                            <h5 class="card-title text-tebal font-16 mb-0">Four Points by <br>
+                                        <div class="card-body position-relative">
+                                            <h5 class="card-title text-tebal font-16 mb-0 text-left">Four Points by <br>
                                                 Sheraton
                                                 Bandung</h5>
                                             <section class="row padding-left-18">
@@ -78,7 +78,7 @@
                                                 <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
                                                 <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
                                             </section>
-                                            <p class="card-text text-biasa font-14 unactived-text-color mt-1">
+                                            <p class="card-text text-biasa font-14 unactived-text-color mt-1 text-left">
                                                 Bandung,
                                                 Jawa Barat
                                             </p>
@@ -93,7 +93,7 @@
                                             <p class="primary-text-color text-biasa font-16 rating-hotel-iconn">8.4
                                             </p>
 
-                                            <p class="text-biasa mb-lg-1">Fasilitas</p>
+                                            <p class="text-biasa mb-lg-1 text-left">Fasilitas</p>
                                             <section class="row padding-left-18 fasilitas height-20">
                                                 <img class="margin-right-15 fasilitas-icon" data-toggle="tooltip" data-placement="top" title="Lift" src="assets/icon/lift-pink.png" alt="">
                                                 <img class="margin-right-15 fasilitas-icon" data-toggle="tooltip" data-placement="top" title="Parkir" src="assets/icon/parkir-pink.png" alt="">
@@ -103,22 +103,22 @@
                                                     6+
                                                 </p>
                                             </section>
-                                            <button class="btn btn-card-hotel">Lihat harga</button>
+                                            <p class="text-tebal font-18 mb-0 mt-3 text-left accent-text-color">Rp 1.000.000<span class="text-sedang font-14 second-text-color">/malam</span></p>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </button>
 
 
                             <!-- #TODO Jayakarta -->
-                            <div class="card mb-3 full-width card-hotel">
+                            <button type="submit" class="card mb-3 full-width card-hotel ">
                                 <div class="row no-gutters">
                                     <div class="col-md-4">
                                         <img src="/assets/img/hotel/jayakarta.png" class="card-img full-height" alt="...">
                                     </div>
                                     <div class="col-md-8">
                                         <div class="card-body">
-                                            <h5 class="card-title text-tebal font-16 mb-0">The Jayakarta Suites <br>
+                                            <h5 class="card-title text-tebal font-16 mb-0 text-left">The Jayakarta Suites <br>
                                                 Bandung</h5>
                                             <section class="row padding-left-18">
                                                 <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
@@ -126,7 +126,7 @@
                                                 <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
                                                 <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
                                             </section>
-                                            <p class="card-text text-biasa font-14 unactived-text-color mt-1">
+                                            <p class="card-text text-biasa font-14 unactived-text-color mt-1 text-left">
                                                 Bandung,
                                                 Jawa Barat
                                             </p>
@@ -141,7 +141,7 @@
                                             <p class="primary-text-color text-biasa font-16 rating-hotel-iconn">7.7
                                             </p>
 
-                                            <p class="text-biasa mb-lg-1">Fasilitas</p>
+                                            <p class="text-biasa mb-lg-1 text-left">Fasilitas</p>
                                             <section class="row padding-left-18 fasilitas height-20">
                                                 <img class="margin-right-15 fasilitas-icon" data-toggle="tooltip" data-placement="top" title="Lift" src="assets/icon/lift-pink.png" alt="">
                                                 <img class="margin-right-15 fasilitas-icon" data-toggle="tooltip" data-placement="top" title="Parkir" src="assets/icon/parkir-pink.png" alt="">
@@ -151,29 +151,29 @@
                                                     6+
                                                 </p>
                                             </section>
-                                            <button class="btn btn-card-hotel">Lihat harga</button>
+                                            <p class="text-tebal font-18 mb-0 mt-3 text-left accent-text-color">Rp 1.000.000<span class="text-sedang font-14 second-text-color">/malam</span></p>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </button>
 
 
                             <!-- #TODO Hilton -->
-                            <div class="card mb-3 full-width card-hotel">
+                            <button type="submit" class="card mb-3 full-width card-hotel">
                                 <div class="row no-gutters">
                                     <div class="col-md-4">
                                         <img src="/assets/img/hotel/hilton.png" class="card-img full-height" alt="...">
                                     </div>
                                     <div class="col-md-8">
                                         <div class="card-body">
-                                            <h5 class="card-title text-tebal font-16 mb-0">Hilton Bandung</h5>
+                                            <h5 class="card-title text-tebal font-16 mb-0 text-left">Hilton Bandung</h5>
                                             <section class="row padding-left-18">
                                                 <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
                                                 <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
                                                 <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
                                                 <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
                                             </section>
-                                            <p class="card-text text-biasa font-14 unactived-text-color mt-1">
+                                            <p class="card-text text-biasa font-14 unactived-text-color mt-1 text-left">
                                                 Bandung,
                                                 Jawa Barat
                                             </p>
@@ -188,7 +188,7 @@
                                             <p class="primary-text-color text-biasa font-16 rating-hotel-iconn">8.9
                                             </p>
 
-                                            <p class="text-biasa mb-lg-1">Fasilitas</p>
+                                            <p class="text-biasa mb-lg-1 text-left">Fasilitas</p>
                                             <section class="row padding-left-18 fasilitas height-20">
                                                 <img class="margin-right-15 fasilitas-icon" data-toggle="tooltip" data-placement="top" title="Lift" src="assets/icon/lift-pink.png" alt="">
                                                 <img class="margin-right-15 fasilitas-icon" data-toggle="tooltip" data-placement="top" title="Parkir" src="assets/icon/parkir-pink.png" alt="">
@@ -198,11 +198,11 @@
                                                     6+
                                                 </p>
                                             </section>
-                                            <button class="btn btn-card-hotel">Lihat harga</button>
+                                            <p class="text-tebal font-18 mb-0 mt-3 text-left accent-text-color">Rp 1.000.000<span class="text-sedang font-14 second-text-color">/malam</span></p>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </button>
 
 
 
@@ -266,21 +266,21 @@
                         <section class="col-lg-6">
 
                             <!-- #TODO aryaduta -->
-                            <div class="card mb-4 full-width card-hotel">
+                            <button type="submit" class="card mb-4 full-width card-hotel">
                                 <div class="row no-gutters">
                                     <div class="col-md-4">
                                         <img src="/assets/img/hotel/aryaduta.png" class="card-img full-height" alt="...">
                                     </div>
                                     <div class="col-md-8">
                                         <div class="card-body">
-                                            <h5 class="card-title text-tebal font-16 mb-0">Aryaduta Bandung</h5>
+                                            <h5 class="card-title text-tebal font-16 mb-0 text-left">Aryaduta Bandung</h5>
                                             <section class="row padding-left-18">
                                                 <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
                                                 <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
                                                 <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
                                                 <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
                                             </section>
-                                            <p class="card-text text-biasa font-14 unactived-text-color mt-1">
+                                            <p class="card-text text-biasa font-14 unactived-text-color mt-1 text-left">
                                                 Bandung,
                                                 Jawa Barat
                                             </p>
@@ -295,7 +295,7 @@
                                             <p class="primary-text-color text-biasa font-16 rating-hotel-iconn">8.4
                                             </p>
 
-                                            <p class="text-biasa mb-lg-1">Fasilitas</p>
+                                            <p class="text-biasa mb-lg-1 text-left">Fasilitas</p>
                                             <section class="row padding-left-18 fasilitas height-20">
                                                 <img class="margin-right-15 fasilitas-icon" data-toggle="tooltip" data-placement="top" title="Lift" src="assets/icon/lift-pink.png" alt="">
                                                 <img class="margin-right-15 fasilitas-icon" data-toggle="tooltip" data-placement="top" title="Parkir" src="assets/icon/parkir-pink.png" alt="">
@@ -305,21 +305,21 @@
                                                     6+
                                                 </p>
                                             </section>
-                                            <button class="btn btn-card-hotel">Lihat harga</button>
+                                            <p class="text-tebal font-18 mb-0 mt-3 text-left accent-text-color">Rp 1.000.000<span class="text-sedang font-14 second-text-color">/malam</span></p>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </button>
 
                             <!-- #TODO courtyard by Mariot -->
-                            <div class="card mb-4 full-width card-hotel">
+                            <button type="submit" class="card mb-4 full-width card-hotel">
                                 <div class="row no-gutters">
                                     <div class="col-md-4">
                                         <img src="/assets/img/hotel/courtyard.png" class="card-img full-height" alt="...">
                                     </div>
                                     <div class="col-md-8">
                                         <div class="card-body">
-                                            <h5 class="card-title text-tebal font-16 mb-0">Courtyard by <br>
+                                            <h5 class="card-title text-tebal font-16 mb-0 text-left">Courtyard by <br>
                                                 Marriott
                                                 Bandung</h5>
                                             <section class="row padding-left-18">
@@ -328,7 +328,7 @@
                                                 <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
                                                 <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
                                             </section>
-                                            <p class="card-text text-biasa font-14 unactived-text-color mt-1">
+                                            <p class="card-text text-biasa font-14 unactived-text-color mt-1 text-left">
                                                 Bandung,
                                                 Jawa Barat
                                             </p>
@@ -343,7 +343,7 @@
                                             <p class="primary-text-color text-biasa font-16 rating-hotel-iconn">8.6
                                             </p>
 
-                                            <p class="text-biasa mb-lg-1">Fasilitas</p>
+                                            <p class="text-biasa mb-lg-1 text-left">Fasilitas</p>
                                             <section class="row padding-left-18 fasilitas height-20">
                                                 <img class="margin-right-15 fasilitas-icon" data-toggle="tooltip" data-placement="top" title="Lift" src="assets/icon/lift-pink.png" alt="">
                                                 <img class="margin-right-15 fasilitas-icon" data-toggle="tooltip" data-placement="top" title="Parkir" src="assets/icon/parkir-pink.png" alt="">
@@ -353,21 +353,21 @@
                                                     6+
                                                 </p>
                                             </section>
-                                            <button class="btn btn-card-hotel">Lihat harga</button>
+                                            <p class="text-tebal font-18 mb-0 mt-3 text-left accent-text-color">Rp 1.000.000<span class="text-sedang font-14 second-text-color">/malam</span></p>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </button>
 
                             <!-- #TODO Swiss belresort -->
-                            <div class="card mb-3 full-width card-hotel">
+                            <button type="submit" class="card mb-3 full-width card-hotel">
                                 <div class="row no-gutters">
                                     <div class="col-md-4">
                                         <img src="/assets/img/hotel/swiss-belresort.png" class="card-img full-height" alt="...">
                                     </div>
                                     <div class="col-md-8">
                                         <div class="card-body">
-                                            <h5 class="card-title text-tebal font-16 mb-0">Swiss-Belresort <br>
+                                            <h5 class="card-title text-tebal font-16 mb-0 text-left">Swiss-Belresort <br>
                                                 Bandung
                                                 Dago</h5>
                                             <section class="row padding-left-18">
@@ -376,7 +376,7 @@
                                                 <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
                                                 <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
                                             </section>
-                                            <p class="card-text text-biasa font-14 unactived-text-color mt-1">
+                                            <p class="card-text text-biasa font-14 unactived-text-color mt-1 text-left">
                                                 Bandung,
                                                 Jawa Barat
                                             </p>
@@ -391,7 +391,7 @@
                                             <p class="primary-text-color text-biasa font-16 rating-hotel-iconn">8.0
                                             </p>
 
-                                            <p class="text-biasa mb-lg-1">Fasilitas</p>
+                                            <p class="text-biasa mb-lg-1 text-left">Fasilitas</p>
                                             <section class="row padding-left-18 fasilitas height-20">
                                                 <img class="margin-right-15 fasilitas-icon" data-toggle="tooltip" data-placement="top" title="Lift" src="assets/icon/lift-pink.png" alt="">
                                                 <img class="margin-right-15 fasilitas-icon" data-toggle="tooltip" data-placement="top" title="Parkir" src="assets/icon/parkir-pink.png" alt="">
@@ -401,13 +401,11 @@
                                                     6+
                                                 </p>
                                             </section>
-                                            <button class="btn btn-card-hotel">Lihat harga</button>
+                                            <p class="text-tebal font-18 mb-0 mt-3 text-left accent-text-color">Rp 1.000.000<span class="text-sedang font-14 second-text-color">/malam</span></p>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-
-
+                            </button>
                         </section>
                     </section>
                 </div>
@@ -427,14 +425,14 @@
                             <section class="col-lg-6">
                                 <!-- #TODO Isi Deskripsi -->
                                 <!-- //*Kawah Putih -->
-                                <div class="card mb-3 full-width card-hotel">
+                                <button type="submit" class="card mb-3 full-width card-hotel">
                                     <div class="row no-gutters">
                                         <div class="col-md-6">
                                             <img src="/assets/img/wisata/kawah-putih.png" class="card-img full-height" alt="...">
                                         </div>
                                         <div class="col-md-6">
                                             <div class="card-body">
-                                                <h5 class="card-title text-tebal font-18 mb-0">Kawah Putih</h5>
+                                                <h5 class="card-title text-tebal font-18 mb-0 text-left">Kawah Putih</h5>
                                                 <section class="row padding-left-18">
                                                     <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
                                                     <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
@@ -444,7 +442,7 @@
                                                     <p class="text-biasa font-14 unactived-text-color margin-top-2">
                                                         (4.499)</p>
                                                 </section>
-                                                <p class="card-text text-biasa font-14 unactived-text-color mt-lg-n2">
+                                                <p class="card-text text-biasa font-14 unactived-text-color mt-lg-n2 text-left">
                                                     Bandung,
                                                     Jawa Barat
                                                 </p>
@@ -453,18 +451,18 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </button>
 
                                 <!-- #TODO Isi Deskripsi -->
                                 <!-- //*asia afrika -->
-                                <div class="card mb-3 full-width card-hotel">
+                                <button type="submit" class="card mb-3 full-width card-hotel">
                                     <div class="row no-gutters">
                                         <div class="col-md-6">
                                             <img src="/assets/img/wisata/asia-afrika.png" class="card-img full-height" alt="...">
                                         </div>
                                         <div class="col-md-6">
                                             <div class="card-body">
-                                                <h5 class="card-title text-tebal font-18 mb-0">The Great Asia Afrika
+                                                <h5 class="card-title text-tebal font-18 mb-0 text-left">The Great Asia Afrika
                                                 </h5>
                                                 <section class="row padding-left-18">
                                                     <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
@@ -475,7 +473,7 @@
                                                     <p class="text-biasa font-14 unactived-text-color margin-top-2">
                                                         (7.551)</p>
                                                 </section>
-                                                <p class="card-text text-biasa font-14 unactived-text-color mt-lg-n2">
+                                                <p class="card-text text-biasa font-14 unactived-text-color mt-lg-n2 text-left">
                                                     Bandung,
                                                     Jawa Barat
                                                 </p>
@@ -484,17 +482,17 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </button>
                                 <!-- #TODO Isi Deskripsi -->
                                 <!-- //*taman hutan raya -->
-                                <div class="card mb-3 full-width card-hotel">
+                                <button type="submit" class="card mb-3 full-width card-hotel">
                                     <div class="row no-gutters">
                                         <div class="col-md-6">
                                             <img src="/assets/img/wisata/taman-hutan.png" class="card-img full-height" alt="...">
                                         </div>
                                         <div class="col-md-6">
                                             <div class="card-body">
-                                                <h5 class="card-title text-tebal font-18 mb-0">Taman Hutan Raya</h5>
+                                                <h5 class="card-title text-tebal font-18 mb-0 text-left">Taman Hutan Raya</h5>
                                                 <section class="row padding-left-18">
                                                     <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
                                                     <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
@@ -504,7 +502,7 @@
                                                     <p class="text-biasa font-14 unactived-text-color margin-top-2">
                                                         (11.393)</p>
                                                 </section>
-                                                <p class="card-text text-biasa font-14 unactived-text-color mt-lg-n2">
+                                                <p class="card-text text-biasa font-14 unactived-text-color mt-lg-n2 text-left">
                                                     Bandung,
                                                     Jawa Barat
                                                 </p>
@@ -513,20 +511,20 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </button>
                             </section>
 
                             <section class="col-lg-6">
                                 <!-- #TODO Isi Deskripsi -->
                                 <!-- //*Tangkuban Perahu -->
-                                <div class="card mb-3 full-width card-hotel">
+                                <button type="submit" class="card mb-3 full-width card-hotel">
                                     <div class="row no-gutters">
                                         <div class="col-md-6">
                                             <img src="/assets/img/wisata/tangkuban.png" class="card-img full-height" alt="...">
                                         </div>
                                         <div class="col-md-6">
                                             <div class="card-body">
-                                                <h5 class="card-title text-tebal font-18 mb-0">Tangkuban Perahu</h5>
+                                                <h5 class="card-title text-tebal font-18 mb-0 text-left">Tangkuban Perahu</h5>
                                                 <section class="row padding-left-18">
                                                     <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
                                                     <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
@@ -536,7 +534,7 @@
                                                     <p class="text-biasa font-14 unactived-text-color margin-top-2">
                                                         (4.148)</p>
                                                 </section>
-                                                <p class="card-text text-biasa font-14 unactived-text-color mt-lg-n2">
+                                                <p class="card-text text-biasa font-14 unactived-text-color mt-lg-n2 text-left">
                                                     Bandung,
                                                     Jawa Barat
                                                 </p>
@@ -545,17 +543,17 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </button>
                                 <!-- #TODO Isi Deskripsi -->
                                 <!-- //*Dago dreampark-->
-                                <div class="card mb-3 full-width card-hotel">
+                                <button type="submit" class="card mb-3 full-width card-hotel">
                                     <div class="row no-gutters">
                                         <div class="col-md-6">
                                             <img src="/assets/img/wisata/dago-park.png" class="card-img full-height" alt="...">
                                         </div>
                                         <div class="col-md-6">
                                             <div class="card-body">
-                                                <h5 class="card-title text-tebal font-18 mb-0">Dago Dreampark</h5>
+                                                <h5 class="card-title text-tebal font-18 mb-0 text-left">Dago Dreampark</h5>
                                                 <section class="row padding-left-18">
                                                     <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
                                                     <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
@@ -565,7 +563,7 @@
                                                     <p class="text-biasa font-14 unactived-text-color margin-top-2">
                                                         (15.285)</p>
                                                 </section>
-                                                <p class="card-text text-biasa font-14 unactived-text-color mt-lg-n2">
+                                                <p class="card-text text-biasa font-14 unactived-text-color mt-lg-n2 text-left">
                                                     Bandung,
                                                     Jawa Barat
                                                 </p>
@@ -574,17 +572,17 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </button>
                                 <!-- #TODO Isi Deskripsi -->
                                 <!-- //*Kampung Tulip -->
-                                <div class="card mb-3 full-width card-hotel">
+                                <button type="submit" class="card mb-3 full-width card-hotel">
                                     <div class="row no-gutters">
                                         <div class="col-md-6">
                                             <img src="/assets/img/wisata/kampung-tulip.png" class="card-img full-height" alt="...">
                                         </div>
                                         <div class="col-md-6">
                                             <div class="card-body">
-                                                <h5 class="card-title text-tebal font-18 mb-0">Kampoeng Tulip</h5>
+                                                <h5 class="card-title text-tebal font-18 mb-0 text-left">Kampoeng Tulip</h5>
                                                 <section class="row padding-left-18">
                                                     <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
                                                     <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
@@ -594,7 +592,7 @@
                                                     <p class="text-biasa font-14 unactived-text-color margin-top-2">
                                                         (3.359)</p>
                                                 </section>
-                                                <p class="card-text text-biasa font-14 unactived-text-color mt-lg-n2">
+                                                <p class="card-text text-biasa font-14 unactived-text-color mt-lg-n2 text-left">
                                                     Bandung,
                                                     Jawa Barat
                                                 </p>
@@ -603,7 +601,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </button>
                             </section>
                         </section>
                     </div>
