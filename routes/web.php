@@ -26,3 +26,7 @@ Route::get('/detail-hotel', function(){
 Route::get('/result', function(){
     return view('result');
 });
+
+Route::get('/detail-wisata', function(){
+    return view('detail_wisata');
+});

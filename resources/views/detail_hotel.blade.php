@@ -157,22 +157,30 @@
                         </div>
 
                         <form action="">
-
-                            <label class="mt-lg-3 text-tebal font-16" for="daterange">Check in - Check out</label>
-                            <div class="inputwith_icon mb-5">
-                                <Span>
-                                    <img src="{{ asset('assets/icon/calendar.png') }}" alt="">
-                                </Span>
-                                <input id="daterange"type="text" class="form-control searchinput" aria-describedby="emailHelp"
-                                     name="daterange" value="01/25/2021 - 02/14/2021">
+                            <div class="mt-lg-3">
+                                <label class="mb-lg-n3 text-tebal font-16" for="daterange">Check in - Check out</label>
+                                <div class="inputwith_icon mb-5">
+                                    <Span>
+                                        <img src="{{ asset('assets/icon/calendar.png') }}" alt="">
+                                    </Span>
+                                    <input id="daterange"type="text" class="form-control searchinput" aria-describedby="emailHelp"
+                                        name="daterange" value="01/25/2021 - 02/14/2021">
+                                </div>
                             </div>
-                            {{-- #TODO ubah selectnya --}}
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Open this select menu</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                              </select>
+                            <div class="mt-lg-n4">
+                                <label class="text-tebal font-16" for="select">Pilih kamar</label>
+                                <div class="inputwith_icon mb-5">
+                                    <Span>
+                                        <img class="large-bed-icon" src="{{ asset('assets/icon/large-bed.png') }}" alt="">
+                                    </Span>
+                                    <select class="custom-select second-text-color" id="select">
+                                        <option>1 kamar, 1 tamu</option>
+                                        <option>2 kamar, 1 tamu</option>
+                                        <option>4 kamar, 1 tamu</option>
+                                        <option>5 kamar, 2 tamu</option>
+                                    </select>
+                                </div>
+                            </div>
                             <p class="text-biasa font-16 mb-0">Harga</p>
                             <p class="text-tebal font-18 mb-0">Rp. <span class="accent-text-color">1.000.000</span> <span class="text-sedang font-14">/malam</span></p>
                             <button type="submit" class="btn text-sedang font-18 position-absolute pl-3 pr-3">Pesan</button>

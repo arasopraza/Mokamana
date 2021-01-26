@@ -321,6 +321,15 @@ body,html{
     padding-left: 45px;
 }
 
+.inputwith_icon select.custom-select{
+    background-color:  #F3F5F9;
+    position: relative;
+    padding-left: 45px;
+    height: 45px;
+    border-radius: 10px;
+    border: 0;
+}
+
 
 input[type="email"]:focus,input[type="password"]:focus,input[type="text"]:focus{
     border: 1px solid #F62065;
@@ -479,7 +488,7 @@ input[type="email"], input[type="password"],input[type="text"]{
 /* //*SINGLE DESTINASI PAGE */
 
 .cont-single-destinasi{
-    padding-top: 100px;
+    margin-top: 100px;
 }
 
 .gambar img{
@@ -630,6 +639,28 @@ span.carousel-control-prev-icon{
 span.carousel-control-next-icon{
     width: 14px;
 }
+
+.inputwith_icon select:focus,input[type="text"]:focus{
+    border: 2px solid #F62065;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    outline: 0 none;
+}
+
+.inputwith_icon select,input[type="text"]{
+    background-color: #F3F5F9;
+    border: 0;
+    border-radius: 10px;
+    color: black;
+    padding-left: 24px;
+}
+
+.large-bed-icon{
+    margin-top: 15px !important;
+}
+
+
+
+/* //*Detail wisata */
 
 
 
