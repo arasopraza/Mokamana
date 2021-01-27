@@ -14,7 +14,7 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-auto navbar-config text-sedang font-18">
                 <a class="nav-link pl-4" href="#">Galeri<span class="sr-only">(current)</span></a>
-                <a class="nav-link pl-4" href="#">Kontak</a>
+                <a class="nav-link pl-4" href="tentang-kami/#kontak">Kontak</a>
                 <a class="nav-link pl-4" href="#">Tentang Kami</a>
                 <a class="nav-link pl-4 profile-icon" href="/login" tabindex="-1" aria-disabled="true">
                     <button type="submit" class="btn btn-block text-biasa mt-n1">Masuk</button>
@@ -97,12 +97,12 @@
 <div class="container justify-content-center">
 
     <!-- //*Destinasi Populer -->
-    <section class="row">
+    <section class="row" data-aos="fade-up">
         <section class="col-lg-12 mt-lg-5 mb-lg-5">
             <p class="judul text-tebal font-30">Destinasi Pilihan</p>
         </section>
     </section>
-    <section class="row pb-xl-5">
+    <section class="row pb-xl-5" data-aos="fade-up">
         <section class="col-lg-4">
             <a href="#" class="ahref-no-decor second-text-color ">
                 <div class="card">
@@ -159,7 +159,7 @@
         </section>
     </section>
 
-    <section class="row pb-xl-5">
+    <section class="row pb-xl-5" data-aos="fade-up">
         <section class="col-lg-4">
             <a href="#" class="ahref-no-decor second-text-color ">
                 <div class="card">
@@ -218,7 +218,7 @@
     <!-- //*END Destinasi Populer -->
 
     <!-- //*banner -->
-    <section class="row">
+    <section class="row" data-aos="fade-up">
         <section class="col-lg-5">
             <h1 class="font-34 text-tebal title-santai">Santai Bersama Keluarga <br> dan Teman
             </h1>
@@ -240,14 +240,14 @@
 
 <!-- //*Galery -->
 
-<div class="jumbotron jumbotron-fluid galery-box">
+<div class="jumbotron jumbotron-fluid galery-box" data-aos="fade-up">
     <section class="row">
         <section class="col-lg-6">
             <img src="{{ ('assets/img/galery.png') }}" class="img-galery" alt="">
         </section>
         <section class="col-lg-6">
             <h1 class="galery-title font-34 text-tebal">Serunya liburan bersama <span class="accent-text-color text-tebal">Mokamana</span></h1>
-            <a href="login.html" class="ahref-no-decor">
+            <a href="galeri" class="ahref-no-decor">
                 <button type="submit" class="btn text-sedang btn-galery">Ke Galeri</button>
             </a>
         </section>

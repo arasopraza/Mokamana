@@ -11,7 +11,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="{{ asset('css/template.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}">  
     <link rel="icon" href="{{ asset('assets/icon/logo_title.png') }}" type="image/icon type">
     <title>@yield('title')</title>
 </head>
@@ -25,8 +25,8 @@
     <!-- //* Jumbroton-->
     @yield('content')
     <!-- //*FOOTER -->
-    <div class="container justify-content-center">
-        <section class="row margin-footer">
+    <div class="container justify-content-center margin-footer" data-aos="fade">
+        <section class="row ">
             <section class="col-lg-4">
                 <img src="{{ asset('assets/img/logo.png') }}" class="logo-footer" alt="">
                 <p class="accent-text-color text-tebal font-18">2021 © Copyright</p>

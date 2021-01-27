@@ -46,7 +46,9 @@
     background: #636e72; 
   }
 
-
+html{
+    scroll-behavior: smooth;
+}
 body,html{
     overflow-x: hidden;
 }
@@ -120,7 +122,7 @@ body,html{
 
 /* //* footer */
 .margin-footer{
-    margin-top: 120px;
+    margin-top: 200px;
 }
 
 .logo-footer{
@@ -703,7 +705,7 @@ span.carousel-control-next-icon{
 .galeri-container{
     width: 90vw;
     margin: 0 auto;
-    padding: 130px 0;
+    padding-top: 130px;
 }
 .galeri-container > h2{
     text-align: center;
@@ -835,8 +837,8 @@ span.carousel-control-next-icon{
 }
 
 .clear-btn-search{
-    width: 24px;
-    height: 24px;
+    width: 18px;
+    height: 18px;
     margin-left: 460px;
     bottom: 0;
     margin-bottom: 11px;
