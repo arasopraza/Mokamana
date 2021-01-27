@@ -19,6 +19,11 @@
     src: url(../assets/font/Poppins-SemiBold.ttf);
 }
 
+@font-face{
+    font-family: Poppins-Bold;
+    src: url(../assets/font/Poppins-Bold.ttf);
+}
+
 /* SCROLLBAR CUSTOM */
 /* width */
 ::-webkit-scrollbar {
@@ -72,9 +77,6 @@ body,html{
     background-color: #a0a0a0;
     border: 0;
 }
-
-
-
 
 /* //*navbar */
 
@@ -194,22 +196,27 @@ body,html{
 .container-search-box{
     background-color: white;
     position: relative;
-    padding: 20px;
-    width: 100%;
-    border-radius: 18px;
+    padding: 26px;
+    width: 80%;
+    border-radius: 15px !important;
+   box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+   0 2px 2px rgba(0,0,0,0.11), 
+   0 4px 4px rgba(0,0,0,0.11), 
+   0 6px 8px rgba(0,0,0,0.11),
+   0 8px 16px rgba(0,0,0,0.11);
 }
 
 .clear-btn-index{
-    width: 24px;
-    height: 24px;    
+    width: 18px;
+    height: 18px;    
     bottom: 0;
-    margin-left: 385px;
-    margin-bottom: 27px;
+    margin-left: 274px;
+    margin-bottom: 30px;
 }
 
 .clear-btn img{
-    width: 10px;
-    height: 10px;
+    width: 7px;
+    height: 7px;
 }
 
 .search-box-btn{
@@ -218,7 +225,7 @@ body,html{
     height: 45px;
     padding-right: 20px;
     padding-left: 20px;
-    margin-left: 33.3vw;
+    margin-left: 24vw;
     margin-bottom: 2.6vh;
     z-index: 1;
 }
@@ -415,6 +422,7 @@ input[type="email"], input[type="password"],input[type="text"]{
     grid-row: 2;  
 }
 
+
 .location-box div:nth-child(1){
     left: -70px;
     top: -10px;
@@ -423,6 +431,7 @@ input[type="email"], input[type="password"],input[type="text"]{
     border-bottom-right-radius: 0px;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.2);
 }
 .location-box div:nth-child(2){
     left: 20px;
@@ -432,6 +441,7 @@ input[type="email"], input[type="password"],input[type="text"]{
     border-bottom-right-radius: 25px;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.2);
 }
 .location-box div:nth-child(3){
     left: 440px;
@@ -440,6 +450,7 @@ input[type="email"], input[type="password"],input[type="text"]{
     border-bottom-right-radius: 25px;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 25px;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.2);
 }
 
 .title-santai{
@@ -778,8 +789,6 @@ span.carousel-control-next-icon{
     border-radius: 16px;
 }
 
-.all img:hover{
-}
 
 .pantai-laut .category-name{
     background: #00a7ea;
@@ -930,6 +939,7 @@ input[type="text"]#search_hotel{
 }
 .card-hotel{
     padding: 0;
+    height: fit-content;
     border-radius: 25px;
     position: relative;
     box-shadow: 0 5px 10px #dadada;
@@ -1087,6 +1097,68 @@ input[type="text"]#search_hotel{
     transform: rotate(45deg) !important;
   }
 
+
+
+
+  /* //*TENTANG KAMI PAGE */
+.jumbotron-about{
+    background-image: url(../assets/img/tentang-kami.png);
+    height: 620px;
+}
+
+.jumbotron-about::after{
+    z-index: 0 !important; 
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 50%;
+    position: absolute; 
+    bottom: 0;
+}
+
+.jumbotron-about .display-4{
+    position: absolute;
+    color: white;
+    margin-top: 170px;
+}
+
+.jumbotron-about h1:nth-child(2){
+    top: 160px;
+}
+
+.jumbotron-about img{
+    left: 50%;
+    right: 50%;
+    bottom: 3%;
+}
+
+.margin-about{
+    margin-left: 25%;
+    margin-top: 380px;
+}
+
+.margin-sub{
+    margin-left: 40%;
+    margin-top: 120px;
+}  
+
+.row-img{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 200px!important;
+
+}
+
+.img-box-about{
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 300px;
+    height: 300px;
+    background-color: #a0a0a0;
+    margin-right: 0;
+}
 
 
 

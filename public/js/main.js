@@ -149,5 +149,10 @@ function changeActivePosition(activeItem){
 };
 
 
+// ANIMASI ON SCROLL CSS
+AOS.init({
+    duration: 1200
+});
+
 
 

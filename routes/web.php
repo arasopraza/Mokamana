@@ -24,3 +24,7 @@ Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::get('/galeri', function () {
     return view('galeri');    
 });
+
+Route::get('/tentang-kami', function () {
+    return view('tentang_kami');    
+});

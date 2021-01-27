@@ -30,17 +30,19 @@
     <div class="container">
         <section class="row">
             <section class="col-lg-6">
-                <h1 class="text-tebal font-40 mt-lg-5">EH <span class="accent-text-color">Kamu</span>,<br>Mau kemana
+                <h1 class="text-tebal-banget font-40 mt-lg-5">EH <span class="accent-text-color">Kamu</span>,<br>Mau kemana
                     nih?
                 </h1>
+                <p class="text-biasa font-16 mt-3 mb-0">Cukup ketik kota yang ingin anda tuju</p>
+                <p class="text-biasa font-16 mb-lg-n5">lalu klik cari, gampang kan?</p>
 
                 {{-- #TODO search box index blom selesai --}}
                 <form class="form-margin" method="POST" action="/hasil_pencarian">
                     @csrf
                     <div class="tabs" id="tabs">
-                        <div class="container-search-box pb-0">
+                        <div class="container-search-box mt-lg-n3 pb-0">
                             <div class="form-group">
-                                {{-- <p class="text-sedang accent-text-color font-18">Cari Hotel</p> --}}
+                                <p class="text-sedang font-18">Mulai cari liburanmu</p>
                                 <div class="inputwith_icon">
                                     <Span>
                                         <img src="{{ asset('assets/icon/search_icon.png') }}" alt="">
