@@ -80,7 +80,6 @@ $urlPhoto = str_replace("{size}", $sizeImage, $url);
         </button>
     </form>
 
-
 </section>
 <section class="row justify-content-center">
     <p class="text-tebal font-26 mt-lg-4 mb-lg-n4">Hasil Pencarian {{ $data->cari }}</p>
@@ -99,18 +98,18 @@ $urlPhoto = str_replace("{size}", $sizeImage, $url);
                 <!-- //*isi tab hotel -->
                 <div class="tab-search">
                     <section class="row">
-                        <?php foreach ($hotel as $hotels) : ?>
-                            {{-- //*CONTAINER GRID --}}
-                            <div class="grid-result-container">
+                        {{-- //*CONTAINER GRID --}}
+                        <div class="grid-result-container">
 
-                                <!-- #TODO four points -->
-                                <button type="submit" class="card mb-3 full-width card-hotel">
+                            <!-- #TODO four points -->
+                            <?php foreach ($hotel as $hotels) : ?>
+                                <button type="submit" class="card mb-4 full-width card-hotel">
                                     <div class="row no-gutters">
                                         <div class="col-md-4">
-                                            <img src="<?= $urlPhoto; ?>" class="card-img full-height" alt="...">
+                                            <img src="/assets/img/hotel/aryaduta.png" class="card-img full-height" alt="...">
                                         </div>
                                         <div class="col-md-8">
-                                            <div class="card-body position-relative">
+                                            <div class="card-body">
                                                 <section class="row">
                                                     <section class="col-lg-7">
                                                         <h5 class="card-title text-tebal font-16 mb-0 text-left"><?= $hotels["name"]; ?></h5>
@@ -120,7 +119,7 @@ $urlPhoto = str_replace("{size}", $sizeImage, $url);
                                                             <p class="accent-text-color text-biasa mb-0 font-14 text-right">
                                                                 Terkesan
                                                             </p>
-                                                            <p class="unactived-text-color text-biasa font-12 text-right">229
+                                                            <p class="unactived-text-color text-biasa font-12 text-right">1310
                                                                 review</p>
 
                                                         </div>
@@ -128,12 +127,37 @@ $urlPhoto = str_replace("{size}", $sizeImage, $url);
                                                         </p>
                                                     </section>
                                                 </section>
-
                                                 <section class="row padding-left-18">
-                                                    <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
-                                                    <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
-                                                    <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
-                                                    <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
+                                                    <?php $ratingHotel = $getDetailHotel["data"]["body"]["propertyDescription"]["starRating"]; ?>
+                                                    <?php switch ($ratingHotel) :
+                                                        case 5: ?>
+                                                            <?php for ($x = 1; $x <= 5; $x++) { ?>
+                                                                <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
+                                                            <?php } ?>
+                                                            <?php break; ?>
+                                                            <?php case 4: ?>
+                                                                <?php for ($x = 1; $x <= 4; $x++) { ?>
+                                                                <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
+                                                            <?php } ?>
+                                                            <?php break; ?>
+                                                        <?php case 3: ?>
+                                                            <?php for ($x = 1; $x <= 3; $x++) { ?>
+                                                                <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
+                                                            <?php } ?>
+                                                            <?php break; ?>
+                                                        <?php case 2: ?>
+                                                            <?php for ($x = 1; $x <= 2; $x++) { ?>
+                                                                <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
+                                                            <?php } ?>
+                                                            <?php break; ?>
+                                                        <?php case 1: ?>
+                                                            <?php for ($x = 1; $x <= 1; $x++) { ?>
+                                                                <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
+                                                            <?php } ?>
+                                                            <?php break; ?>
+                                                        <?php default:?>
+                                                            <?php echo "Rating not available"; ?>
+                                                    <?php endswitch ?>
                                                 </section>
                                                 <p class="card-text text-biasa font-14 unactived-text-color mt-1 text-left">
                                                     <?= $getDetailHotel["data"]["body"]["pdpHeader"]["hotelLocation"]["locationName"]; ?>
@@ -150,12 +174,11 @@ $urlPhoto = str_replace("{size}", $sizeImage, $url);
                                                         6+
                                                     </p>
                                                 </section>
-                                                <p class="text-tebal font-18 mb-0 mt-3 text-left accent-text-color">Rp 1.000.000<span class="text-sedang font-14 second-text-color">/malam</span></p>
+                                                <p class="text-tebal font-18 mb-0 mt-3 text-left accent-text-color"><?= $getDetailHotel["data"]["body"]["propertyDescription"]["featuredPrice"]["currentPrice"]["formatted"]; ?><span class="text-sedang font-14 second-text-color">/malam</span></p>
                                             </div>
                                         </div>
                                     </div>
                                 </button>
-
                                 <!-- <div class="card" style="width: 18rem;">
                                     <div class="card-body">
                                         <h5 class="card-title text-tebal">Filter Berdasarkan:</h5>
@@ -214,58 +237,8 @@ $urlPhoto = str_replace("{size}", $sizeImage, $url);
                                 <!-- //*ISI CARD HOTEL -->
 
                                 <!-- #TODO aryaduta -->
-                                <button type="submit" class="card mb-4 full-width card-hotel">
-                                    <div class="row no-gutters">
-                                        <div class="col-md-4">
-                                            <img src="/assets/img/hotel/aryaduta.png" class="card-img full-height" alt="...">
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="card-body">
-                                                <section class="row">
-                                                    <section class="col-lg-7">
-                                                        <h5 class="card-title text-tebal font-16 mb-0 text-left"><?= $hotels["name"]; ?></h5>
-                                                    </section>
-                                                    <section class="col-lg-5">
-                                                        <div class="rating-hotel">
-                                                            <p class="accent-text-color text-biasa mb-0 font-14 text-right">
-                                                                Terkesan
-                                                            </p>
-                                                            <p class="unactived-text-color text-biasa font-12 text-right">1310
-                                                                review</p>
-
-                                                        </div>
-                                                        <p class="primary-text-color text-biasa font-16 rating-hotel-iconn">8.4
-                                                        </p>
-                                                    </section>
-                                                </section>
-                                                <section class="row padding-left-18">
-                                                    <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
-                                                    <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
-                                                    <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
-                                                    <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
-                                                </section>
-                                                <p class="card-text text-biasa font-14 unactived-text-color mt-1 text-left">
-                                                    <?= $getDetailHotel["data"]["body"]["pdpHeader"]["hotelLocation"]["locationName"]; ?>
-                                                </p>
-
-
-                                                <p class="text-biasa mb-lg-1 text-left">Fasilitas</p>
-                                                <section class="row padding-left-18 fasilitas height-20">
-                                                    <img class="margin-right-15 fasilitas-icon" data-toggle="tooltip" data-placement="top" title="Lift" src="assets/icon/lift-pink.png" alt="">
-                                                    <img class="margin-right-15 fasilitas-icon" data-toggle="tooltip" data-placement="top" title="Parkir" src="assets/icon/parkir-pink.png" alt="">
-                                                    <img class="margin-right-15" data-toggle="tooltip" data-placement="top" title="Wifi" src="assets/icon/wifi-pink.png" alt="">
-                                                    <img class="margin-right-15 fasilitas-icon" data-toggle="tooltip" data-placement="top" title="24 jam Resepsionis" src="assets/icon/24h-pink.png" alt="">
-                                                    <p class="unactived-text-color text-tebal more-fasilitas font-12" data-toggle="tooltip" data-placement="top" data-html="true" title="Restoran <br> AC <br> Kolam renang <br> TV <br> Single Bed <br> Large Bed">
-                                                        6+
-                                                    </p>
-                                                </section>
-                                                <p class="text-tebal font-18 mb-0 mt-3 text-left accent-text-color">Rp 1.000.000<span class="text-sedang font-14 second-text-color">/malam</span></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </button>
-                            </div>
-                        <?php endforeach; ?>
+                            <?php endforeach; ?>
+                        </div>
                     </section>
                 </div>
 
