@@ -30,17 +30,17 @@ function get_CURL($url)
 
 $cityName = $data->cari;
 $getHotel = get_CURL("https://hotels4.p.rapidapi.com/locations/search?query=$cityName&locale=en_US");
-$hotel = $getHotel["suggestions"][1]["entities"];
+$responseHotel = $getHotel["suggestions"][1]["entities"];
 
-foreach ($hotel as $hotels) {
-    $id = $hotels["destinationId"];
-}
-$getDetailHotel = get_CURL("https://hotels4.p.rapidapi.com/properties/get-details?id=$id&locale=en_US&currency=USD&checkOut=2020-01-15&adults1=1&checkIn=2020-01-08");
+// $id = [];
+// foreach ($responseHotel as $hotels) {
+//     $id[] = $hotels["destinationId"];
+//     $idd = $id;
+// }
 
-$getPhotoHotel = get_CURL("https://hotels4.p.rapidapi.com/properties/get-hotel-photos?id=$id");
-$url = $getPhotoHotel["hotelImages"][0]["baseUrl"];
-$sizeImage = 'z';
-$urlPhoto = str_replace("{size}", $sizeImage, $url);
+// $getDetailHotel = get_CURL("https://hotels4.p.rapidapi.com/properties/get-details?id=$id&locale=en_US&currency=USD&checkOut=2020-01-15&adults1=1&checkIn=2020-01-08");
+// $responseDetailHotel = $getDetailHotel["data"]["body"];
+// $price = $responseDetailHotel["propertyDescription"]["featuredPrice"]["currentPrice"]["formatted"];
 
 ?>
 
@@ -102,11 +102,16 @@ $urlPhoto = str_replace("{size}", $sizeImage, $url);
                         <div class="grid-result-container">
 
                             <!-- #TODO four points -->
-                            <?php foreach ($hotel as $hotels) : ?>
+                            <?php foreach ($responseHotel as $hotels) : ?>
                                 <button type="submit" class="card mb-4 full-width card-hotel">
                                     <div class="row no-gutters">
                                         <div class="col-md-4">
-                                            <img src="/assets/img/hotel/aryaduta.png" class="card-img full-height" alt="...">
+                                            <?php $id = $hotels["destinationId"];
+                                            $getPhotoHotel = get_CURL("https://hotels4.p.rapidapi.com/properties/get-hotel-photos?id=$id");
+                                            $url = $getPhotoHotel["hotelImages"][0]["baseUrl"];
+                                            $sizeImage = 'z';
+                                            $urlPhoto = str_replace("{size}", $sizeImage, $url); ?>
+                                            <img src="<?= $urlPhoto; ?>" class="card-img full-height" alt="...">
                                         </div>
                                         <div class="col-md-8">
                                             <div class="card-body">
@@ -128,39 +133,47 @@ $urlPhoto = str_replace("{size}", $sizeImage, $url);
                                                     </section>
                                                 </section>
                                                 <section class="row padding-left-18">
-                                                    <?php $ratingHotel = $getDetailHotel["data"]["body"]["propertyDescription"]["starRating"]; ?>
-                                                    <?php switch ($ratingHotel) :
+                                                    <?php $id = $hotels["destinationId"];
+                                                    $getDetailHotel = get_CURL("https://hotels4.p.rapidapi.com/properties/get-details?id=$id&locale=en_US&currency=USD&checkOut=2020-01-15&adults1=1&checkIn=2020-01-08");
+                                                    $ratingHotel = $getDetailHotel["data"]["body"]["propertyDescription"]["starRating"]; ?>
+                                                    <?php switch ($ratingHotel):
                                                         case 5: ?>
                                                             <?php for ($x = 1; $x <= 5; $x++) { ?>
                                                                 <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
                                                             <?php } ?>
                                                             <?php break; ?>
-                                                            <?php case 4: ?>
-                                                                <?php for ($x = 1; $x <= 4; $x++) { ?>
+                                                        <?php
+                                                        case 4: ?>
+                                                            <?php for ($x = 1; $x <= 4; $x++) { ?>
                                                                 <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
                                                             <?php } ?>
                                                             <?php break; ?>
-                                                        <?php case 3: ?>
+                                                        <?php
+                                                        case 3: ?>
                                                             <?php for ($x = 1; $x <= 3; $x++) { ?>
                                                                 <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
                                                             <?php } ?>
                                                             <?php break; ?>
-                                                        <?php case 2: ?>
+                                                        <?php
+                                                        case 2: ?>
                                                             <?php for ($x = 1; $x <= 2; $x++) { ?>
                                                                 <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
                                                             <?php } ?>
                                                             <?php break; ?>
-                                                        <?php case 1: ?>
+                                                        <?php
+                                                        case 1: ?>
                                                             <?php for ($x = 1; $x <= 1; $x++) { ?>
                                                                 <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
                                                             <?php } ?>
                                                             <?php break; ?>
-                                                        <?php default:?>
+                                                        <?php
+                                                        default: ?>
                                                             <?php echo "Rating not available"; ?>
                                                     <?php endswitch ?>
                                                 </section>
                                                 <p class="card-text text-biasa font-14 unactived-text-color mt-1 text-left">
-                                                    <?= $getDetailHotel["data"]["body"]["pdpHeader"]["hotelLocation"]["locationName"]; ?>
+                                                    <?php $getDetailHotel = get_CURL("https://hotels4.p.rapidapi.com/properties/get-details?id=$id&locale=en_US&currency=USD&checkOut=2020-01-15&adults1=1&checkIn=2020-01-08"); ?>
+                                                    <?= $lokasi = $getDetailHotel["data"]["body"]["pdpHeader"]["hotelLocation"]["locationName"]; ?>
                                                 </p>
 
 
@@ -174,7 +187,8 @@ $urlPhoto = str_replace("{size}", $sizeImage, $url);
                                                         6+
                                                     </p>
                                                 </section>
-                                                <p class="text-tebal font-18 mb-0 mt-3 text-left accent-text-color"><?= $getDetailHotel["data"]["body"]["propertyDescription"]["featuredPrice"]["currentPrice"]["formatted"]; ?><span class="text-sedang font-14 second-text-color">/malam</span></p>
+                                                <?php $getDetailHotel = get_CURL("https://hotels4.p.rapidapi.com/properties/get-details?id=$id&locale=en_US&currency=USD&checkOut=2020-01-15&adults1=1&checkIn=2020-01-08"); ?>
+                                                <p class="text-tebal font-18 mb-0 mt-3 text-left accent-text-color"><?= $harga = $getDetailHotel["data"]["body"]["propertyDescription"]["featuredPrice"]["currentPrice"]["formatted"]; ?><span class="text-sedang font-14 second-text-color">/malam</span></p>
                                             </div>
                                         </div>
                                     </div>
