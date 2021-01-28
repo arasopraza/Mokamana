@@ -12,8 +12,8 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav ml-auto navbar-config text-sedang font-18">
-                <a class="nav-link pl-4" href="/galeri">Galeri<span class="sr-only">(current)</span></a>
+            <div class="navbar-nav ml-auto navbar-config text-sedang">
+                <a class="nav-link pl-4" href="#">Galeri<span class="sr-only">(current)</span></a>
                 <a class="nav-link pl-4" href="tentang-kami/#kontak">Kontak</a>
                 <a class="nav-link pl-4" href="/tentang-kami">Tentang Kami</a>
                 <a class="nav-link pl-4 profile-icon" href="/login" tabindex="-1" aria-disabled="true">
@@ -70,7 +70,7 @@
 
 
             <section class="col-lg-6 pl-4">
-                <div class="grid-hero pt-lg-4">
+                {{-- <div class="grid-hero pt-lg-4">
                     <img src="{{ asset('assets/img/labuan-bajo.png') }}" alt="">
                     <img src="{{ asset('assets/img/bali.png') }}" alt="">
                     <img src="{{ asset('assets/img/raja-ampat.png') }}" alt="">
@@ -84,7 +84,53 @@
                     </div>
                     <div class="font-20 text-biasa position-absolute accent-text-color primary-box-color pt-2 pl-4 pr-4 pb-2">
                         Bali</div>
-                </div>
+                </div> --}}
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="https://img.freepik.com/free-photo/aerial-view-young-woman-swimming-pink-swim-ring_159067-1.jpg?size=626&ext=jpg&uid=P32456831&ga=GA1.2.1071532805.1610099719" class="d-block w-100 img-carousel-index" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://img.freepik.com/free-photo/modern-buildings-with-glass-windows-cloudy-sky-during-sunset-evening_181624-21988.jpg?size=626&ext=jpg&uid=P32456831&ga=GA1.2.1071532805.1610099719" class="d-block w-100 img-carousel-index" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://img.freepik.com/free-photo/female-tourists-spread-their-arms-held-their-wings_1150-7462.jpg?size=626&ext=jpg&uid=P32456831&ga=GA1.2.1071532805.1610099719" class="d-block w-100 img-carousel-index" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://img.freepik.com/free-photo/parked-bicycles-sharing-with-green-illuminationt-night-bucharest-romania_1268-16392.jpg?size=626&ext=jpg&uid=P32456831&ga=GA1.2.1071532805.1610099719" class="d-block w-100 img-carousel-index" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://img.freepik.com/free-photo/group-three-friends-lying-retro-bus-sandy-beach_247147-36.jpg?size=664&ext=jpg&ga=GA1.2.1071532805.1610099719" class="d-block w-100 img-carousel-index" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://img.freepik.com/free-photo/city-park_1127-3322.jpg?size=626&ext=jpg&uid=P32456831&ga=GA1.2.1071532805.1610099719" class="d-block w-100 img-carousel-index" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://img.freepik.com/free-photo/boatman-punting-boat-river-arashiyama-autumn-season-along-river-kyoto-japan_335224-26.jpg?size=626&ext=jpg&uid=P32456831&ga=GA1.2.1071532805.1610099719" class="d-block w-100 img-carousel-index" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://img.freepik.com/free-photo/road-with-illuminated-streetlights_1127-2084.jpg?size=626&ext=jpg&uid=P32456831&ga=GA1.2.1071532805.1610099719" class="d-block w-100 img-carousel-index" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://img.freepik.com/free-photo/woman-walking-kelingking-beach-nusa-penida-island-bali-indonesia_335224-337.jpg?size=626&ext=jpg&uid=P32456831&ga=GA1.2.1071532805.1610099719" class="d-block w-100 img-carousel-index" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://img.freepik.com/free-photo/girl-drinking-tea-istanbul_1157-8843.jpg?size=626&ext=jpg&uid=P32456831&ga=GA1.2.1071532805.1610099719" class="d-block w-100 img-carousel-index" alt="...">
+                      </div>
+                      {{-- <div class="carousel-item">
+                        <img src="..." class="d-block w-100 img-carousel-index" alt="...">
+                      </div> --}}
+                      
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
             </section>
         </section>
     </div>

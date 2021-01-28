@@ -183,7 +183,15 @@ body,html{
 
 .jumbotron{
     padding-top: 100px;
-    background-color: #DAEFFF;
+    padding-bottom: 0;
+    height: 620px;
+    background-color: #Ffffff;
+}
+
+.img-carousel-index{
+    height: 470px !important;
+    border-radius: 20px;
+    object-fit: cover;
 }
 
 .form-margin{
@@ -201,11 +209,13 @@ body,html{
     padding: 26px;
     width: 80%;
     border-radius: 15px !important;
-   box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
-   0 2px 2px rgba(0,0,0,0.11), 
-   0 4px 4px rgba(0,0,0,0.11), 
-   0 6px 8px rgba(0,0,0,0.11),
-   0 8px 16px rgba(0,0,0,0.11);
+    box-shadow:
+  0 0.7px 14.2px rgba(0, 0, 0, 0.016),
+  0 3.7px 28.6px rgba(0, 0, 0, 0.022),
+  0 10.9px 45.5px rgba(0, 0, 0, 0.028),
+  0 28.9px 73.5px rgba(0, 0, 0, 0.034),
+  0 100px 174px rgba(0, 0, 0, 0.05)
+;
 }
 
 .clear-btn-index{

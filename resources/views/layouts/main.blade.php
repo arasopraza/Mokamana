@@ -33,18 +33,18 @@
             </section>
             <section class="col-lg-2 mt-2">
                 <div class="cont-footer">
-                    <a href="#" class="border-footer accent-text-color text-biasa font-16">Beranda</a>
+                    <a href="#" class="border-footer second-text-color text-biasa font-16">Beranda</a>
                 </div>
                 <div class="cont-footer-text-panjang mt-4">
-                    <a href="#" class="border-footer accent-text-color text-biasa font-16">Kontak<span class="opacity-0">..</span>kami</a>
+                    <a href="#" class="border-footer second-text-color text-biasa font-16">Kontak<span class="opacity-0">..</span>kami</a>
                 </div>
             </section>
             <section class="col-lg-2 mt-2">
                 <div class="cont-footer">
-                    <a href="/galeri" class="border-footer accent-text-color text-biasa font-16">Galeri</a>
+                    <a href="#" class="border-footer second-text-color text-biasa font-16">Galeri</a>
                 </div>
                 <div class="cont-footer-text-panjang mt-4">
-                    <a href="/tentang-kami" class="border-footer accent-text-color text-biasa font-16">Tentang<span class="opacity-0">..</span>kami</a>
+                    <a href="#" class="border-footer second-text-color text-biasa font-16">Tentang<span class="opacity-0">..</span>kami</a>
                 </div>
             </section>
             <section class="col-lg-4 mt-2">
