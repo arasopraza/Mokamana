@@ -12,4 +12,15 @@ class PagesController extends Controller
         return view('index');
     }
 
+    public function galeri()
+    {
+        return view('galeri');
+    }
+    public function tentangKami()
+    {
+        return view('tentang_kami');
+    }
+    
+
+
 }

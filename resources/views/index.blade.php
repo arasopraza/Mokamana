@@ -13,9 +13,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-auto navbar-config text-sedang font-18">
-                <a class="nav-link pl-4" href="#">Galeri<span class="sr-only">(current)</span></a>
+                <a class="nav-link pl-4" href="/galeri">Galeri<span class="sr-only">(current)</span></a>
                 <a class="nav-link pl-4" href="tentang-kami/#kontak">Kontak</a>
-                <a class="nav-link pl-4" href="#">Tentang Kami</a>
+                <a class="nav-link pl-4" href="/tentang-kami">Tentang Kami</a>
                 <a class="nav-link pl-4 profile-icon" href="/login" tabindex="-1" aria-disabled="true">
                     <button type="submit" class="btn btn-block text-biasa mt-n1">Masuk</button>
                 </a>
@@ -37,7 +37,7 @@
                 <p class="text-biasa font-16 mb-lg-n5">lalu klik cari, gampang kan?</p>
 
                 {{-- #TODO search box index blom selesai --}}
-                <form class="form-margin" method="POST" action="/hasil_pencarian">
+                <form class="form-margin" method="POST" action="/hasil-pencarian">
                     @csrf
                     <div class="tabs" id="tabs">
                         <div class="container-search-box mt-lg-n3 pb-0">
