@@ -17,7 +17,7 @@ Route::get('/', 'PagesController@home');
 Route::get('/galeri', 'PagesController@galeri');
 Route::get('/tentang-kami', 'PagesController@tentangKami');
 Route::get('/detail-hotel', 'HotelController@detailHotel');
-Route::post('/hasil-pencarian', 'HotelController@searchHotel');
+Route::get('/hasil-pencarian', 'HotelController@searchHotel');
 
 Auth::routes();
 

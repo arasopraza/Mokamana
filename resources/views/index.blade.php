@@ -37,8 +37,7 @@
                 <p class="text-biasa font-16 mb-lg-n5">lalu klik cari, gampang kan?</p>
 
                 {{-- #TODO search box index blom selesai --}}
-                <form class="form-margin" method="POST" action="/hasil-pencarian">
-                    @csrf
+                <form class="form-margin" method="GET" action="/hasil-pencarian">
                     <div class="tabs" id="tabs">
                         <div class="container-search-box mt-lg-n3 pb-0">
                             <div class="form-group">
