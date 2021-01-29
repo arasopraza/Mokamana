@@ -181,7 +181,7 @@ body,html{
 /* //* INDEX PAGE */
 
 
-.jumbotron{
+.jumbotron-index{
     padding-top: 100px;
     padding-bottom: 0;
     height: 620px;
@@ -231,9 +231,20 @@ body,html{
     height: 7px;
 }
 
+#loader-index{
+    width: 24px !important;
+    height: 24px !important;
+    position: absolute;
+    left: 28vw;
+    top: 80px;
+    z-index: 2;
+    display: none;
+}
+
 .search-box-btn{
     bottom: 0;
     position: absolute;
+    width: 75px;
     height: 45px;
     padding-right: 20px;
     padding-left: 20px;
@@ -742,7 +753,7 @@ span.carousel-control-next-icon{
     display: flex;
     justify-content:center;
     padding: 5px;
-    color: black;
+    color: #a0a0a0;
     width: fit-content !important;
     margin-right: 15px;
     cursor: pointer;

@@ -156,3 +156,16 @@ AOS.init({
 
 
 
+// onlaod result
+
+
+
+function loadfunction(){
+    
+    var Pcari = document.getElementById('pcari');
+    var Loadindex = document.getElementById('loader-index');
+    Pcari.style.display="none";
+    Loadindex.style.display="block";  
+}
+
+

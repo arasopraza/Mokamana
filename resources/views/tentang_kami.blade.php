@@ -5,16 +5,16 @@
 @section('navbar')
 <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-white position-fixed z-index-3 full-width">
     <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
             <img src="{{ asset('assets/img/logo.png') }}" style="width: 150px;" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav ml-auto navbar-config text-sedang font-18">
-                <a class="nav-link pl-4" href="#">Galeri<span class="sr-only">(current)</span></a>
-                <a class="nav-link pl-4" href="#">Kontak</a>
+            <div class="navbar-nav ml-auto navbar-config text-sedang">
+                <a class="nav-link pl-4" href="galeri">Galeri<span class="sr-only">(current)</span></a>
+                <a class="nav-link pl-4" href="#kontak">Kontak</a>
                 <a class="nav-link pl-4" href="#">Tentang Kami</a>
                 <a class="nav-link pl-4 profile-icon" href="/login" tabindex="-1" aria-disabled="true">
                     <button type="submit" class="btn btn-block text-biasa mt-n1">Masuk</button>
@@ -113,9 +113,8 @@
 
     </section>
     <div id="kontak">
-    <h1 data-aos="fade-right" class="text-tebal font-50 margin-about mb-lg-5" id="trigger3 "><span class="accent-text-color">kami</span> ada di</h1>
+    <h1 data-aos="fade-right" class="text-tebal font-50 margin-about mb-lg-5" id="trigger3"><span class="accent-text-color">kami</span> ada di</h1>
     <div data-aos="fade-up" class="text-sedang font-26 margin-sub"
-     data-aos="fade-up"
     data-aos-anchor="#trigger3"
     data-aos-anchor-placement="top-center">
         <p>Jl. Ahmad Dahlan no. 77 B , Kebayoran Baru,Jakarta, 33453

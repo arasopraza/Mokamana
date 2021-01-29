@@ -5,7 +5,7 @@
 @section('navbar')
 <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-white position-fixed z-index-3 full-width">
     <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
             <img src="{{ asset('assets/img/logo.png') }}" style="width: 150px;" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,7 +13,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-auto navbar-config text-sedang">
-                <a class="nav-link pl-4" href="#">Galeri<span class="sr-only">(current)</span></a>
+                <a class="nav-link pl-4" href="galeri">Galeri<span class="sr-only">(current)</span></a>
                 <a class="nav-link pl-4" href="tentang-kami/#kontak">Kontak</a>
                 <a class="nav-link pl-4" href="/tentang-kami">Tentang Kami</a>
                 <a class="nav-link pl-4 profile-icon" href="/login" tabindex="-1" aria-disabled="true">
@@ -26,7 +26,7 @@
 @endsection
 
 @section('content')
-<div class="jumbotron jumbotron-fluid">
+<div class="jumbotron jumbotron-fluid jumbotron-index">
     <div class="container">
         <section class="row">
             <section class="col-lg-6">
@@ -53,8 +53,12 @@
                                 <button type="button" class="clear-btn clear-btn-index rounded-circle del">
                                     <img src="{{ asset('assets/icon/clear.png') }}" alt="">
                                 </button>
-
-                                <button type="submit" class="btn accent-box-color search-box-btn text-sedang">Cari</button>
+                                <div class="spinner-border text-light" id="loader-index" role="status">
+                                    <span class="sr-only">Loading...</span>
+                                  </div>
+                                <button type="submit" onclick="loadfunction()" class="btn accent-box-color search-box-btn text-sedang" id="search-btn">
+                                    <p class="mb-0" id="pcari">Cari</p>
+                                </button>
                             </div>
 
                         </div>

@@ -2,6 +2,10 @@
 
 @section('title', 'Hasil Pencarian')
 
+
+<body id="loading">
+    
+</body>
 @section('navbar')
 
 <?php
@@ -46,7 +50,7 @@ $responseHotel = $getHotel["suggestions"][1]["entities"];
 
 <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-white position-fixed z-index-3 full-width">
     <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
             <img src="assets/img/logo.png" style="width: 150px;" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,7 +59,7 @@ $responseHotel = $getHotel["suggestions"][1]["entities"];
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-auto navbar-config text-sedang font-18">
                 <a class="nav-link pl-4" href="/galeri">Galeri<span class="sr-only">(current)</span></a>
-                <a class="nav-link pl-4" href="#">Kontak</a>
+                <a class="nav-link pl-4" href="tentang-kami#kontak">Kontak</a>
                 <a class="nav-link pl-4" href="/tentang-kami">Tentang Kami</a>
                 <a class="nav-link pl-4 profile-icon" href="/logout" tabindex="-1" aria-disabled="true">
                     <button type="submit" class="btn btn-block text-biasa mt-n1">Keluar</button>
