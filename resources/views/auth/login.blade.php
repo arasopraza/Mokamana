@@ -24,7 +24,7 @@
 
             <section class="col-lg-7" style="padding: 0;">
                 <div class="img-box">
-                    <img src="assets/img/login1.png" style="border: 0;" alt="" class="img-thumbnail">
+                    <img src="{{ asset("assets/img/login1.png") }}" style="border: 0;" alt="" class="img-thumbnail">
                     <p class="text-left p-atas">Kerja mulu,<br>sekali-kali liburan dong..</p>
                     <!-- <div class="location-box">
 
@@ -45,20 +45,20 @@
 
                     <div class="form-group">
                         <label for="email">E-mail Address</label>
-                        <input id="email" type="email" class="form-control " name="email" aria-describedby="emailHelp" required autofocus>
+                        <input type="email" class="form-control" id="email" name="email" required autofocus>
                         @error('email')
-                        <span class="invalid-feedback" role="alert">
+                        <div class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
-                        </span>
+                        </div>
                         @enderror
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
                         <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required>
                         @error('password')
-                        <span class="invalid-feedback" role="alert">
+                        <div class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
-                        </span>
+                        </div>
                         @enderror
                     </div>
                     <div class="form-group form-check">

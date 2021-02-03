@@ -47,7 +47,7 @@
                                         <img src="{{ asset('assets/icon/search_icon.png') }}" alt="">
                                     </Span>
                                     {{-- #FIXME FIX Ketika value diclear tidak mau autofocus  --}}
-                                    <input type="text" name="cari" class="form-control search-box searchinput" aria-describedby="emailHelp" placeholder="Mau liburan kemana?" autofocus>
+                                    <input type="text" name="kota" class="form-control search-box searchinput" placeholder="Mau liburan kemana?" autofocus>
                                 </div>
                                 <button type="button" class="clear-btn clear-btn-index rounded-circle del">
                                     <img src="{{ asset('assets/icon/clear.png') }}" alt="">
