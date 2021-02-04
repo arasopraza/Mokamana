@@ -48,7 +48,7 @@
     </section>
 
     <section class="row justify-content-center">
-        <p class="text-tebal font-26 mt-lg-4 mb-lg-n4">Hasil Pencarian {{ $data->kota }}</p>
+        <p class="text-tebal font-26 mt-lg-4 mb-lg-n4">Hasil pencarian hotel di {{ $data->kota }}</p>
     </section>
 
     <section class="container justify-content-center">
@@ -150,7 +150,7 @@
                                                         </p>
                                                     </section>
                                                     <p class="text-tebal font-18 mb-0 mt-3 text-left accent-text-color">
-                                                        {{ $hotels['price'] }}
+                                                        Rp.{{ $harga = $hotels['price'] }}
                                                         <span class="text-sedang font-14 second-text-color">/malam</span></p>
                                                 </div>
                                             </div>

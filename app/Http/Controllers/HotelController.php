@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use Exception;
 use Illuminate\Http\Request;
 
 class HotelController extends Controller
@@ -22,7 +23,7 @@ class HotelController extends Controller
             CURLOPT_CUSTOMREQUEST => "GET",
             CURLOPT_HTTPHEADER => [
                 "x-rapidapi-host: hotels4.p.rapidapi.com",
-                "x-rapidapi-key: ba7ebb0ec3msh0c6ba67d0becbe9p1359f6jsn07de4881b75d"
+                "x-rapidapi-key: b92d78168cmsh0cfde3f38f9e4c0p14d7b4jsn31a26bb58a61"
             ],
         ]);
         $response = curl_exec($curl);
@@ -45,7 +46,7 @@ class HotelController extends Controller
         foreach ($responseHotel as $items) {
             $id = $items["destinationId"];
             $getPhotoHotel = $this->get_CURL("https://hotels4.p.rapidapi.com/properties/get-hotel-photos?id=$id");
-            $getDetailHotel = $this->get_CURL("https://hotels4.p.rapidapi.com/properties/get-details?id=$id&locale=en_ID&currency=USD&checkOut=2020-01-15&adults1=1&checkIn=2020-01-08");
+            $getDetailHotel = $this->get_CURL("https://hotels4.p.rapidapi.com/properties/get-details?id=$id&locale=en_US&currency=USD&checkOut=2020-01-15&adults1=1&checkIn=2020-01-08");
             
             try {
                 $nameHotel = $items["name"];
@@ -53,14 +54,14 @@ class HotelController extends Controller
                 $locationHotel = $getDetailHotel["data"]["body"]["pdpHeader"]["hotelLocation"]['locationName'];
                 $priceHotel = $getDetailHotel["data"]["body"]["propertyDescription"]["featuredPrice"]["currentPrice"]["plain"];
                 $baseUrl = $getPhotoHotel["hotelImages"][0]["baseUrl"];
-            } catch (\Throwable $th) {
-                throw $th;
+                $priceInRupiah = $priceHotel * 14000;
+                $sizeImage = 'y';
+                $urlPhoto = str_replace("{size}", $sizeImage, $baseUrl);
+                $dataHotel->push(['id' => $id, 'name' => $nameHotel, 'rating' => $ratingHotel, 'photo' => $urlPhoto, 'location' => $locationHotel, 'price' => $priceInRupiah]);
+            } catch (Exception $e) {
+                report($e);
             }
-            $priceInRupiah = $priceHotel * 14000;
-            $sizeImage = 'y';
-            $urlPhoto = str_replace("{size}", $sizeImage, $baseUrl);
 
-            $dataHotel->push(['id' => $id, 'name' => $nameHotel, 'rating' => $ratingHotel, 'photo' => $urlPhoto, 'location' => $locationHotel, 'price' => $priceInRupiah]);
         }
 
         return view('result_hotel', compact('dataHotel'), ['data' => $request]);
