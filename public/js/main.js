@@ -156,9 +156,7 @@ AOS.init({
 
 
 
-// onlaod result
-
-
+//* onlaod result
 
 function loadfunction(){
     
@@ -168,4 +166,14 @@ function loadfunction(){
     Loadindex.style.display="block";  
 }
 
+//*cardbody tab hotel
+var cardbody = document.getElementById('cardbody');
+
+function cardbodyhilang(){
+    cardbody.style.display="none";
+}
+
+function cardbodymuncul(){
+    cardbody.style.display="block";
+}
 

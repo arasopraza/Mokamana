@@ -73,10 +73,10 @@
                                     <button type="submit" class="card mb-4 full-width card-hotel">
                                         <div class="row no-gutters">
                                             <div class="col-md-4">
-                                                <img src="{{ $hotels['photo'] }}" class="card-img full-height" alt="...">
+                                                <img src="{{ $hotels['photo'] }}" class="card-img" onmouseover="cardbodyhilang()" onmouseout="cardbodymuncul()" id="card-img" alt="...">
                                             </div>
                                             <div class="col-md-8">
-                                                <div class="card-body">
+                                                <div class="card-body" id="cardbody">
                                                     <section class="row">
                                                         <section class="col-lg-7">
                                                             <h5 class="card-title text-tebal font-16 mb-0 text-left">{{ $hotels['name'] }}</h5>
@@ -180,11 +180,11 @@
                                     <button type="submit" class="card mb-3 full-width card-hotel">
                                         <div class="row no-gutters">
                                             <div class="col-md-6">
-                                                <img src="/assets/img/wisata/kawah-putih.png" class="card-img full-height"
+                                                <img src="/assets/img/wisata/kawah-putih.png" class="card-img" id="card-img"
                                                     alt="...">
                                             </div>
                                             <div class="col-md-6">
-                                                <div class="card-body">
+                                                <div class="card-body" id="cardbody">
                                                     <h5 class="card-title text-tebal font-18 mb-0 text-left">Kawah Putih
                                                     </h5>
                                                     <section class="row padding-left-18">
@@ -212,11 +212,11 @@
                                     <button type="submit" class="card mb-3 full-width card-hotel">
                                         <div class="row no-gutters">
                                             <div class="col-md-6">
-                                                <img src="/assets/img/wisata/asia-afrika.png" class="card-img full-height"
+                                                <img src="/assets/img/wisata/asia-afrika.png" class="card-img" id="card-img"
                                                     alt="...">
                                             </div>
                                             <div class="col-md-6">
-                                                <div class="card-body">
+                                                <div class="card-body" id="cardbody">
                                                     <h5 class="card-title text-tebal font-18 mb-0 text-left">The Great Asia
                                                         Afrika
                                                     </h5>
@@ -242,11 +242,11 @@
                                     <button type="submit" class="card mb-3 full-width card-hotel">
                                         <div class="row no-gutters">
                                             <div class="col-md-6">
-                                                <img src="/assets/img/wisata/taman-hutan.png" class="card-img full-height"
+                                                <img src="/assets/img/wisata/taman-hutan.png" class="card-img" id="card-img"
                                                     alt="...">
                                             </div>
                                             <div class="col-md-6">
-                                                <div class="card-body">
+                                                <div class="card-body" id="cardbody">
                                                     <h5 class="card-title text-tebal font-18 mb-0 text-left">Taman Hutan
                                                         Raya</h5>
                                                     <section class="row padding-left-18">
@@ -268,15 +268,15 @@
                                     </button>
 
                                     <!-- #TODO Isi Deskripsi -->
-                                    <!-- //*Tangkuban Perahu -->
+                                    <!-- //*Tangkuban Perahu -->    
                                     <button type="submit" class="card mb-3 full-width card-hotel">
                                         <div class="row no-gutters">
                                             <div class="col-md-6">
-                                                <img src="/assets/img/wisata/tangkuban.png" class="card-img full-height"
+                                                <img src="/assets/img/wisata/tangkuban.png" class="card-img" id="card-img"
                                                     alt="...">
                                             </div>
                                             <div class="col-md-6">
-                                                <div class="card-body">
+                                                <div class="card-body" id="cardbody">
                                                     <h5 class="card-title text-tebal font-18 mb-0 text-left">Tangkuban
                                                         Perahu</h5>
                                                     <section class="row padding-left-18">
@@ -301,11 +301,11 @@
                                     <button type="submit" class="card mb-3 full-width card-hotel">
                                         <div class="row no-gutters">
                                             <div class="col-md-6">
-                                                <img src="/assets/img/wisata/dago-park.png" class="card-img full-height"
+                                                <img src="/assets/img/wisata/dago-park.png" class="card-img" id="card-img"
                                                     alt="...">
                                             </div>
                                             <div class="col-md-6">
-                                                <div class="card-body">
+                                                <div class="card-body" id="cardbody">
                                                     <h5 class="card-title text-tebal font-18 mb-0 text-left">Dago Dreampark
                                                     </h5>
                                                     <section class="row padding-left-18">
@@ -330,11 +330,11 @@
                                     <button type="submit" class="card mb-3 full-width card-hotel">
                                         <div class="row no-gutters">
                                             <div class="col-md-6">
-                                                <img src="/assets/img/wisata/kampung-tulip.png" class="card-img full-height"
+                                                <img src="/assets/img/wisata/kampung-tulip.png" class="card-img" id="card-img"
                                                     alt="...">
                                             </div>
                                             <div class="col-md-6">
-                                                <div class="card-body">
+                                                <div class="card-body" id="cardbody">
                                                     <h5 class="card-title text-tebal font-18 mb-0 text-left">Kampoeng Tulip
                                                     </h5>
                                                     <section class="row padding-left-18">

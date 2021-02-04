@@ -962,8 +962,8 @@ input[type="text"]#search_hotel{
 }
 .card-hotel{
     padding: 0;
-    height: fit-content;
     border-radius: 25px;
+    height: 235px;
     position: relative;
     box-shadow: 0 5px 10px #dadada;
     z-index: 0;
@@ -973,12 +973,14 @@ input[type="text"]#search_hotel{
 .card-hotel:hover{
     border: 1px solid #dadada ;
     box-shadow: none;
+    height: 235px !important;
     z-index: 0;
 }
 
 .card-hotel img.card-img{
     border-radius: 25px;
     object-fit: cover;
+    height: 235px;
     transition-duration: 300ms;
     z-index: 1;
 }
@@ -986,14 +988,15 @@ input[type="text"]#search_hotel{
 .card-hotel img.card-img:hover{
     left: 0;
     position: absolute;
-    width: 400px;
-    height: 100%;
+    width: 400px !important;
+    height: 235px !important;
     padding-left: 0;
     margin-left: 0;
     border-radius: 25px;
     object-fit: cover;
     z-index: 2;
 }
+
 .rating-hotel{
     position: absolute;
 }

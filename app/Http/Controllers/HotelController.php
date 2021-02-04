@@ -45,7 +45,7 @@ class HotelController extends Controller
         foreach ($responseHotel as $items) {
             $id = $items["destinationId"];
             $getPhotoHotel = $this->get_CURL("https://hotels4.p.rapidapi.com/properties/get-hotel-photos?id=$id");
-            $getDetailHotel = $this->get_CURL("https://hotels4.p.rapidapi.com/properties/get-details?id=$id&locale=en_US&currency=USD&checkOut=2020-01-15&adults1=1&checkIn=2020-01-08");
+            $getDetailHotel = $this->get_CURL("https://hotels4.p.rapidapi.com/properties/get-details?id=$id&locale=en_ID&currency=USD&checkOut=2020-01-15&adults1=1&checkIn=2020-01-08");
             
             try {
                 $nameHotel = $items["name"];
