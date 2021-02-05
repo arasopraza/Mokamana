@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'PagesController@home');
 Route::get('/galeri', 'PagesController@galeri');
 Route::get('/tentang-kami', 'PagesController@tentangKami');
-Route::get('/detail-hotel', 'HotelController@detailHotel');
+Route::get('/detail-hotel/{id}', 'HotelController@detailHotel');
 Route::get('/hasil-pencarian', 'HotelController@searchHotel');
 
 Auth::routes();

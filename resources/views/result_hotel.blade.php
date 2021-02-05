@@ -73,6 +73,7 @@
                                     <button type="submit" class="card mb-4 full-width card-hotel">
                                         <div class="row no-gutters">
                                             <div class="col-md-4">
+                                                {{-- href="/detail-hotel/{{ $hotels['id'] }} --}}
                                                 <img src="{{ $hotels['photo'] }}" class="card-img" onmouseover="cardbodyhilang()" onmouseout="cardbodymuncul()" id="card-img" alt="...">
                                             </div>
                                             <div class="col-md-8">
@@ -84,7 +85,7 @@
                                                         <section class="col-lg-5">
                                                             <div class="rating-hotel">
                                                                 <p class="accent-text-color text-biasa mb-0 font-14 text-right">
-                                                                    Terkesan
+                                                                    <a href="/detail-hotel/{{ $hotels['id'] }}"> Terkesan </a>
                                                                 </p>
                                                                 <p class="unactived-text-color text-biasa font-12 text-right">
                                                                     1310

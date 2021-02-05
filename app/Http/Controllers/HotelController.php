@@ -9,6 +9,8 @@ use Illuminate\Http\Request;
 class HotelController extends Controller
 {
 
+    protected $dataHotel;
+
     function get_CURL($url)
     {
         $curl = curl_init();
@@ -69,6 +71,9 @@ class HotelController extends Controller
 
     public function detailHotel()
     {
-        return view('detail_hotel');
+        $dataHotel = collect([]);
+        $nama = "Hotel Pangeran";
+        $dataHotel->push(['name' => $nama]);
+        return view('detail_hotel', compact('dataHotel'));
     }
 }
