@@ -12,7 +12,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav ml-auto navbar-config text-sedang">
+            <div class="navbar-nav ml-auto navbar-config text-sedang font-16">
                 <a class="nav-link pl-4" href="galeri">Galeri<span class="sr-only">(current)</span></a>
                 <a class="nav-link pl-4" href="#kontak">Kontak</a>
                 <a class="nav-link pl-4" href="#">Tentang Kami</a>

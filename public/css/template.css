@@ -141,11 +141,11 @@
 }
 
 .ahref-no-decor{
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 .ahref-no-decor:hover{
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 .position-relative{

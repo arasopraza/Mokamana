@@ -177,3 +177,21 @@ function cardbodymuncul(){
     cardbody.style.display="block";
 }
 
+
+//* replace text hotel & wisata
+var Photel = document.getElementById('hotel');
+var Pwisata = document.getElementById('wisata');
+var Hasiltext = document.getElementById('ket-hasil');
+
+Photel.onclick = function(){
+    var res = Hasiltext.replace(/wisata/gi, "hotel");
+    document.getElementById('ket-hasil').innerHTML = res;
+    alert('tuh bisa');
+}
+
+Pwisata.onclick = function(){
+    var res = Hasiltext.replace(/hotel/gi, "wisata");
+    document.getElementById('ket-hasil').innerHTML = res;
+    alert('tuh bisa');
+}
+

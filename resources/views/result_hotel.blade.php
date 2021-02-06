@@ -17,11 +17,11 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav ml-auto navbar-config text-sedang font-18">
-                    <a class="nav-link pl-4" href="/galeri">Galeri<span class="sr-only">(current)</span></a>
-                    <a class="nav-link pl-4" href="tentang-kami#kontak">Kontak</a>
-                    <a class="nav-link pl-4" href="/tentang-kami">Tentang Kami</a>
-                    <a class="nav-link pl-4 profile-icon" href="/logout" tabindex="-1" aria-disabled="true">
+                <div class="navbar-nav ml-auto navbar-config text-sedang font-16">
+                    <a class="nav-link pl-4 pt-3" href="/galeri">Galeri<span class="sr-only">(current)</span></a>
+                    <a class="nav-link pl-4 pt-3" href="">Favorit</a>
+                    <a class="nav-link pl-4 pt-3" href="/tentang-kami">Tentang Kami</a>
+                    <a class="nav-link pl-4 pt-3 profile-icon" href="/logout" tabindex="-1" aria-disabled="true">
                         <button type="submit" class="btn btn-block text-biasa mt-n1">Keluar</button>
                     </a>
                 </div>
@@ -48,10 +48,10 @@
     </section>
 
     <section class="row justify-content-center">
-        <p class="text-tebal font-26 mt-lg-4 mb-lg-n4">Hasil pencarian hotel di {{ $data->kota }}</p>
+        <p id="ket-hasil" class="text-tebal font-26 mt-lg-4 mb-lg-n4">Hasil pencarian hotel di {{ $data->kota }}</p>
     </section>
 
-    <section class="container justify-content-center">
+    <section class="container justify-content-center">  
         <section class="col-lg-12 pl-0 pr-0">
             <form class="form-margin">
                 <div class="tabs-search" id="tabs">
@@ -70,7 +70,7 @@
 
                                 <!-- #TODO four points -->
                                 @foreach ($dataHotel as $hotels)
-                                    <button type="submit" class="card mb-4 full-width card-hotel">
+                                    <a href="/detail-hotel/{{ $hotels['id'] }}" class="card mb-4 full-width card-hotel ahref-no-decor">
                                         <div class="row no-gutters">
                                             <div class="col-md-4">
                                                 {{-- href="/detail-hotel/{{ $hotels['id'] }} --}}
@@ -80,12 +80,12 @@
                                                 <div class="card-body" id="cardbody">
                                                     <section class="row">
                                                         <section class="col-lg-7">
-                                                            <h5 class="card-title text-tebal font-16 mb-0 text-left">{{ $hotels['name'] }}</h5>
+                                                            <h5 class="card-title text-tebal font-16 mb-0 text-left second-text-color   ">{{ $hotels['name'] }}</h5>
                                                         </section>
                                                         <section class="col-lg-5">
                                                             <div class="rating-hotel">
                                                                 <p class="accent-text-color text-biasa mb-0 font-14 text-right">
-                                                                    <a href="/detail-hotel/{{ $hotels['id'] }}"> Terkesan </a>
+                                                                Terkesan
                                                                 </p>
                                                                 <p class="unactived-text-color text-biasa font-12 text-right">
                                                                     1310
@@ -103,10 +103,22 @@
                                                                 <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
                                                             @endfor
                                                             @break
+                                                            @case(4.5)
+                                                            @for ($i = 1; $i <= 4; $i++)
+                                                                <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
+                                                            @endfor
+                                                            <img src="assets/icon/rating-half.png" class="rating-icon" alt="">
+                                                            @break
                                                             @case(4)
                                                             @for ($i = 1; $i <= 4; $i++)
                                                                 <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
                                                             @endfor
+                                                            @break
+                                                            @case(3.5)
+                                                            @for ($i = 1; $i <= 3; $i++)
+                                                                <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
+                                                            @endfor
+                                                            <img src="assets/icon/rating-half.png" class="rating-icon" alt="">
                                                             @break
                                                             @case(3)
                                                             @for ($i = 1; $i <= 3; $i++)
@@ -130,7 +142,7 @@
                                                     <p class="card-text text-biasa font-14 unactived-text-color mt-1 text-left">
                                                         {{ $hotels['location'] }}
                                                     </p>
-                                                    <p class="text-biasa mb-lg-1 text-left">Fasilitas</p>
+                                                    <p class="text-biasa mb-lg-1 text-left second-text-color">Fasilitas</p>
                                                     <section class="row padding-left-18 fasilitas height-20">
                                                         <img class="margin-right-15 fasilitas-icon" data-toggle="tooltip"
                                                             data-placement="top" title="Lift"
@@ -156,7 +168,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </button>
+                                    </a>
                                 @endforeach
                             </div>
                         </section>

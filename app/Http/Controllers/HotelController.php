@@ -25,7 +25,7 @@ class HotelController extends Controller
             CURLOPT_CUSTOMREQUEST => "GET",
             CURLOPT_HTTPHEADER => [
                 "x-rapidapi-host: hotels4.p.rapidapi.com",
-                "x-rapidapi-key: b92d78168cmsh0cfde3f38f9e4c0p14d7b4jsn31a26bb58a61"
+                "x-rapidapi-key: a187198648msh9afacc624296596p1830a0jsnccdabb2b55f8"
             ],
         ]);
         $response = curl_exec($curl);
