@@ -7,7 +7,7 @@
 </body>
 @section('navbar')
 
-    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-white position-fixed z-index-3 full-width">
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-white position-fixed z-index-5 full-width">
         <div class="container">
             <a class="navbar-brand" href="/">
                 <img src="assets/img/logo.png" style="width: 150px;" alt="">
@@ -70,13 +70,16 @@
 
                                 <!-- #TODO four points -->
                                 @foreach ($dataHotel as $hotels)
-                                    <a href="/detail-hotel/{{ $hotels['id'] }}" class="card mb-4 full-width card-hotel ahref-no-decor">
+                                    <div class="card mb-4 full-width card-hotel ahref-no-decor">
                                         <div class="row no-gutters">
                                             <div class="col-md-4">
                                                 {{-- href="/detail-hotel/{{ $hotels['id'] }} --}}
-                                                <img src="{{ $hotels['photo'] }}" class="card-img" onmouseover="cardbodyhilang()" onmouseout="cardbodymuncul()" id="card-img" alt="...">
+                                                <div class="cont-icon-bookmark" href="#" onclick="bookmarkActive()">
+                                                    <img src="assets/icon/bookmark.png" alt="" class="icon-bookmark" id="icon-bookmark">
+                                                </div>
+                                                <img src="{{ $hotels['photo'] }}" class="card-img" id="card-img" alt="...">
                                             </div>
-                                            <div class="col-md-8">
+                                            <a href="/detail-hotel/{{ $hotels['id'] }}" class="col-md-8 ahref-no-decor">
                                                 <div class="card-body" id="cardbody">
                                                     <section class="row">
                                                         <section class="col-lg-7">
@@ -166,9 +169,9 @@
                                                         Rp.{{ $harga = $hotels['price'] }}
                                                         <span class="text-sedang font-14 second-text-color">/malam</span></p>
                                                 </div>
-                                            </div>
+                                            </a>
                                         </div>
-                                    </a>
+                                    </div>
                                 @endforeach
                             </div>
                         </section>
@@ -183,8 +186,6 @@
                     <!-- //*isi tab wisata -->
                     <div class="tab-search">
                         <div class="form-group">
-
-
                             <section class="row">
                                 <div class="grid-result-container">
 

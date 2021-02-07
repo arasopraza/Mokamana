@@ -198,6 +198,10 @@
     z-index: 3;
 }
 
+.z-index-5{
+    z-index: 5;
+}
+
 .width-content{
     width: fit-content;
 }

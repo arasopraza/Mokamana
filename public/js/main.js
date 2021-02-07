@@ -1,6 +1,8 @@
 
 //* HIDE NAVBAR ON SCROLL DOWN
 
+// const { functionsIn } = require("lodash");
+
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function(){
     
@@ -69,59 +71,6 @@ $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();   
   });
 
-
-//* Detail page Hotel & wisata //SLIDER PRODUCT IMAGE
-let position_img = 0;
-
-$('div.img-bawah > img').on('click', function(e){                
-    $('#product_img').attr('src', $(e)[0].target.src);        
-    for (const x of $('div.img-bawah > img')) {    
-        $(x).removeClass('active');        
-    }
-    $(this).addClass('active');       
-    set_position();         
-});
-
-function set_position(){
-    for (const x of $('div.img-bawah > img')) {    
-        position_img++;
-        if($(x).hasClass('active')){
-            break;            
-        }                
-    }   
-}
-
-$('#btn_slide_right').on('click', function(){
-    position_img++;        
-    set_img(position_img);
-})
-
-function set_img(i){    
-    var i = i;
-    if(i >= $('div.img-bawah > img').length){
-        i = 0;
-        position_img = 0;
-    }
-    $('#product_img').attr('src', $($('div.img-bawah > img')[i]).attr('src'));
-}
-
-$('#btn_slide_left').on('click', function(){
-    position_img--;        
-    set_img(position_img);
-})
-
-//* DATE RANGE PICKER
-$(function() {
-    $('input[name="daterange"]').daterangepicker({
-      opens: 'left'
-    }, function(start, end, label) {
-      console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
-    });
-  });
-
-
-
-
 //* FILTER GALERI
 const categoryTitle = document.querySelectorAll('.category-title');
 const allCategoryPosts = document.querySelectorAll('.all');
@@ -149,7 +98,7 @@ function changeActivePosition(activeItem){
 };
 
 
-// ANIMASI ON SCROLL CSS
+//* ANIMASI ON SCROLL CSS
 AOS.init({
     duration: 1200
 });
@@ -164,17 +113,6 @@ function loadfunction(){
     var Loadindex = document.getElementById('loader-index');
     Pcari.style.display="none";
     Loadindex.style.display="block";  
-}
-
-//*cardbody tab hotel
-var cardbody = document.getElementById('cardbody');
-
-function cardbodyhilang(){
-    cardbody.style.display="none";
-}
-
-function cardbodymuncul(){
-    cardbody.style.display="block";
 }
 
 
@@ -194,4 +132,13 @@ Pwisata.onclick = function(){
     document.getElementById('ket-hasil').innerHTML = res;
     alert('tuh bisa');
 }
+
+//* ONCLICK ICON BOOKMARK HOTEL
+// #FIXME bug
+function bookmarkActive(){
+    var icon = document.getElementById('icon-bookmark');
+    icon.style.setProperty("filter", "none", "important");
+    icon.style.setProperty("opacity", "1", "important");
+}
+
 
