@@ -126,7 +126,7 @@
                                 <section class="col-md-12 fit-height">
                                     <div class="container-suhu text-center">
                                         <p class="font-16 text-sedang pt-3">Suhu disekitar hotel</p>
-                                        <p class="font-30 text-tebal accent-text-color mb-0">25°C</p>
+                                        <p class="font-30 text-tebal accent-text-color mb-0">{{ $hotel['temperature'] }} °C</p>
                                         <p class="font-14 text-biasa unactived-text-color mb-0">Berawan</p>
                                     </div>
                                 </section>                        
@@ -139,7 +139,7 @@
                                         <img src="{{ asset('assets/icon/lembab.png') }}" class="icon-cuaca mr-3 mt-1" alt="">
                                         <div class="keterangan-suhu">
                                             <p class="mb-0 text-biasa unactived-text-color font-14">Kelembaban</p>
-                                            <p class="mb-0 text-tebal unactived-text-color font-18">83%</p>
+                                            <p class="mb-0 text-tebal unactived-text-color font-18">{{ $hotel['humidity'] }} %</p>
                                         </div>   
                                     </section>                                    
                                 </div>  
@@ -151,7 +151,7 @@
                                         <img src="{{ asset('assets/icon/angin.png') }}" class="icon-cuaca mr-3 mt-1" alt="">
                                         <div class="keterangan-suhu">
                                             <p class="mb-0 text-biasa unactived-text-color font-14">Laju Angin</p>
-                                            <p class="mb-0 text-tebal unactived-text-color font-18">20 Km/H</p>
+                                            <p class="mb-0 text-tebal unactived-text-color font-18">{{ $hotel['windspeed'] }} m/s</p>
                                         </div>   
                                     </section>                                    
                                 </div>  
