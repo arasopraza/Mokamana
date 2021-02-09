@@ -36,8 +36,8 @@
     <!-- //*content -->
     <div class="container justify-content-center cont-single-destinasi">
         <div class="col-12 mb-5 card card-detail-hotel">
-            @foreach ($dataHotel as $hotels)
-            <h5 class="card-title text-tebal font-24 mb-0">{{ $hotels['name'] }}</h5>
+            @foreach ($detailHotel as $hotel)
+            <h5 class="card-title text-tebal font-24 mb-0">{{ $hotel['name'] }}</h5>
             @endforeach
             {{-- <h5 class="card-title text-tebal font-18 mb-0">Hilton Bandung</h5> --}}
             <section class="row padding-left-18">
@@ -47,7 +47,7 @@
                 <img src="{{ asset('assets/icon/rating-icon.png') }}" class="rating-icon " alt="">
             </section>
             <p class="card-text text-biasa font-14 unactived-text-color mt-lg-2 mb-0">
-                Jl. HOS Tjokroaminoto No.41-43, Arjuna, Kec. Cicendo, Kota Bandung, Jawa Barat 40172
+            {{ $hotel['address'] }}
             </p>
             {{-- <div class="rating-detail-hotel">
                 <p class="accent-text-color text-biasa mb-0 font-14 text-right">
@@ -67,7 +67,7 @@
                     review</p>
             </div>
             <p class="primary-text-color text-biasa font-18 rating-hotel-title-iconn mb-0">
-                8.4
+                {{ $hotel['rating'] }}
             </p>
             <div class="cont-icon-bookmark-title" href="#" onclick="bookmarkActive()">
                 <img src="{{ asset('assets/icon/bookmark.png') }}" alt="" class="icon-bookmark-title    " id="icon-bookmark">
@@ -218,7 +218,7 @@
             
             <p class="font-16 text-sedang mb-0 mt-3">Harga Mulai dari</p>
             <p class="text-tebal font-20 mb-0 text-left accent-text-color">
-                Rp. 754000
+                {{ $hotel['price'] }}
                 <span class="text-sedang font-14 second-text-color">/malam</span>
             </p>
 
