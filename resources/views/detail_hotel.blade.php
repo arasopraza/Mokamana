@@ -41,10 +41,47 @@
             @endforeach
             {{-- <h5 class="card-title text-tebal font-18 mb-0">Hilton Bandung</h5> --}}
             <section class="row padding-left-18">
-                <img src="{{ asset('assets/icon/rating-icon.png') }}" class="rating-icon " alt="">
-                <img src="{{ asset('assets/icon/rating-icon.png') }}" class="rating-icon " alt="">
-                <img src="{{ asset('assets/icon/rating-icon.png') }}" class="rating-icon " alt="">
-                <img src="{{ asset('assets/icon/rating-icon.png') }}" class="rating-icon " alt="">
+                @switch($hotel['rating'])
+                    @case(5)
+                    @for ($i = 1; $i <= 5; $i++)
+                        <img src="{{ asset('assets/icon/rating-icon.png') }}" class="rating-icon " alt="">
+                    @endfor
+                    @break
+                    @case(4.5)
+                    @for ($i = 1; $i <= 4; $i++)
+                        <img src="{{ asset('assets/icon/rating-icon.png') }}" class="rating-icon " alt="">
+                    @endfor
+                    <img src="{{ asset('assets/icon/rating-half.png') }}" class="rating-icon" alt="">
+                    @break
+                    @case(4)
+                    @for ($i = 1; $i <= 4; $i++)
+                        <img src="{{ asset('assets/icon/rating-icon.png') }}" class="rating-icon " alt="">
+                    @endfor
+                    @break
+                    @case(3.5)
+                    @for ($i = 1; $i <= 3; $i++)
+                        <img src="{{ asset('assets/icon/rating-icon.png') }}" class="rating-icon " alt="">
+                    @endfor
+                    <img src="{{ asset('assets/icon/rating-half.png') }}" class="rating-icon" alt="">
+                    @break
+                    @case(3)
+                    @for ($i = 1; $i <= 3; $i++)
+                        <img src="{{ asset('assets/icon/rating-icon.png') }}" class="rating-icon " alt="">
+                    @endfor
+                    @break
+                    @case(2)
+                    @for ($i = 1; $i <= 2; $i++)
+                        <img src="{{ asset('assets/icon/rating-icon.png') }}" class="rating-icon " alt="">
+                    @endfor
+                    @break
+                    @case(1)
+                    @for ($i = 1; $i <= 1; $i++)
+                        <img src="{{ asset('assets/icon/rating-icon.png') }}" class="rating-icon " alt="">
+                    @endfor
+                    @break
+                    @default
+                    {{ $hotel['rating']}}
+                @endswitch
             </section>
             <p class="card-text text-biasa font-14 unactived-text-color mt-lg-2 mb-0">
             {{ $hotel['address'] }}
@@ -67,7 +104,7 @@
                     review</p>
             </div>
             <p class="primary-text-color text-biasa font-18 rating-hotel-title-iconn mb-0">
-                {{ $hotel['rating'] }}
+                8.4
             </p>
             <div class="cont-icon-bookmark-title" href="#" onclick="bookmarkActive()">
                 <img src="{{ asset('assets/icon/bookmark.png') }}" alt="" class="icon-bookmark-title    " id="icon-bookmark">
@@ -222,6 +259,14 @@
                 <span class="text-sedang font-14 second-text-color">/malam</span>
             </p>
 
+        </div>
+
+        <div class="card card-detail-hotel">
+            <p class="text-sedang font-18 mb-4">Info Lokasi</p>
+            <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px;">
+                <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+                  style="border:0" allowfullscreen></iframe>
+              </div>
         </div>
 
     </div>

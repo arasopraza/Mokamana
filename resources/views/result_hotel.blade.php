@@ -21,9 +21,15 @@
                     <a class="nav-link pl-4 pt-3" href="/galeri">Galeri<span class="sr-only">(current)</span></a>
                     <a class="nav-link pl-4 pt-3" href="">Favorit</a>
                     <a class="nav-link pl-4 pt-3" href="/tentang-kami">Tentang Kami</a>
-                    <a class="nav-link pl-4 pt-3 profile-icon" href="/logout" tabindex="-1" aria-disabled="true">
-                        <button type="submit" class="btn btn-block text-biasa mt-n1">Keluar</button>
-                    </a>
+                    <div class="dropdown">
+                        <button class="dropdown-toggle profile-icon primary-box-color no-border pl-4 pt-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="assets/icon/profile-icon.png" alt="">
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item text-biasa" href="#">Lihat Profil</a>
+                            <a class="dropdown-item ahref-no-decor text-biasa accent-text-color" href="/logout">Logout</a>
+                        </div>
+                      </div>
                 </div>
             </div>
         </div>

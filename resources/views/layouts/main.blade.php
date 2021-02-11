@@ -21,7 +21,7 @@
     <!-- //*navbar -->
     @yield('navbar')
     <!-- //* end navbar -->
-
+ 
     <!-- //* Jumbroton-->
     @yield('content')
     <!-- //*FOOTER -->

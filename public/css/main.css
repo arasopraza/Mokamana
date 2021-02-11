@@ -80,6 +80,14 @@ body,html{
     border: 0;
 }
 
+.dropdown-toggle:focus{
+    outline: 0;
+}
+
+.dropdown-menu{
+    margin-right: -50px;
+}
+
 /* //*navbar */
 
 .navbar{
@@ -87,15 +95,9 @@ body,html{
 }
 
  .profile-icon img{
-    width: 24px;
-    margin-top: -6px;
+    width: 28px;
+    margin-top: -2px;
     transition-delay: 100ms;
-}
-
-.profile-icon img:hover{
-    width: 24px;
-    margin-top: -6px;
-    transform: rotate(-45deg);
 }
 
 /* //* content */
@@ -637,7 +639,7 @@ input[type="email"], input[type="password"],input[type="text"]{
 .rating-detail-hotel-title{
     position: absolute;
     right: 95px;
-    top: 70px;
+    top: 84px;
 }
 
 .fasilitas-wifi{
@@ -710,6 +712,21 @@ input[type="email"], input[type="password"],input[type="text"]{
 
 .large-bed-icon{
     margin-top: 15px !important;
+}
+
+.map-container{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+    
+.map-container iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
 }
 
 
@@ -1088,7 +1105,7 @@ input[type="text"]#search_hotel{
     border-radius: 7px;
     position: absolute !important;
     right: 50px;
-    top: 74px;
+    top: 88px;
 }
 
 .bs-tooltip-top {
