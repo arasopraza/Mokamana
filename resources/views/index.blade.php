@@ -14,7 +14,7 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-auto navbar-config text-sedang">
                 <a class="nav-link pl-4 pt-3" href="galeri">Galeri<span class="sr-only">(current)</span></a>
-                <a class="nav-link pl-4 pt-3" href="">Favorit</a>
+                <a class="nav-link pl-4 pt-3" href="">Destinasi Favorit</a>
                 <a class="nav-link pl-4 pt-3" href="/tentang-kami">Tentang Kami</a>
                 <a class="nav-link pl-4 pt-3 profile-icon" href="/login" tabindex="-1" aria-disabled="true">
                     <button type="submit" class="btn btn-block text-biasa mt-n1">Masuk</button>

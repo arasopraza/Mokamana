@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="{{ asset('css/template.css') }}">
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">  
     <link rel="icon" href="{{ asset('assets/icon/logo_title.png') }}" type="image/icon type">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>@yield('title')</title>
 </head>
 
@@ -79,6 +80,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
     -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="{{ asset('js/main.js') }}"></script>
 </body>
 

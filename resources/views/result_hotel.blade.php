@@ -29,7 +29,7 @@
                             <a class="dropdown-item text-biasa" href="#">Lihat Profil</a>
                             <a class="dropdown-item ahref-no-decor text-biasa accent-text-color" href="/logout">Logout</a>
                         </div>
-                      </div>
+                    </div>
                 </div>
             </div>
         </div>

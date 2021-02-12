@@ -1258,8 +1258,66 @@ input[type="text"]#search_hotel{
     margin-right: 0;
 }
 
+/* //* PROFILE PAGE */
+.container-profile{
+    width: fit-content;
+    height: fit-content;
+    padding: 30px;
+    border-radius: 20px;
+    border:1px solid #b2bec3 ;
+}
 
+.container-profile img{
+    width: 275px;
+    height: 275px;
+    border-radius: 200px;
+    object-fit: cover;
 
+}
+
+.container-profile-info{
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid #b2bec3;
+}
+
+.profile-input{
+    width: 300px;
+    height: 40px !important;
+}
+
+.edit-icon{
+    width: 24px;
+}
+
+.btn-reset-password{
+    color: white;
+    background-color: #f03250;
+    border: none;
+    padding: 7px;
+    border-radius: 11px;
+}
+
+.button-file-profile{
+    background-color: white;
+}
+
+.button-file-profile:focus{
+    outline: 0;
+}
+
+.btn-update-profile{
+    background-color: #31A3B6;
+}
+
+.btn-close-modal{
+    background-color: white;
+    border: none;
+}
+
+.btn-close-modal:focus{
+    outline: 0;
+}
 
 
 

@@ -116,22 +116,22 @@ function loadfunction(){
 }
 
 
-//* replace text hotel & wisata
-var Photel = document.getElementById('hotel');
-var Pwisata = document.getElementById('wisata');
-var Hasiltext = document.getElementById('ket-hasil');
+// //* replace text hotel & wisata
+// var Photel = document.getElementById('hotel');
+// var Pwisata = document.getElementById('wisata');
+// var Hasiltext = document.getElementById('ket-hasil');
 
-Photel.onclick = function(){
-    var res = Hasiltext.replace(/wisata/gi, "hotel");
-    document.getElementById('ket-hasil').innerHTML = res;
-    alert('tuh bisa');
-}
+// Photel.onclick = function(){
+//     var res = Hasiltext.replace(/wisata/gi, "hotel");
+//     document.getElementById('ket-hasil').innerHTML = res;
+//     alert('tuh bisa');
+// }
 
-Pwisata.onclick = function(){
-    var res = Hasiltext.replace(/hotel/gi, "wisata");
-    document.getElementById('ket-hasil').innerHTML = res;
-    alert('tuh bisa');
-}
+// Pwisata.onclick = function(){
+//     var res = Hasiltext.replace(/hotel/gi, "wisata");
+//     document.getElementById('ket-hasil').innerHTML = res;
+//     alert('tuh bisa');
+// }
 
 //* ONCLICK ICON BOOKMARK HOTEL
 // #FIXME bug
@@ -140,5 +140,3 @@ function bookmarkActive(){
     icon.style.setProperty("filter", "none", "important");
     icon.style.setProperty("opacity", "1", "important");
 }
-
-
