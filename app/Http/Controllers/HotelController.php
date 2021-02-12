@@ -23,7 +23,7 @@ class HotelController extends Controller
             CURLOPT_CUSTOMREQUEST => "GET",
             CURLOPT_HTTPHEADER => [
                 "x-rapidapi-host: hotels4.p.rapidapi.com",
-                "x-rapidapi-key: 410a76110bmsh572c99e914a7b5ap19b9d6jsn4dc181ed5644"
+                "x-rapidapi-key: 4204385fa1mshb6e6fbaf5df5a75p1c680djsnd84ad9d5a41d"
             ],
         ]);
         $response = curl_exec($curl);
@@ -53,8 +53,8 @@ class HotelController extends Controller
                 $ratingHotels = $getDetailHotel["data"]["body"]["propertyDescription"]["starRating"];
                 $locationHotels = $getDetailHotel["data"]["body"]["pdpHeader"]["hotelLocation"]['locationName'];
                 $priceHotels = $getDetailHotel["data"]["body"]["propertyDescription"]["featuredPrice"]["currentPrice"]["plain"];
-                $baseUrl = $getPhotoHotel["hotelImages"][0]["baseUrl"];
                 $priceInRupiah = $priceHotels * 14000;
+                $baseUrl = $getPhotoHotel["hotelImages"][0]["baseUrl"];
                 $sizeImage = 'y';
                 $urlPhotoHotels = str_replace("{size}", $sizeImage, $baseUrl);
                 $dataHotel->push(['id' => $idHotels, 'name' => $nameHotels, 'rating' => $ratingHotels, 'photo' => $urlPhotoHotels, 'location' => $locationHotels, 'price' => $priceInRupiah]);
@@ -77,8 +77,21 @@ class HotelController extends Controller
         $nameHotel = $getDetailHotel["data"]["body"]["propertyDescription"]["name"];
         $ratingHotel = $getDetailHotel["data"]["body"]["propertyDescription"]["starRating"];
         $locationHotel = $getDetailHotel["data"]["body"]["propertyDescription"]["address"]['fullAddress'];
+        $latitudeHotel = $getDetailHotel["data"]["body"]["pdpHeader"]["hotelLocation"]['coordinates']["latitude"];
+        $longitudeHotel = $getDetailHotel["data"]["body"]["pdpHeader"]["hotelLocation"]['coordinates']["longitude"];
         $priceHotel = $getDetailHotel["data"]["body"]["propertyDescription"]["featuredPrice"]["currentPrice"]["plain"];
         $priceInRupiah = $priceHotel * 14000;
+
+        $baseUrl1 = $getPhotoHotel["hotelImages"][0]["baseUrl"];
+        $baseUrl2 = $getPhotoHotel["hotelImages"][1]["baseUrl"];
+        $baseUrl3 = $getPhotoHotel["hotelImages"][2]["baseUrl"];
+        $baseUrl4 = $getPhotoHotel["hotelImages"][3]["baseUrl"];
+
+        $sizeImage = 'y';
+        $urlPhotoHotels1 = str_replace("{size}", $sizeImage, $baseUrl1);
+        $urlPhotoHotels2 = str_replace("{size}", $sizeImage, $baseUrl2);
+        $urlPhotoHotels3 = str_replace("{size}", $sizeImage, $baseUrl3);
+        $urlPhotoHotels4 = str_replace("{size}", $sizeImage, $baseUrl4);
 
         $currentWeather = $this->get_CURL("http://api.openweathermap.org/data/2.5/weather?q=Pekanbaru&appid=43099dc76f1ed752ffe8a7f761ecdaf1&units=metric");
         $currentTemp = $currentWeather["main"]["temp"];
@@ -86,7 +99,9 @@ class HotelController extends Controller
         $currentWindSpeed = $currentWeather["wind"]["speed"];
         $detailHotel->push([
             'name' => $nameHotel, 'rating' => $ratingHotel, 'address' => $locationHotel,
-            'price' => $priceInRupiah, 'temperature' => $currentTemp, 'humidity' => $currentHumidity,
+            'price' => $priceInRupiah, 'latitude' => $latitudeHotel, 'longitude' => $longitudeHotel, 
+            'photo1' => $urlPhotoHotels1, 'photo2' => $urlPhotoHotels2, 'photo3' => $urlPhotoHotels3, 
+            'photo4' => $urlPhotoHotels4, 'temperature' => $currentTemp, 'humidity' => $currentHumidity, 
             'windspeed' => $currentWindSpeed
         ]);
 

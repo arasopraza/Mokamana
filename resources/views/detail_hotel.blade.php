@@ -118,30 +118,30 @@
                     <div id="carouselExampleIndicators" class="carousel slide slider-detail-hotel" data-interval="false">
                         <ol class="carousel-indicators">
                             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active img-indicator">
-                                <img src="{{ asset('assets/img/hotel/hilton.png') }}" class="d-block w-100 small-img" alt="...">
+                                <img src="{{ $hotel['photo1'] }}" class="d-block w-100 small-img" alt="...">
                             </li>
                             <li data-target="#carouselExampleIndicators" data-slide-to="1" class="img-indicator">
-                                <img src="{{ asset('assets/img/hotel/hilton2.png') }}" class="d-block w-100 small-img" alt="...">
+                                <img src="{{ $hotel['photo2'] }}" class="d-block w-100 small-img" alt="...">
                             </li>
                             <li data-target="#carouselExampleIndicators" data-slide-to="2" class="img-indicator">
-                                <img src="{{ asset('assets/img/hotel/hilton3.png') }}" class="d-block w-100 small-img" alt="...">
+                                <img src="{{ $hotel['photo3'] }}" class="d-block w-100 small-img" alt="...">
                             </li>
                             <li data-target="#carouselExampleIndicators" data-slide-to="3" class="img-indicator">
-                                <img src="{{ asset('assets/img/hotel/hilton4.png') }}" class="d-block w-100 small-img" alt="...">
+                                <img src="{{ $hotel['photo4'] }}" class="d-block w-100 small-img" alt="...">
                             </li>
                         </ol>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="{{ asset('assets/img/hotel/hilton.png') }}" class="d-block w-100 img-slider" alt="...">
+                                <img src="{{ $hotel['photo1'] }}" class="d-block w-100 img-slider" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="{{ asset('assets/img/hotel/hilton2.png') }}" class="d-block w-100 img-slider" alt="...">
+                                <img src="{{ $hotel['photo2'] }}" class="d-block w-100 img-slider" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="{{ asset('assets/img/hotel/hilton3.png') }}" class="d-block w-100 img-slider" alt="...">
+                                <img src="{{ $hotel['photo3'] }}" class="d-block w-100 img-slider" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="{{ asset('assets/img/hotel/hilton4.png') }}" class="d-block w-100 img-slider" alt="...">
+                                <img src="{{ $hotel['photo4'] }}" class="d-block w-100 img-slider" alt="...">
                             </div>
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -264,8 +264,9 @@
         <div class="card card-detail-hotel">
             <p class="text-sedang font-18 mb-4">Info Lokasi</p>
             <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px;">
-                <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
-                  style="border:0" allowfullscreen></iframe>
+                <iframe width="100%" height="600" frameborder="0" scrolling="no"  marginheight="0" marginwidth="0" 
+            src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=<?= $hotel['latitude']?>,%20<?= $hotel['longitude'] ?>+(Mokamana)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+        </iframe>
               </div>
         </div>
 
