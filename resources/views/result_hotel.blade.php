@@ -5,36 +5,6 @@
 <body id="loading">
 
 </body>
-@section('navbar')
-
-    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-white position-fixed z-index-5 full-width">
-        <div class="container">
-            <a class="navbar-brand" href="/">
-                <img src="assets/img/logo.png" style="width: 150px;" alt="">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav ml-auto navbar-config text-sedang font-16">
-                    <a class="nav-link pl-4 pt-3" href="/galeri">Galeri<span class="sr-only">(current)</span></a>
-                    <a class="nav-link pl-4 pt-3" href="">Favorit</a>
-                    <a class="nav-link pl-4 pt-3" href="/tentang-kami">Tentang Kami</a>
-                    <div class="dropdown">
-                        <button class="dropdown-toggle profile-icon primary-box-color no-border pl-4 pt-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img src="assets/icon/profile-icon.png" alt="">
-                        </button>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item text-biasa" href="#">Lihat Profil</a>
-                            <a class="dropdown-item ahref-no-decor text-biasa accent-text-color" href="/logout">Logout</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-@endsection
 
 @section('content')
     <section class="row justify-content-center">

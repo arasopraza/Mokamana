@@ -9,6 +9,11 @@ use Illuminate\Http\Request;
 class HotelController extends Controller
 {
 
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     function get_CURL($url)
     {
         $curl = curl_init();

@@ -13,16 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'PagesController@home');
+Route::get('/', 'PagesController@index');
 Route::get('/galeri', 'PagesController@galeri');
 Route::get('/tentang-kami', 'PagesController@tentangKami');
-Route::get('/detail-hotel/id-hotel/{id}', 'HotelController@detailHotel');
 Route::get('/hasil-pencarian', 'HotelController@searchHotel');
+Route::get('/detail-hotel/id-hotel/{id}', 'HotelController@detailHotel');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/profil', 'HomeController@profile');
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
-Route::get('/profil', function(){
-    return view('profile');
-});

@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
-    public function home()
+    public function index()
     {
         return view('index');
     }
@@ -16,11 +16,10 @@ class PagesController extends Controller
     {
         return view('galeri');
     }
+    
     public function tentangKami()
     {
         return view('tentang_kami');
     }
     
-
-
 }

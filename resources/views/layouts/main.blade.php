@@ -20,7 +20,38 @@
 <body>
 
     <!-- //*navbar -->
-    @yield('navbar')
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-white position-fixed z-index-3 full-width">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="{{ asset('assets/img/logo.png') }}" style="width: 150px;" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto navbar-config text-sedang">
+                    <a class="nav-link pl-4 pt-3" href="galeri">Galeri<span class="sr-only">(current)</span></a>
+                    <a class="nav-link pl-4 pt-3" href="tentang-kami/#kontak">Kontak</a>
+                    <a class="nav-link pl-4 pt-3" href="/tentang-kami">Tentang Kami</a>
+                    @guest
+                    <a class="nav-link pl-4 pt-3 profile-icon" href="{{ route('login') }}" tabindex="-1" aria-disabled="true">
+                        <button type="submit" class="btn btn-block text-biasa mt-n1">Login</button>
+                    </a>
+                    @else
+                    <div class="dropdown">
+                        <button class="dropdown-toggle profile-icon primary-box-color no-border pl-4 pt-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="assets/icon/profile-icon.png" alt="">
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item text-biasa" href="/profil">Lihat Profil</a>
+                            <a class="dropdown-item ahref-no-decor text-biasa accent-text-color" href="{{ route('logout') }}">Logout</a>
+                        </div>
+                    </div>
+                    @endguest
+                </div>
+            </div>
+        </div>
+    </nav>
     <!-- //* end navbar -->
  
     <!-- //* Jumbroton-->

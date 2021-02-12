@@ -2,37 +2,20 @@
 
 @section('title', 'Mokamana')
 
-@section('navbar')
-<nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-white position-fixed z-index-3 full-width">
-    <div class="container">
-        <a class="navbar-brand" href="/">
-            <img src="{{ asset('assets/img/logo.png') }}" style="width: 150px;" alt="">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav ml-auto navbar-config text-sedang">
-                <a class="nav-link pl-4 pt-3" href="galeri">Galeri<span class="sr-only">(current)</span></a>
-                <a class="nav-link pl-4 pt-3" href="">Destinasi Favorit</a>
-                <a class="nav-link pl-4 pt-3" href="/tentang-kami">Tentang Kami</a>
-                <a class="nav-link pl-4 pt-3 profile-icon" href="/login" tabindex="-1" aria-disabled="true">
-                    <button type="submit" class="btn btn-block text-biasa mt-n1">Masuk</button>
-                </a>
-            </div>
-        </div>
-    </div>
-</nav>
-@endsection
-
 @section('content')
 <div class="jumbotron jumbotron-fluid jumbotron-index">
     <div class="container">
         <section class="row">
             <section class="col-lg-6">
+                @guest 
                 <h1 class="text-tebal-banget font-40 mt-lg-5">EH <span class="accent-text-color">Kamu</span>,<br>Mau kemana
                     nih?
                 </h1>
+                @else
+                <h1 class="text-tebal-banget font-40 mt-lg-5">EH <span class="accent-text-color">{{ Auth::user()->name }}</span>,<br>Mau kemana
+                    nih?
+                </h1>
+                @endguest
                 <p class="text-biasa font-16 mt-3 mb-0">Cukup ketik kota yang ingin anda tuju</p>
                 <p class="text-biasa font-16 mb-lg-n5">lalu klik cari, gampang kan?</p>
 
