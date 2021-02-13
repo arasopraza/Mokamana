@@ -43,7 +43,7 @@
                             <img src="assets/icon/profile-icon.png" alt="">
                         </button>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item text-biasa" href="/profil">Lihat Profil</a>
+                            <a class="dropdown-item text-biasa" href="/users/{{ Auth::user()->id }}/edit-profile">Lihat Profil</a>
                             <a class="dropdown-item ahref-no-decor text-biasa accent-text-color" href="{{ route('logout') }}">Logout</a>
                         </div>
                     </div>

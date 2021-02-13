@@ -16,11 +16,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'PagesController@index');
 Route::get('/galeri', 'PagesController@galeri');
 Route::get('/tentang-kami', 'PagesController@tentangKami');
-Route::get('/hasil-pencarian', 'HotelController@searchHotel');
-Route::get('/detail-hotel/id-hotel/{id}', 'HotelController@detailHotel');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/profil', 'HomeController@profile');
+Route::get('/home', 'HomeController@index');
+
+//user
+Route::get('/users', 'UserController@show');
+Route::get('/users/{user}/edit-profile', 'UserController@edit');
+Route::patch('/users/{user}', 'UserController@update');
+
+//hotel
+Route::get('/hasil-pencarian', 'HotelController@searchHotel');
+Route::get('/detail-hotel/id-hotel/{id}', 'HotelController@detailHotel');
+
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');

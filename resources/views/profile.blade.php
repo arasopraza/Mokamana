@@ -10,48 +10,44 @@
                     <button type="file" class="no-border button-file-profile">
                         <img src="assets/icon/profile-icon.png" alt="">
                     </button>
-                    <p class="text-center text-sedang font-22 mt-4 mb-0">Argya Aulia Fauzandika</p>
+                    <p class="text-center text-sedang font-22 mt-4 mb-0">{{ $user->name }}</p>
                     <p class="text-center unactived-text-color text-biasa font-16">Palembang</p>
                 </div>               
             </section>
             <section class="col-8">
-                <form class="container-profile-info">    
+                <form method="POST" action="/users/{{ $user->id }}" class="container-profile-info">    
+                    @method('patch')
+                    @csrf
                     <p class="text-tebal font-24">Info User</p>   
                     <hr>
                     <div class="form-group row">
                         <label for="inputUsername" class="col-sm-2 col-form-label">Username</label>
                         <div class="col-sm-5">
-                            <input type="text" class="form-control profile-input input-color" id="inputUsername" value="Gya" required>
+                            <input type="text" class="form-control profile-input input-color" id="inputUsername" value="{{ $user->name }}" name="name">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="inputNama" class="col-sm-2 col-form-label">Nama</label>
                         <div class="col-sm-5">
-                            <input type="text" class="form-control profile-input input-color" id="inputNama" value="Argya Aulia Fauzandika">
+                            <input type="text" class="form-control profile-input input-color" id="inputNama">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
                         <div class="col-sm-5">
-                            <input type="text" class="form-control profile-input input-color" id="inputEmail" value="ardian20146@gmail.com" >
+                            <input type="text" class="form-control profile-input input-color" id="inputEmail" value="{{ $user->email }}" name="email">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="inputDomisili" class="col-sm-2 col-form-label">Domisili</label>
                         <div class="col-sm-5">
-                            <input type="text" class="form-control profile-input input-color" id="inputEmail" value="Palembang" >
+                            <input type="text" class="form-control profile-input input-color" id="inputEmail">
                         </div>
                     </div>
                     <button type="submit" class="btn btn-info btn-update-profile mt-4 mb-3" onclick="updateprofile()">Ubah Profil</button>
 
                     <hr>
                     <p class="text-tebal font-24">Password</p> 
-                    <div class="form-group row">
-                        <label for="inputold" class="col-sm-2 col-form-label">Password Lama</label>
-                        <div class="col-sm-5">
-                            <input type="text" class="form-control profile-input input-color mt-2" id="inputold">
-                        </div>
-                    </div>
                     <div class="form-group row">
                         <label for="inputnew" class="col-sm-2 col-form-label">Password Baru</label>
                         <div class="col-sm-5">
