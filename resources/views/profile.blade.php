@@ -5,15 +5,6 @@
 @section('content')
     <div class="container justify-content-center margin-top-160">
         <section class="row">
-            <section class="col-4 text-center">
-                <div class="container-profile text-center mr-0 ml-auto">
-                    <button type="file" class="no-border button-file-profile">
-                        <img src="assets/icon/profile-icon.png" alt="">
-                    </button>
-                    <p class="text-center text-sedang font-22 mt-4 mb-0">{{ $user->name }}</p>
-                    <p class="text-center unactived-text-color text-biasa font-16">Palembang</p>
-                </div>               
-            </section>
             <section class="col-8">
                 <form method="POST" action="/users/{{ $user->id }}" class="container-profile-info">    
                     @method('patch')

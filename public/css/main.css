@@ -1097,7 +1097,7 @@ input[type="text"]#search_hotel{
     border-radius: 7px;
     position: absolute !important;
     right: 20px;
-    top: 20px;
+    top: 0px;
 }
 
 .rating-hotel-title-iconn{
@@ -1322,6 +1322,21 @@ input[type="text"]#search_hotel{
 }
 
 
+/* //* BOOKMARK */
+.icon-remove{
+    margin-left: 90px;
+    filter: grayscale(100%);
+    opacity: 50%;
+    position: absolute;
+    z-index: 3;
+    right: 20px;
+    top: 20px;
+}
+
+.icon-remove:hover{
+    filter: none;
+    opacity: 100%;
+}
 
 
 

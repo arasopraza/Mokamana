@@ -31,7 +31,7 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ml-auto navbar-config text-sedang">
                     <a class="nav-link pl-4 pt-3" href="galeri">Galeri<span class="sr-only">(current)</span></a>
-                    <a class="nav-link pl-4 pt-3" href="tentang-kami/#kontak">Kontak</a>
+                    <a class="nav-link pl-4 pt-3" href="bookmark">Destinasi Favorit</a>
                     <a class="nav-link pl-4 pt-3" href="/tentang-kami">Tentang Kami</a>
                     @guest
                     <a class="nav-link pl-4 pt-3 profile-icon" href="{{ route('login') }}" tabindex="-1" aria-disabled="true">
@@ -113,6 +113,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="{{ asset('js/main.js') }}"></script>
+    @stack('scripts')
 </body>
 
 </html>

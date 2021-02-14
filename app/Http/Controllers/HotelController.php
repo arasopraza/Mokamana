@@ -103,6 +103,7 @@ class HotelController extends Controller
         $currentHumidity = $currentWeather["main"]["humidity"];
         $currentWindSpeed = $currentWeather["wind"]["speed"];
         $detailHotel->push([
+            'id' => $idHotel,
             'name' => $nameHotel, 'rating' => $ratingHotel, 'address' => $locationHotel,
             'price' => $priceInRupiah, 'latitude' => $latitudeHotel, 'longitude' => $longitudeHotel, 
             'photo1' => $urlPhotoHotels1, 'photo2' => $urlPhotoHotels2, 'photo3' => $urlPhotoHotels3, 

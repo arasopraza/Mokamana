@@ -13,7 +13,8 @@
     <div class="container justify-content-center cont-single-destinasi">
         <div class="col-12 mb-5 card card-detail-hotel">
             @foreach ($detailHotel as $hotel)
-            <h5 class="card-title text-tebal font-24 mb-0">{{ $hotel['name'] }}</h5>
+            <input type="hidden" id="id_hotel" value="{{$hotel['id']}}">
+            <h5 class="card-title text-tebal font-24 mb-0" id="hotel_name">{{ $hotel['name'] }}</h5>
             @endforeach
             {{-- <h5 class="card-title text-tebal font-18 mb-0">Hilton Bandung</h5> --}}
             <section class="row padding-left-18">
@@ -82,7 +83,7 @@
             <p class="primary-text-color text-biasa font-18 rating-hotel-title-iconn mb-0">
                 8.4
             </p>
-            <div class="cont-icon-bookmark-title" href="#" onclick="bookmarkActive()">
+            <div class="cont-icon-bookmark-title bookmark-select" onclick="bookmarkActive()">
                 <img src="{{ asset('assets/icon/bookmark.png') }}" alt="" class="icon-bookmark-title    " id="icon-bookmark">
             </div>
 
@@ -248,3 +249,26 @@
 
     </div>
 @endsection
+@push('scripts')
+    <script type="text/javascript">
+        $('.bookmark-select').click(function(){
+            $.ajax({
+                'url' : '{{route('')}}',
+                'type' : 'POST',
+                'data' : {
+                    '_token' : '{{csrf_token()}}',
+                    'id_hotel' : $('#id_hotel').val()
+                },
+                'success' : function(data){
+                    //bebas
+
+                    //style
+
+                },
+                'error' : function(data){
+                    console.log(data);
+                }
+            })
+        })
+    </script>
+@endpush

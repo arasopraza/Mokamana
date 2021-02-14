@@ -31,3 +31,6 @@ Route::get('/hasil-pencarian', 'HotelController@searchHotel');
 Route::get('/detail-hotel/id-hotel/{id}', 'HotelController@detailHotel');
 
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
+Route::get('/bookmark', function(){
+    return view('bookmark');
+});
