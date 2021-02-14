@@ -20,7 +20,7 @@
 <body>
 
     <!-- //*navbar -->
-    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-white position-fixed z-index-3 full-width">
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-white position-fixed z-index-5 full-width">
         <div class="container">
             <a class="navbar-brand" href="/">
                 <img src="{{ asset('assets/img/logo.png') }}" style="width: 150px;" alt="">
@@ -40,7 +40,7 @@
                     @else
                     <div class="dropdown">
                         <button class="dropdown-toggle profile-icon primary-box-color no-border pl-4 pt-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img src="assets/icon/profile-icon.png" alt="">
+                            <img src="{{asset('assets/icon/profile-icon.png') }}" alt="">
                         </button>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item text-biasa" href="/users/{{ Auth::user()->id }}/edit-profile">Lihat Profil</a>

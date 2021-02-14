@@ -49,9 +49,6 @@
                                     <div class="card mb-4 full-width card-hotel ahref-no-decor">
                                         <div class="row no-gutters">
                                             <div class="col-md-4">
-                                                <div class="cont-icon-bookmark" href="#" onclick="bookmarkActive()">
-                                                    <img src="assets/icon/bookmark.png" alt="" class="icon-bookmark" id="icon-bookmark">
-                                                </div>
                                                 <img src="{{ $hotels['photo'] }}" class="card-img" id="card-img" alt="...">
                                             </div>
                                             <a href="/detail-hotel/id-hotel/{{ $hotels['id'] }}" class="col-md-8 ahref-no-decor">
