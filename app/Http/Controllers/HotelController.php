@@ -28,7 +28,7 @@ class HotelController extends Controller
             CURLOPT_CUSTOMREQUEST => "GET",
             CURLOPT_HTTPHEADER => [
                 "x-rapidapi-host: hotels4.p.rapidapi.com",
-                "x-rapidapi-key: 4204385fa1mshb6e6fbaf5df5a75p1c680djsnd84ad9d5a41d"
+                "x-rapidapi-key: 2006390490mshcbbe2845fce2cd6p1e22d6jsn1d2442417570"
             ],
         ]);
         $response = curl_exec($curl);
@@ -36,38 +36,38 @@ class HotelController extends Controller
         curl_close($curl);
         return json_decode($response, TRUE);
     }
-
+    
     function searchHotel(Request $request)
     {
         $dataHotel = collect([]);
-
+        
         //get params
         $cityName = $request->input('kota');
         $this->validate($request, ['kota' => 'required']);
 
         $getHotel = $this->get_CURL("https://hotels4.p.rapidapi.com/locations/search?query=$cityName&locale=en_ID");
         $responseHotel = $getHotel["suggestions"][1]["entities"];
-
+        
         foreach ($responseHotel as $items) {
             $idHotels = $items["destinationId"];
             $getPhotoHotel = $this->get_CURL("https://hotels4.p.rapidapi.com/properties/get-hotel-photos?id=$idHotels");
             $getDetailHotel = $this->get_CURL("https://hotels4.p.rapidapi.com/properties/get-details?id=$idHotels&locale=en_US&currency=USD&checkOut=2020-01-15&adults1=1&checkIn=2020-01-08");
-
+            
             try {
                 $nameHotels = $items["name"];
                 $ratingHotels = $getDetailHotel["data"]["body"]["propertyDescription"]["starRating"];
-                $locationHotels = $getDetailHotel["data"]["body"]["pdpHeader"]["hotelLocation"]['locationName'];
+                $locationHotels = $getDetailHotel["data"]["body"]["propertyDescription"]["address"]['cityName'];
                 $priceHotels = $getDetailHotel["data"]["body"]["propertyDescription"]["featuredPrice"]["currentPrice"]["plain"];
                 $priceInRupiah = $priceHotels * 14000;
                 $baseUrl = $getPhotoHotel["hotelImages"][0]["baseUrl"];
                 $sizeImage = 'y';
                 $urlPhotoHotels = str_replace("{size}", $sizeImage, $baseUrl);
-                $dataHotel->push(['id' => $idHotels, 'name' => $nameHotels, 'rating' => $ratingHotels, 'photo' => $urlPhotoHotels, 'location' => $locationHotels, 'price' => $priceInRupiah]);
+                $dataHotel->push(['id' => $idHotels, 'name' => $nameHotels, 'rating' => $ratingHotels, 
+                'photo' => $urlPhotoHotels, 'location' => $locationHotels, 'price' => $priceInRupiah]);
             } catch (Exception $e) {
                 report($e);
             }
         }
-
         return view('result_hotel', compact('dataHotel'), ['data' => $request]);
     }
 

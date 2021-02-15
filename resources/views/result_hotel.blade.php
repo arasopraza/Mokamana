@@ -49,13 +49,14 @@
                                     <div class="card mb-4 full-width card-hotel ahref-no-decor">
                                         <div class="row no-gutters">
                                             <div class="col-md-4">
-                                                <img src="{{ $hotels['photo'] }}" class="card-img" id="card-img" alt="...">
+                                                <img src="{{ $hotels['photo'] }}" class="card-img" id="card-img" alt="..." name="photo_hotels">
                                             </div>
                                             <a href="/detail-hotel/id-hotel/{{ $hotels['id'] }}" class="col-md-8 ahref-no-decor">
                                                 <div class="card-body" id="cardbody">
+                                                    <input type="hidden" id="id_hotels" value="{{ $hotels['id'] }}">
                                                     <section class="row">
                                                         <section class="col-lg-7">
-                                                            <h5 class="card-title text-tebal font-16 mb-0 text-left second-text-color   ">{{ $hotels['name'] }}</h5>
+                                                            <h5 class="card-title text-tebal font-16 mb-0 text-left second-text-color" id="name_hotels">{{ $hotels['name'] }}</h5>
                                                         </section>
                                                         <section class="col-lg-5">
                                                             <div class="rating-hotel">
@@ -71,7 +72,7 @@
                                                             </p>
                                                         </section>
                                                     </section>
-                                                    <section class="row padding-left-18">
+                                                    <section class="row padding-left-18" id="rating_hotels">
                                                         @switch($hotels['rating'])
                                                             @case(5)
                                                             @for ($i = 1; $i <= 5; $i++)
@@ -114,7 +115,7 @@
                                                             {{ $hotels['rating']}}
                                                         @endswitch
                                                     </section>
-                                                    <p class="card-text text-biasa font-14 unactived-text-color mt-1 text-left">
+                                                    <p class="card-text text-biasa font-14 unactived-text-color mt-1 text-left" id="location_hotels">
                                                         {{ $hotels['location'] }}
                                                     </p>
                                                     <p class="text-biasa mb-lg-1 text-left second-text-color">Fasilitas</p>
@@ -137,7 +138,7 @@
                                                             6+
                                                         </p>
                                                     </section>
-                                                    <p class="text-tebal font-18 mb-0 mt-3 text-left accent-text-color">
+                                                    <p class="text-tebal font-18 mb-0 mt-3 text-left accent-text-color" id="price_hotels">
                                                         Rp.{{ $harga = $hotels['price'] }}
                                                         <span class="text-sedang font-14 second-text-color">/malam</span></p>
                                                 </div>
@@ -350,3 +351,32 @@
     </section>
     <!-- //* end content -->
 @endsection
+{{-- @push('scripts')
+    <script type="text/javascript">
+        $('.bookmark-select').click(function(){
+            $.ajax({
+                'url' : '/bookmark',
+                'type' : 'POST',
+                'data' : {
+                    '_token' : '{{csrf_token()}}',
+                    'id_hotel' : $('#id_hotels').val(),
+                    'name' : $('#name_hotels').text(),
+                    'rating' : $('#rating_hotels').text(),
+                    'address' : $('#location_hotels').text(),
+                    'price' : $('#price_hotels').text(),
+                    'photo' : $('photo_hotels').attr('src'),
+                },
+                'success' : function(data){
+                    //bebas
+                    console.log(data);
+
+                    //style
+
+                },
+                'error' : function(data){
+                    console.log(data);
+                }
+            })
+        })
+    </script>
+@endpush --}}

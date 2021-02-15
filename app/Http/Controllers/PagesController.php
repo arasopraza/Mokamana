@@ -17,6 +17,11 @@ class PagesController extends Controller
         return view('galeri');
     }
     
+    public function favorit()
+    {
+        return view('bookmark');
+    }
+
     public function tentangKami()
     {
         return view('tentang_kami');

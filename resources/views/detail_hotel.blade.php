@@ -12,12 +12,14 @@
     <!-- //*content -->
     <div class="container justify-content-center cont-single-destinasi">
         <div class="col-12 mb-5 card card-detail-hotel">
+            @csrf
             @foreach ($detailHotel as $hotel)
             <input type="hidden" id="id_hotel" value="{{$hotel['id']}}">
-            <h5 class="card-title text-tebal font-24 mb-0" id="hotel_name">{{ $hotel['name'] }}</h5>
+            <h5 class="card-title text-tebal font-24 mb-0" id="name_hotel">{{ $hotel['name'] }}</h5>
             @endforeach
             {{-- <h5 class="card-title text-tebal font-18 mb-0">Hilton Bandung</h5> --}}
-            <section class="row padding-left-18">
+            <section class="row padding-left-18" id="rating_hotel">
+                {{($hotel['rating'])}}
                 @switch($hotel['rating'])
                     @case(5)
                     @for ($i = 1; $i <= 5; $i++)
@@ -60,7 +62,7 @@
                     {{ $hotel['rating']}}
                 @endswitch
             </section>
-            <p class="card-text text-biasa font-14 unactived-text-color mt-lg-2 mb-0">
+            <p class="card-text text-biasa font-14 unactived-text-color mt-lg-2 mb-0" id="address_hotel">
             {{ $hotel['address'] }}
             </p>
             {{-- <div class="rating-detail-hotel">
@@ -84,7 +86,7 @@
                 8.4
             </p>
             <div class="cont-icon-bookmark-title bookmark-select" onclick="bookmarkActive()">
-                <img src="{{ asset('assets/icon/bookmark.png') }}" alt="" class="icon-bookmark-title    " id="icon-bookmark">
+                <img src="{{ asset('assets/icon/bookmark.png') }}" alt="" class="icon-bookmark-title" id="icon-bookmark">
             </div>
 
             <hr>      
@@ -95,16 +97,16 @@
                     <div id="carouselExampleIndicators" class="carousel slide slider-detail-hotel" data-interval="false">
                         <ol class="carousel-indicators">
                             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active img-indicator">
-                                <img src="{{ $hotel['photo1'] }}" class="d-block w-100 small-img" alt="...">
+                                <img src="{{ $hotel['photo1'] }}" class="d-block w-100 small-img" alt="..." id="photo1">
                             </li>
                             <li data-target="#carouselExampleIndicators" data-slide-to="1" class="img-indicator">
-                                <img src="{{ $hotel['photo2'] }}" class="d-block w-100 small-img" alt="...">
+                                <img src="{{ $hotel['photo2'] }}" class="d-block w-100 small-img" alt="..." id="photo2">
                             </li>
                             <li data-target="#carouselExampleIndicators" data-slide-to="2" class="img-indicator">
-                                <img src="{{ $hotel['photo3'] }}" class="d-block w-100 small-img" alt="...">
+                                <img src="{{ $hotel['photo3'] }}" class="d-block w-100 small-img" alt="..." id="photo3">
                             </li>
                             <li data-target="#carouselExampleIndicators" data-slide-to="3" class="img-indicator">
-                                <img src="{{ $hotel['photo4'] }}" class="d-block w-100 small-img" alt="...">
+                                <img src="{{ $hotel['photo4'] }}" class="d-block w-100 small-img" alt="..." id="photo4">
                             </li>
                         </ol>
                         <div class="carousel-inner">
@@ -135,12 +137,11 @@
                 <section class="col-lg-4">
                     <div class="card">
                         <div class="card-detail-cuaca card-body">
-
                             <section class="row no-gutters mb-lg-4">
                                 <section class="col-md-12 fit-height">
                                     <div class="container-suhu text-center">
                                         <p class="font-16 text-sedang pt-3">Suhu disekitar hotel</p>
-                                        <p class="font-30 text-tebal accent-text-color mb-0">{{ $hotel['temperature'] }} °C</p>
+                                        <p class="font-30 text-tebal accent-text-color mb-0" id="temperature_hotel">{{ $hotel['temperature'] }} °C</p>
                                         <p class="font-14 text-biasa unactived-text-color mb-0">Berawan</p>
                                     </div>
                                 </section>                        
@@ -153,7 +154,7 @@
                                         <img src="{{ asset('assets/icon/lembab.png') }}" class="icon-cuaca mr-3 mt-1" alt="">
                                         <div class="keterangan-suhu">
                                             <p class="mb-0 text-biasa unactived-text-color font-14">Kelembaban</p>
-                                            <p class="mb-0 text-tebal unactived-text-color font-18">{{ $hotel['humidity'] }} %</p>
+                                            <p class="mb-0 text-tebal unactived-text-color font-18" id="humidity_hotel">{{ $hotel['humidity'] }} %</p>
                                         </div>   
                                     </section>                                    
                                 </div>  
@@ -165,7 +166,7 @@
                                         <img src="{{ asset('assets/icon/angin.png') }}" class="icon-cuaca mr-3 mt-1" alt="">
                                         <div class="keterangan-suhu">
                                             <p class="mb-0 text-biasa unactived-text-color font-14">Laju Angin</p>
-                                            <p class="mb-0 text-tebal unactived-text-color font-18">{{ $hotel['windspeed'] }} m/s</p>
+                                            <p class="mb-0 text-tebal unactived-text-color font-18" id="windspeed_hotel">{{ $hotel['windspeed'] }} m/s</p>
                                         </div>   
                                     </section>                                    
                                 </div>  
@@ -231,7 +232,7 @@
             </section>
             
             <p class="font-16 text-sedang mb-0 mt-3">Harga Mulai dari</p>
-            <p class="text-tebal font-20 mb-0 text-left accent-text-color">
+            <p class="text-tebal font-20 mb-0 text-left accent-text-color" id="price_hotel">
                 {{ $hotel['price'] }}
                 <span class="text-sedang font-14 second-text-color">/malam</span>
             </p>
@@ -253,16 +254,30 @@
     <script type="text/javascript">
         $('.bookmark-select').click(function(){
             $.ajax({
-                'url' : '{{route('')}}',
+                'url' : '/bookmark',
                 'type' : 'POST',
                 'data' : {
                     '_token' : '{{csrf_token()}}',
-                    'id_hotel' : $('#id_hotel').val()
+                    'id_hotel' : $('#id_hotel').val(),
+                    'name' : $('#name_hotel').text(),
+                    'rating' : $('#rating_hotel').text(),
+                    'address' : $('#address_hotel').text(),
+                    'price' : $('#price_hotel').text(),
+                    'photo1' : $('#photo1').attr('src'),
+                    'photo2' : $('#photo2').attr('src'),
+                    'photo3' : $('#photo3').attr('src'),
+                    'photo4' : $('#photo4').attr('src'),
+                    'temperature' : $('#temperature_hotel').text(),
+                    'humidity' : $('#humidity_hotel').text(),
+                    'windspeed' : $('#windspeed_hotel').text()
                 },
                 'success' : function(data){
                     //bebas
+                    console.log(data);
+                    alert('Berhasil menambahkan bookmark');
 
                     //style
+
 
                 },
                 'error' : function(data){
