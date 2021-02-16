@@ -26,8 +26,8 @@ class BookmarkController extends Controller
      */
     public function create(Request $request)
     {
-        $bookmark = Hotel::create($request->all());        
-        return response()->json($bookmark);
+        $hotel = Hotel::create($request->all());        
+        return response()->json($hotel);
     }
 
     /**
@@ -83,6 +83,7 @@ class BookmarkController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $hotel = Hotel::find($id)->delete($id);
+        return response()->json($hotel);
     }
 }

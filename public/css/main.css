@@ -1323,7 +1323,7 @@ input[type="text"]#search_hotel{
 
 
 /* //* BOOKMARK */
-.icon-remove{
+.icon-remove-title{
     margin-left: 90px;
     filter: grayscale(100%);
     opacity: 50%;

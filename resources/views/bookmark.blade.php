@@ -11,18 +11,21 @@
                 <hr>
                 <div class="grid-result-container">
                     {{-- card --}}
-                    @foreach ($hotel as $item)
+                    @foreach ($hotel as $items)
                     <div class="card mb-4 full-width card-hotel ahref-no-decor">
+                    <input type="hidden" id="id_hotel" value="{{ $items->id}}">    
                         <div class="row no-gutters">
                             <div class="col-md-4">
-                                <img src="{{ $item->photo1}}" class="card-img" id="card-img" alt="...">
+                                <img src="{{ $items->photo1}}" class="card-img" id="card-img" alt="...">
                             </div>
-                            <img src="{{asset('assets/icon/remove.png') }}" class="icon-remove" alt="">
+                            <div class="cont-icon-bookmark-title bookmark-select">
+                                <img src="{{ asset('assets/icon/bookmark.png') }}" alt="" class="icon-bookmark-title" id="icon-bookmark">
+                            </div>
                             <a href="#" class="col-md-8 ahref-no-decor">
                                 <div class="card-body" id="cardbody">
                                     <section class="row">
                                         <section class="col-lg-7">
-                                            <h5 class="card-title text-tebal font-16 mb-0 text-left second-text-color">{{ $item->name }}</h5>
+                                            <h5 class="card-title text-tebal font-16 mb-0 text-left second-text-color">{{ $items->name }}</h5>
                                         </section>
                                         <section class="col-lg-5">
                                         
@@ -36,7 +39,7 @@
                                         
                                     </section>
                                     <p class="card-text text-biasa font-14 unactived-text-color mt-1 text-left">
-                                        {{ $item->address}}
+                                        {{ $items->address}}
                                     </p>
                                     <p class="text-biasa mb-lg-1 text-left second-text-color">Fasilitas</p>
                                     <section class="row padding-left-18 fasilitas height-20">
@@ -59,7 +62,7 @@
                                         </p>
                                     </section>
                                     <p class="text-tebal font-18 mb-0 mt-3 text-left accent-text-color">
-                                        {{ $item->price}}
+                                        {{ $items->price}}
                                         <span class="text-sedang font-14 second-text-color">/malam</span></p>
                                     </div>
                                 </a>
@@ -70,9 +73,26 @@
             </div>
         </section>
     </div>
-    @endsection
-    @push('scripts')
+@endsection
+@push('scripts')
     <script type="text/javascript">
-
+        $(".bookmark-select").click(function(){
+            var id_hotel = $('#id_hotel').val();
+            $.ajax({
+                url  : 'bookmark/'+id_hotel,
+                type : 'DELETE',
+                data : {
+                    '_token'  : '{{csrf_token()}}',
+                    'id-hotel': id_hotel
+                },
+                success: function (){
+                console.log("it works!");
+                swal('Berhasil menghapus bookmark','', 'success');
+                },
+                'error' : function(data){
+                console.log(data);
+                }
+            });
+        });
     </script>
 @endpush

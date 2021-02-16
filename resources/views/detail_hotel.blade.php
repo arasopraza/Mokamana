@@ -255,28 +255,28 @@
     <script type="text/javascript">
         $('.bookmark-select').click(function(){
             $.ajax({
-                'url' : '/bookmark',
-                'type' : 'POST',
-                'data' : {
-                    '_token' : '{{csrf_token()}}',
+                url  : '/bookmark',
+                type : 'POST',
+                data : {
+                    '_token'   : '{{csrf_token()}}',
                     'id_hotel' : $('#id_hotel').val(),
-                    'name' : $('#name_hotel').text(),
-                    'rating' : $('#rating_hotel').text(),
-                    'address' : $('#address_hotel').text(),
-                    'price' : $('#price_hotel').text(),
-                    'photo1' : $('#photo1').attr('src'),
-                    'photo2' : $('#photo2').attr('src'),
-                    'photo3' : $('#photo3').attr('src'),
-                    'photo4' : $('#photo4').attr('src'),
-                    'temperature' : $('#temperature_hotel').text(),
-                    'humidity' : $('#humidity_hotel').text(),
-                    'windspeed' : $('#windspeed_hotel').text()
+                    'name'     : $('#name_hotel').text(),
+                    'rating'   : $('#rating_hotel').text(),
+                    'address'  : $('#address_hotel').text(),
+                    'price'    : parseInt($('#price_hotel').text().replace(/[^0-9.]/g, "")),
+                    'photo1'   : $('#photo1').attr('src'),
+                    'photo2'   : $('#photo2').attr('src'),
+                    'photo3'   : $('#photo3').attr('src'),
+                    'photo4'   : $('#photo4').attr('src'),
+                    'temperature' : parseInt($('#temperature_hotel').text().replace(/[^0-9.]/g, "")),
+                    'humidity'    : parseInt($('#humidity_hotel').text().replace(/[^0-9.]/g, "")),
+                    'windspeed'   : parseInt($('#windspeed_hotel').text().replace(/[^0-9.]/g, "")),
                 },
                 'success' : function(data){
                     //bebas
                     console.log(data);
                     swal('Berhasil menambahkan bookmark','', 'success');
-                    
+            
                     const icon = document.getElementById('icon-bookmark');
                     if(icon.style.filter === "grayscale(100%)"){
                         icon.style.setProperty("filter", "none", "important");
@@ -287,7 +287,6 @@
                     }
                     
                     //style
-
 
                 },
                 'error' : function(data){
