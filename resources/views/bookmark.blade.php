@@ -17,7 +17,7 @@
                             <div class="col-md-4">
                                 <img src="{{ $item->photo1}}" class="card-img" id="card-img" alt="...">
                             </div>
-                            <img src="assets/icon/remove.png" class="icon-remove" alt="">
+                            <img src="{{asset('assets/icon/remove.png') }}" class="icon-remove" alt="">
                             <a href="#" class="col-md-8 ahref-no-decor">
                                 <div class="card-body" id="cardbody">
                                     <section class="row">

@@ -19,7 +19,7 @@
             @endforeach
             {{-- <h5 class="card-title text-tebal font-18 mb-0">Hilton Bandung</h5> --}}
             <section class="row padding-left-18" id="rating_hotel">
-                {{($hotel['rating'])}}
+                
                 @switch($hotel['rating'])
                     @case(5)
                     @for ($i = 1; $i <= 5; $i++)
@@ -61,6 +61,7 @@
                     @default
                     {{ $hotel['rating']}}
                 @endswitch
+                <p>( {{($hotel['rating'])}} )</p>
             </section>
             <p class="card-text text-biasa font-14 unactived-text-color mt-lg-2 mb-0" id="address_hotel">
             {{ $hotel['address'] }}
@@ -85,7 +86,7 @@
             <p class="primary-text-color text-biasa font-18 rating-hotel-title-iconn mb-0">
                 8.4
             </p>
-            <div class="cont-icon-bookmark-title bookmark-select" onclick="bookmarkActive()">
+            <div class="cont-icon-bookmark-title bookmark-select">
                 <img src="{{ asset('assets/icon/bookmark.png') }}" alt="" class="icon-bookmark-title" id="icon-bookmark">
             </div>
 
@@ -274,8 +275,17 @@
                 'success' : function(data){
                     //bebas
                     console.log(data);
-                    alert('Berhasil menambahkan bookmark');
-
+                    swal('Berhasil menambahkan bookmark','', 'success');
+                    
+                    const icon = document.getElementById('icon-bookmark');
+                    if(icon.style.filter === "grayscale(100%)"){
+                        icon.style.setProperty("filter", "none", "important");
+                        icon.style.setProperty("opacity", "1", "important");
+                    }else{
+                        icon.style.setProperty("filter", "grayscale(100%)", "important");
+                        icon.style.setProperty("opacity", "0.5", "important");
+                    }
+                    
                     //style
 
 
