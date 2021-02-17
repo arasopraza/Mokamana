@@ -19,7 +19,7 @@
                                 <img src="{{ $items->photo1}}" class="card-img" id="card-img" alt="...">
                             </div>
                             <div class="cont-icon-bookmark-title bookmark-select">
-                                <img src="{{ asset('assets/icon/remove.png') }}" alt="" class="icon-remove-title" id="icon-bookmark">
+                                <img src="{{ asset('assets/icon/bookmark.png') }}" alt="" class="icon-remove-title" id="icon-bookmark">
                             </div>
                             <a href="#" class="col-md-8 ahref-no-decor">
                                 <div class="card-body" id="cardbody">
@@ -88,6 +88,15 @@
                 success: function (){
                 console.log("it works!");
                 swal('Berhasil menghapus bookmark','', 'success');
+
+                const icon = document.getElementById('icon-bookmark');
+                    if(icon.style.filter === "grayscale(100%)"){
+                        icon.style.setProperty("filter", "none", "important");
+                        icon.style.setProperty("opacity", "1", "important");
+                    }else{
+                        icon.style.setProperty("filter", "grayscale(100%)", "important");
+                        icon.style.setProperty("opacity", "0.5", "important");
+                    }
                 },
                 'error' : function(data){
                 console.log(data);  

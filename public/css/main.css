@@ -1325,8 +1325,7 @@ input[type="text"]#search_hotel{
 /* //* BOOKMARK */
 .icon-remove-title{
     margin-left: 90px;
-    filter: grayscale(100%);
-    opacity: 50%;
+    opacity: 100%;
     position: absolute;
     z-index: 3;
     right: -30px;
@@ -1334,8 +1333,7 @@ input[type="text"]#search_hotel{
 }
 
 .icon-remove-title:hover{
-    filter: none;
-    opacity: 100%;
+    opacity: 70%;
 }
 
 .btn-info{

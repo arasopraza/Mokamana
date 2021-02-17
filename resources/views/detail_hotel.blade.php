@@ -64,7 +64,7 @@
                 <p>( {{($hotel['rating'])}} )</p>
                 <br>
             </section>
-            <p class="card-text text-biasa font-14 unactived-text-color mt-lg-3 mb-0" id="address_hotel">
+            <p class="card-text text-biasa font-14 unactived-text-color mt-lg-2 mb-0" id="address_hotel">
             {{ $hotel['address'] }}
             </p>
             {{-- <div class="rating-detail-hotel">
@@ -87,12 +87,12 @@
             <p class="primary-text-color text-biasa font-18 rating-hotel-title-iconn mb-0">
                 8.4
             </p>
-            <button type="button" class="btn-info font-14 cont-icon-bookmark-title bookmark-select text-biasa">
-                Tambah ke Favorit   
-            </button>
+
+            <div class="cont-icon-bookmark-title bookmark-select">
+                <img src="{{ asset('assets/icon/bookmark.png') }}" alt="" class="icon-bookmark-title" id="icon-bookmark">
+            </div>
 
             <hr>      
-
 
             <section class="row">
                 <section class="col-lg-8 gambar">
@@ -280,11 +280,11 @@
 
                     const icon = document.getElementById('icon-bookmark');
                     if(icon.style.filter === "grayscale(100%)"){
-                        icon.style.setProperty("filter", "none", "important");
-                        icon.style.setProperty("opacity", "1", "important");
-                    }else{
                         icon.style.setProperty("filter", "grayscale(100%)", "important");
                         icon.style.setProperty("opacity", "0.5", "important");
+                    }else{
+                        icon.style.setProperty("filter", "none", "important");
+                        icon.style.setProperty("opacity", "1", "important");
                     }
                     
                     //style
