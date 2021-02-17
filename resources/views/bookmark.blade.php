@@ -7,7 +7,7 @@
         
         <section class="row">
             <div class="margin-top-160">
-                <p class="text-sedang font-24">Destinasi Pilihan Kamu</p>
+                <p class="text-sedang font-24">Destinasi Favorit Saya</p>
                 <hr>
                 <div class="grid-result-container">
                     {{-- card --}}
@@ -19,7 +19,7 @@
                                 <img src="{{ $items->photo1}}" class="card-img" id="card-img" alt="...">
                             </div>
                             <div class="cont-icon-bookmark-title bookmark-select">
-                                <img src="{{ asset('assets/icon/bookmark.png') }}" alt="" class="icon-bookmark-title" id="icon-bookmark">
+                                <img src="{{ asset('assets/icon/remove.png') }}" alt="" class="icon-remove-title" id="icon-bookmark">
                             </div>
                             <a href="#" class="col-md-8 ahref-no-decor">
                                 <div class="card-body" id="cardbody">
@@ -90,7 +90,7 @@
                 swal('Berhasil menghapus bookmark','', 'success');
                 },
                 'error' : function(data){
-                console.log(data);
+                console.log(data);  
                 }
             });
         });
