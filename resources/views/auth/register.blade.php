@@ -28,13 +28,9 @@
                 <div class="img-box">
                     <img src="assets/img/login1.png" style="border: 0;" alt="" class="img-thumbnail">
                     <p class="text-left p-atas">Kerja mulu,<br>sekali-kali liburan dong..</p>
-                    <!-- <div class="location-box">
-
-                    </div> -->
                     <div class="location-box">Labuan Bajo</div>
                 </div>
             </section>
-
 
             <section class="col-lg-5">
                 <form method="POST" action="{{ route('register') }}" class="form-container-regist">
@@ -47,7 +43,7 @@
                     <div class="container-scroll">
                         <div class="form-group">
                             <label for="name">Username</label>
-                            <input id="name" type="text" class="form-control" name="name" aria-describedby="emailHelp" required autofocus>
+                            <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
                             @error('name')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -57,22 +53,24 @@
 
                         <div class="form-group">
                             <label for="email">E-mail Address</label>
-                            <input id="email" type="email" class="form-control" name="email" aria-describedby="emailHelp" required>
+                            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required>
                             @error('email')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
                             @enderror
                         </div>
+
                         <div class="form-group">
                             <label for="password">Password</label>
-                            <input id="password" type="password" class="form-control" name="password" required>
+                            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required>
                             @error('password')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
                             @enderror
                         </div>
+
                         <div class="form-group">
                             <label for="password-confirm">Confirm Password</label>
                             <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
@@ -82,6 +80,7 @@
                             </span>
                             @enderror
                         </div>
+
                         <button type="submit" class="btn btn-block mt-5">Daftar</button>
                         <p>Sudah punya akun? <a href="/login">Masuk disini</a></p>
                     </div>

@@ -26,13 +26,9 @@
                 <div class="img-box">
                     <img src="{{ asset("assets/img/login1.png") }}" style="border: 0;" alt="" class="img-thumbnail">
                     <p class="text-left p-atas">Kerja mulu,<br>sekali-kali liburan dong..</p>
-                    <!-- <div class="location-box">
-
-                    </div> -->
                     <div class="location-box">Labuan Bajo</div>
                 </div>
             </section>
-
 
             <section class="col-lg-5">
                 <form method="POST" action="{{ route('login') }}" class="form-container">
@@ -45,13 +41,14 @@
 
                     <div class="form-group">
                         <label for="email">E-mail Address</label>
-                        <input type="email" class="form-control" id="email" name="email" required autofocus>
+                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"  name="email" required autofocus>
                         @error('email')
                         <div class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </div>
                         @enderror
                     </div>
+
                     <div class="form-group">
                         <label for="password">Password</label>
                         <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required>
@@ -61,12 +58,16 @@
                         </div>
                         @enderror
                     </div>
+
                     <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Ingat saya</label>
+                        <input type="checkbox" class="form-check-input" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                        <label class="form-check-label" for="remember">Ingat saya</label>
                     </div>
+                    
                     <button type="submit" class="btn btn-block">Masuk</button>
+                    
                     <p>Belum punya akun? <a href="register">Daftar disini</a></p>
+                    
                     @if (Route::has('password.request'))
                     <div class="lupa-password"><a href="{{ route('password.request') }}">Lupa password?</a></div>
                     @endif
