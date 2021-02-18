@@ -31,7 +31,9 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ml-auto navbar-config text-sedang">
                     <a class="nav-link pl-4 pt-3" href="/galeri">Galeri<span class="sr-only">(current)</span></a>
-                    <a class="nav-link pl-4 pt-3" href="/favorit-saya">Destinasi Favorit</a>
+                    <a class="nav-link pl-4 pt-3 position-relative" href="/favorit-saya">Destinasi Favorit
+                        <div class="notif" id="notif"></div>
+                    </a>
                     <a class="nav-link pl-4 pt-3" href="/tentang-kami">Tentang Kami</a>
                     @guest
                     <a class="nav-link pl-4 pt-3 profile-icon" href="{{ route('login') }}" tabindex="-1" aria-disabled="true">

@@ -1345,6 +1345,16 @@ input[type="text"]#search_hotel{
     border: none;
 }
 
+.notif{
+    background-color: red;
+    height: 7px;
+    width: 7px;
+    border-radius: 30px;
+    position: absolute;
+    top: 12px;
+    right: 0px;
+    display: none;
+}
 
 
 

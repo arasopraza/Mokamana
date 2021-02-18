@@ -135,13 +135,7 @@ function loadfunction(){
 
 //* ONCLICK ICON BOOKMARK HOTEL
 // #FIXME bug
-// function bookmarkActive(){
-//     var icon = document.getElementById('icon-bookmark');
-//     if(icon.style.filter === "grayscale(100%)"){
-//         icon.style.setProperty("filter", "none", "important");
-//         icon.style.setProperty("opacity", "1", "important");
-//     }else{
-//         icon.style.setProperty("filter", "grayscale(100%)", "important");
-//         icon.style.setProperty("opacity", "0.5", "important");
-//     }
-// }   
+function bookmarkActive(){
+    var notif = document.getElementById('notif');
+    notif.style.setProperty("display", "block", "important");
+}   

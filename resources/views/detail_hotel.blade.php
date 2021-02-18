@@ -88,7 +88,7 @@
                 8.4
             </p>
 
-            <div class="cont-icon-bookmark-title bookmark-select">
+            <div class="cont-icon-bookmark-title bookmark-select" onclick="bookmarkActive()">
                 <img src="{{ asset('assets/icon/bookmark.png') }}" alt="" class="icon-bookmark-title" id="icon-bookmark">
             </div>
 
@@ -254,7 +254,9 @@
 @endsection
 @push('scripts')
     <script type="text/javascript">
-        $('.bookmark-select').click(function(){
+        
+        $('.bookmark-select').one('click',function(){
+    
             $.ajax({
                 url  : '/bookmark',
                 type : 'POST',
@@ -279,12 +281,16 @@
                     swal('Berhasil menambahkan bookmark','', 'success');
 
                     const icon = document.getElementById('icon-bookmark');
+                    const notif = document.get
+
                     if(icon.style.filter === "grayscale(100%)"){
                         icon.style.setProperty("filter", "grayscale(100%)", "important");
                         icon.style.setProperty("opacity", "0.5", "important");
+                        alert('test');
                     }else{
                         icon.style.setProperty("filter", "none", "important");
                         icon.style.setProperty("opacity", "1", "important");
+                        
                     }
                     
                     //style
@@ -294,6 +300,7 @@
                     console.log(data);
                 }
             })
+            
         })
     </script>
 @endpush
