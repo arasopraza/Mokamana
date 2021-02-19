@@ -24,7 +24,7 @@
     </section>
 
     <section class="row justify-content-center">
-        <p id="ket-hasil" class="text-tebal font-26 mt-lg-4 mb-lg-n4">Hasil pencarian hotel di {{ $data->kota }}</p>
+        <p id="ket-hasil" class="text-tebal font-26 mt-lg-4 mb-lg-n4">Hasil pencarian Hotel dan Wisata di {{ $data->kota }}</p>
     </section>
 
     <section class="container justify-content-center">  
@@ -161,186 +161,29 @@
                         <div class="form-group">
                             <section class="row">
                                 <div class="grid-result-container">
-
+                                    @foreach ($dataWisata as $items)
                                     <!-- #TODO Isi Deskripsi -->
                                     <!-- //*Kawah Putih -->
                                     <button type="submit" class="card mb-3 full-width card-hotel">
                                         <div class="row no-gutters">
                                             <div class="col-md-6">
-                                                <img src="/assets/img/wisata/kawah-putih.png" class="card-img" id="card-img"
+                                                <img src="{{ $items->foto}}" class="card-img" id="card-img"
                                                     alt="...">
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="card-body" id="cardbody">
-                                                    <h5 class="card-title text-tebal font-18 mb-0 text-left">Kawah Putih
+                                                    <h5 class="card-title text-tebal font-18 mb-0 text-left">{{ $items->nama}}
                                                     </h5>
-                                                    <section class="row padding-left-18">
-                                                        <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
-                                                        <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
-                                                        <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
-                                                        <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
-                                                        <img src="assets/icon/rating-half.png" class="rating-icon " alt="">
-                                                        <p class="text-biasa font-14 unactived-text-color margin-top-2">
-                                                            (4.499)</p>
-                                                    </section>
                                                     <p class="card-text text-biasa font-14 unactived-text-color mt-lg-n2 text-left">
-                                                        Bandung,
-                                                        Jawa Barat
-                                                    </p>
-                                                    <p class="text-biasa"></p>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </button>
-
-                                    <!-- #TODO Isi Deskripsi -->
-                                    <!-- //*asia afrika -->
-                                    <button type="submit" class="card mb-3 full-width card-hotel">
-                                        <div class="row no-gutters">
-                                            <div class="col-md-6">
-                                                <img src="/assets/img/wisata/asia-afrika.png" class="card-img" id="card-img"
-                                                    alt="...">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="card-body" id="cardbody">
-                                                    <h5 class="card-title text-tebal font-18 mb-0 text-left">The Great Asia
-                                                        Afrika
-                                                    </h5>
-                                                    <section class="row padding-left-18">
-                                                        <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
-                                                        <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
-                                                        <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
-                                                        <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
-                                                        <img src="assets/icon/rating-half.png" class="rating-icon " alt="">
-                                                        <p class="text-biasa font-14 unactived-text-color margin-top-2">(7.551)</p>
-                                                    </section>
-                                                    <p class="card-text text-biasa font-14 unactived-text-color mt-lg-n2 text-left">
-                                                        Bandung,
-                                                        Jawa Barat
+                                                        {{ $items->alamat}}
                                                     </p>
                                                     <p class="text-biasa"></p>
                                                 </div>
-                                            </div>
+                                                <a href="/detail-wisata/id-wisata/{{ $items->id }}">Detail
+                                            </a>
                                         </div>
                                     </button>
-                                    <!-- #TODO Isi Deskripsi -->
-                                    <!-- //*taman hutan raya -->
-                                    <button type="submit" class="card mb-3 full-width card-hotel">
-                                        <div class="row no-gutters">
-                                            <div class="col-md-6">
-                                                <img src="/assets/img/wisata/taman-hutan.png" class="card-img" id="card-img"
-                                                    alt="...">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="card-body" id="cardbody">
-                                                    <h5 class="card-title text-tebal font-18 mb-0 text-left">Taman Hutan
-                                                        Raya</h5>
-                                                    <section class="row padding-left-18">
-                                                        <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
-                                                        <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
-                                                        <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
-                                                        <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
-                                                        <img src="assets/icon/rating-half.png" class="rating-icon " alt="">
-                                                        <p class="text-biasa font-14 unactived-text-color margin-top-2">(11.393)</p>
-                                                    </section>
-                                                    <p class="card-text text-biasa font-14 unactived-text-color mt-lg-n2 text-left">
-                                                        Bandung,
-                                                        Jawa Barat
-                                                    </p>
-                                                    <p class="text-biasa"></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </button>
-
-                                    <!-- #TODO Isi Deskripsi -->
-                                    <!-- //*Tangkuban Perahu -->    
-                                    <button type="submit" class="card mb-3 full-width card-hotel">
-                                        <div class="row no-gutters">
-                                            <div class="col-md-6">
-                                                <img src="/assets/img/wisata/tangkuban.png" class="card-img" id="card-img"
-                                                    alt="...">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="card-body" id="cardbody">
-                                                    <h5 class="card-title text-tebal font-18 mb-0 text-left">Tangkuban
-                                                        Perahu</h5>
-                                                    <section class="row padding-left-18">
-                                                        <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
-                                                        <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
-                                                        <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
-                                                        <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
-                                                        <img src="assets/icon/rating-half.png" class="rating-icon " alt="">
-                                                        <p class="text-biasa font-14 unactived-text-color margin-top-2">(4.148)</p>
-                                                    </section>
-                                                    <p class="card-text text-biasa font-14 unactived-text-color mt-lg-n2 text-left">
-                                                        Bandung,
-                                                        Jawa Barat
-                                                    </p>
-                                                    <p class="text-biasa"></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </button>
-                                    <!-- #TODO Isi Deskripsi -->
-                                    <!-- //*Dago dreampark-->
-                                    <button type="submit" class="card mb-3 full-width card-hotel">
-                                        <div class="row no-gutters">
-                                            <div class="col-md-6">
-                                                <img src="/assets/img/wisata/dago-park.png" class="card-img" id="card-img"
-                                                    alt="...">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="card-body" id="cardbody">
-                                                    <h5 class="card-title text-tebal font-18 mb-0 text-left">Dago Dreampark
-                                                    </h5>
-                                                    <section class="row padding-left-18">
-                                                        <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
-                                                        <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
-                                                        <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
-                                                        <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
-                                                        <img src="assets/icon/rating-half.png" class="rating-icon " alt="">
-                                                        <p class="text-biasa font-14 unactived-text-color margin-top-2">(15.285)</p>
-                                                    </section>
-                                                    <p class="card-text text-biasa font-14 unactived-text-color mt-lg-n2 text-left">
-                                                        Bandung,
-                                                        Jawa Barat
-                                                    </p>
-                                                    <p class="text-biasa"></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </button>
-                                    <!-- #TODO Isi Deskripsi -->
-                                    <!-- //*Kampung Tulip -->
-                                    <button type="submit" class="card mb-3 full-width card-hotel">
-                                        <div class="row no-gutters">
-                                            <div class="col-md-6">
-                                                <img src="/assets/img/wisata/kampung-tulip.png" class="card-img" id="card-img"
-                                                    alt="...">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="card-body" id="cardbody">
-                                                    <h5 class="card-title text-tebal font-18 mb-0 text-left">Kampoeng Tulip
-                                                    </h5>
-                                                    <section class="row padding-left-18">
-                                                        <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
-                                                        <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
-                                                        <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
-                                                        <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
-                                                        <img src="assets/icon/rating-half.png" class="rating-icon " alt="">
-                                                        <p class="text-biasa font-14 unactived-text-color margin-top-2">(3.359)</p>
-                                                    </section>
-                                                    <p class="card-text text-biasa font-14 unactived-text-color mt-lg-n2 text-left">
-                                                        Bandung,
-                                                        Jawa Barat
-                                                    </p>
-                                                    <p class="text-biasa"></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </button>
+                                    @endforeach
                                 </div>
                             </section>
                         </div>
@@ -351,32 +194,3 @@
     </section>
     <!-- //* end content -->
 @endsection
-{{-- @push('scripts')
-    <script type="text/javascript">
-        $('.bookmark-select').click(function(){
-            $.ajax({
-                'url' : '/bookmark',
-                'type' : 'POST',
-                'data' : {
-                    '_token' : '{{csrf_token()}}',
-                    'id_hotel' : $('#id_hotels').val(),
-                    'name' : $('#name_hotels').text(),
-                    'rating' : $('#rating_hotels').text(),
-                    'address' : $('#location_hotels').text(),
-                    'price' : $('#price_hotels').text(),
-                    'photo' : $('photo_hotels').attr('src'),
-                },
-                'success' : function(data){
-                    //bebas
-                    console.log(data);
-
-                    //style
-
-                },
-                'error' : function(data){
-                    console.log(data);
-                }
-            })
-        })
-    </script>
-@endpush --}}

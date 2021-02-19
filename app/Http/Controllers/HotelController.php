@@ -5,13 +5,18 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
 
 class HotelController extends Controller
 {
 
-    public function __construct()
+    protected $WisataController;
+    public function __construct(WisataController $WisataController)
     {
         $this->middleware('auth');
+        $this->WisataController = $WisataController;
+
     }
     
     function get_CURL($url)
@@ -28,7 +33,7 @@ class HotelController extends Controller
             CURLOPT_CUSTOMREQUEST => "GET",
             CURLOPT_HTTPHEADER => [
                 "x-rapidapi-host: hotels4.p.rapidapi.com",
-                "x-rapidapi-key: 2006390490mshcbbe2845fce2cd6p1e22d6jsn1d2442417570"
+                "x-rapidapi-key: 6d40b1a4a7mshf943297ea0ecb79p1841f3jsn4de4a5903584"
             ],
         ]);
         $response = curl_exec($curl);
@@ -68,17 +73,19 @@ class HotelController extends Controller
                 report($e);
             }
         }
-        return view('result_hotel', compact('dataHotel'), ['data' => $request]);
+
+        $dataWisata = $this->WisataController->searchWisata($cityName);
+        return view('result_hotel', compact('dataHotel', 'dataWisata'), ['data' => $request]);
     }
 
     function detailHotel(Request $request)
     {
         $detailHotel = collect([]);
         $idHotel = $request->route('id');
-
+        
         $getPhotoHotel = $this->get_CURL("https://hotels4.p.rapidapi.com/properties/get-hotel-photos?id=$idHotel");
         $getDetailHotel = $this->get_CURL("https://hotels4.p.rapidapi.com/properties/get-details?id=$idHotel&locale=en_US&currency=USD&checkOut=2020-01-15&adults1=1&checkIn=2020-01-08");
-
+        
         $nameHotel = $getDetailHotel["data"]["body"]["propertyDescription"]["name"];
         $ratingHotel = $getDetailHotel["data"]["body"]["propertyDescription"]["starRating"];
         $locationHotel = $getDetailHotel["data"]["body"]["propertyDescription"]["address"]['fullAddress'];
@@ -86,18 +93,18 @@ class HotelController extends Controller
         $longitudeHotel = $getDetailHotel["data"]["body"]["pdpHeader"]["hotelLocation"]['coordinates']["longitude"];
         $priceHotel = $getDetailHotel["data"]["body"]["propertyDescription"]["featuredPrice"]["currentPrice"]["plain"];
         $priceInRupiah = $priceHotel * 14000;
-
+        
         $baseUrl1 = $getPhotoHotel["hotelImages"][0]["baseUrl"];
         $baseUrl2 = $getPhotoHotel["hotelImages"][1]["baseUrl"];
         $baseUrl3 = $getPhotoHotel["hotelImages"][2]["baseUrl"];
         $baseUrl4 = $getPhotoHotel["hotelImages"][3]["baseUrl"];
-
+        
         $sizeImage = 'y';
         $urlPhotoHotels1 = str_replace("{size}", $sizeImage, $baseUrl1);
         $urlPhotoHotels2 = str_replace("{size}", $sizeImage, $baseUrl2);
         $urlPhotoHotels3 = str_replace("{size}", $sizeImage, $baseUrl3);
         $urlPhotoHotels4 = str_replace("{size}", $sizeImage, $baseUrl4);
-
+        
         $currentWeather = $this->get_CURL("http://api.openweathermap.org/data/2.5/weather?q=Pekanbaru&appid=43099dc76f1ed752ffe8a7f761ecdaf1&units=metric");
         $currentTemp = $currentWeather["main"]["temp"];
         $currentHumidity = $currentWeather["main"]["humidity"];
@@ -110,7 +117,7 @@ class HotelController extends Controller
             'photo4' => $urlPhotoHotels4, 'temperature' => $currentTemp, 'humidity' => $currentHumidity, 
             'windspeed' => $currentWindSpeed
         ]);
-
+        
         return view('detail_hotel', compact('detailHotel'));
     }
 }

@@ -1,5 +1,6 @@
 <?php
 
+use Faker\Guesser\Name;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Pages
 Route::get('/', 'PagesController@index');
 Route::get('/galeri', 'PagesController@galeri');
 Route::get('/tentang-kami', 'PagesController@tentangKami');
@@ -32,5 +34,8 @@ Route::get('/detail-hotel/id-hotel/{id}', 'HotelController@detailHotel');
 Route::get('/favorit-saya', 'BookmarkController@index');
 Route::post('/bookmark', 'BookmarkController@create');
 Route::delete('/bookmark/{id}', 'BookmarkController@destroy');
+
+//wisata
+Route::get('/detail-wisata/id-wisata/{id}', 'WisataController@detailWisata');
 
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');

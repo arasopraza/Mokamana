@@ -1,57 +1,18 @@
-<!doctype html>
-<html lang="en">
+@extends('layouts/main')
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+@section('title', 'Detail Wisata')
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-        
-    <link rel="stylesheet" href="{{ asset('css/template.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-    <title>Hello, world!</title>
-</head>
-
-<body>
-    <!-- //*navbar -->
-
-    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-white position-fixed z-index-5 full-width">
-        <div class="container">
-            <a class="navbar-brand" href="/">
-                <img src="assets/img/logo.png" style="width: 150px;" alt="">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav ml-auto navbar-config text-sedang font-16">
-                    <a class="nav-link pl-4" href="galeri">Galeri<span class="sr-only">(current)</span></a>
-                    <a class="nav-link pl-4" href="tentang-kami#kontak">Kontak</a>
-                    <a class="nav-link pl-4" href="tentang-kami">Tentang Kami</a>
-                    <a class="nav-link pl-4 profile-icon" href="#" tabindex="-1" aria-disabled="true">
-                        <button type="submit" class="btn btn-block text-biasa mt-n1">Masuk</button>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <!-- //* end navbar -->
-
+@section('content')
     <!-- //*content -->
     <div class="container justify-content-center cont-single-destinasi">
         <section class="row">
+            @foreach ($detailWisata as $wisata)
             <section class="col-lg-6 gambar">
                 <button class="btn-slide-right position-absolute rounded-circle primary-box-color"
                         id="btn_slide_right"><span class="fa fa-chevron-right accent-text-color"></span></button>
                 <button class="btn-slide-left position-absolute rounded-circle primary-box-color"
                     id="btn_slide_left"><span class="fa fa-chevron-left accent-text-color"></span></button>
-                <img src="assets/img/wisata/kampung-tulip.png" class="full-width object-cover" id="product_img" alt="">
+                <img src="{{ $wisata['foto'] }}" class="full-width object-cover" id="product_img" alt="">
                 <div class="grid-many-img img-bawah">
                     <img src="assets/img/wisata/kampung-tulip.png" class="small-img active object-cover" alt="">
                     <img src="assets/img/wisata/kampung-tulip2.png" class="small-img object-cover" alt="">
@@ -62,27 +23,15 @@
             <section class="col-lg-6">
                 <div class="card">
                     <div class="card-detail-hotel card-body">
-                        <h5 class="card-title text-tebal font-18 mb-1">Kampoeng tulip</h5>
-                        <section class="row padding-left-18">
-                            <img src="assets/icon/rating-icon.png" class="rating-icon "
-                                alt="">
-                            <img src="assets/icon/rating-icon.png" class="rating-icon "
-                                alt="">
-                            <img src="assets/icon/rating-icon.png" class="rating-icon "
-                                alt="">
-                            <img src="assets/icon/rating-icon.png" class="rating-icon "
-                                alt="">
-                            <img src="assets/icon/rating-half.png" class="rating-icon "
-                                alt="">
-                            <p class="text-biasa font-14 unactived-text-color margin-top-2">
-                                (3.359)</p>
-                        </section>
+                        <h5 class="card-title text-tebal font-18 mb-1">{{ $wisata['nama'] }}</h5>
                         <p class="card-text text-biasa font-14 unactived-text-color mt-lg-2">
-                            Jl. HOS Tjokroaminoto No.41-43, Arjuna, Kec. Cicendo, Kota Bandung, Jawa Barat 40172
-                        </p>    
+                            {{ $wisata['alamat'] }}
+                        </p>
+                        {{ $wisata['deskripsi'] }}
                     </div>
                 </div>
             </section>
+            @endforeach   
         </section>
     </div>
 
