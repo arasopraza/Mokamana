@@ -1356,5 +1356,8 @@ input[type="text"]#search_hotel{
     display: none;
 }
 
+.gambar img{
+    border-radius: 20px;
+}
 
 

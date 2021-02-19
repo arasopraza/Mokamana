@@ -36,12 +36,8 @@
                                         <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
                                         <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
                                         <img src="assets/icon/rating-icon.png" class="rating-icon " alt="">
-                                        
                                     </section>
-                                    <p class="card-text text-biasa font-14 unactived-text-color mt-1 text-left">
-                                        {{ $items->address}}
-                                    </p>
-                                    <p class="text-biasa mb-lg-1 text-left second-text-color">Fasilitas</p>
+                                    <p class="text-biasa mb-lg-1 mt-5 text-left second-text-color">Fasilitas</p>
                                     <section class="row padding-left-18 fasilitas height-20">
                                         <img class="margin-right-15 fasilitas-icon" data-toggle="tooltip"
                                         data-placement="top" title="Lift"
@@ -86,17 +82,18 @@
                     'id-hotel': id_hotel
                 },
                 success: function (){
-                console.log("it works!");
-                swal('Berhasil menghapus bookmark','', 'success');
+                    console.log("it works!");
+                    swal('Berhasil menghapus bookmark','', 'success');
 
-                const icon = document.getElementById('icon-bookmark');
-                    if(icon.style.filter === "grayscale(100%)"){
-                        icon.style.setProperty("filter", "none", "important");
-                        icon.style.setProperty("opacity", "1", "important");
-                    }else{
-                        icon.style.setProperty("filter", "grayscale(100%)", "important");
-                        icon.style.setProperty("opacity", "0.5", "important");
-                    }
+                    const icon = document.getElementById('icon-bookmark');
+                        if(icon.style.filter === "grayscale(100%)"){
+                            icon.style.setProperty("filter", "none", "important");
+                            icon.style.setProperty("opacity", "1", "important");
+                            
+                        }else{
+                            icon.style.setProperty("filter", "grayscale(100%)", "important");
+                            icon.style.setProperty("opacity", "0.5", "important");
+                        }
                 },
                 'error' : function(data){
                 console.log(data);  

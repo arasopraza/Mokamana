@@ -67,7 +67,7 @@
                                                                     1310
                                                                     review</p>
                                                             </div>
-                                                            <p class="primary-text-color text-biasa font-16 rating-hotel-iconn">
+                                                            <p class=   "primary-text-color text-biasa font-16 rating-hotel-iconn">
                                                                 8.4
                                                             </p>
                                                         </section>
@@ -162,27 +162,25 @@
                             <section class="row">
                                 <div class="grid-result-container">
                                     @foreach ($dataWisata as $items)
-                                    <!-- #TODO Isi Deskripsi -->
-                                    <!-- //*Kawah Putih -->
-                                    <button type="submit" class="card mb-3 full-width card-hotel">
+
+                                    <div class="card mb-3 full-width card-hotel">
                                         <div class="row no-gutters">
                                             <div class="col-md-6">
                                                 <img src="{{ $items->foto}}" class="card-img" id="card-img"
                                                     alt="...">
                                             </div>
-                                            <div class="col-md-6">
+                                            <a href="/detail-wisata/id-wisata/{{ $items->id }}" class="col-md-6 ahref-no-decor">
                                                 <div class="card-body" id="cardbody">
-                                                    <h5 class="card-title text-tebal font-18 mb-0 text-left">{{ $items->nama}}
+                                                    <h5 class="card-title text-tebal font-18 mb-0 text-left second-text-color">{{ $items->nama}}
                                                     </h5>
-                                                    <p class="card-text text-biasa font-14 unactived-text-color mt-lg-n2 text-left">
+                                                    <p class="card-text text-biasa font-14 unactived-text-color mt-2 text-left">
                                                         {{ $items->alamat}}
                                                     </p>
                                                     <p class="text-biasa"></p>
                                                 </div>
-                                                <a href="/detail-wisata/id-wisata/{{ $items->id }}">Detail
                                             </a>
                                         </div>
-                                    </button>
+                                    </div>
                                     @endforeach
                                 </div>
                             </section>
