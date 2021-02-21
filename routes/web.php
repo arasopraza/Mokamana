@@ -24,9 +24,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 //user
-Route::get('/users', 'UserController@show');
+// Route::get('/users', 'UserController@show');
 Route::get('/users/{user}/edit-profile', 'UserController@edit');
-Route::patch('/users/{user}', 'UserController@update');
+Route::post('/users/{user}', 'UserController@update');
 
 //hotel
 Route::get('/hasil-pencarian', 'HotelController@searchHotel');

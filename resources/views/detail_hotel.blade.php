@@ -281,7 +281,6 @@
                     swal('Berhasil menambahkan bookmark','', 'success');
 
                     const icon = document.getElementById('icon-bookmark');
-                    const notif = document.get
 
                     if(icon.style.filter === "grayscale(100%)"){
                         icon.style.setProperty("filter", "grayscale(100%)", "important");

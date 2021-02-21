@@ -73,11 +73,11 @@ class HotelController extends Controller
                 report($e);
             }
         }
-
+        
         $dataWisata = $this->WisataController->searchWisata($cityName);
         return view('result_hotel', compact('dataHotel', 'dataWisata'), ['data' => $request]);
     }
-
+    
     function detailHotel(Request $request)
     {
         $detailHotel = collect([]);
@@ -88,6 +88,7 @@ class HotelController extends Controller
         
         $nameHotel = $getDetailHotel["data"]["body"]["propertyDescription"]["name"];
         $ratingHotel = $getDetailHotel["data"]["body"]["propertyDescription"]["starRating"];
+        $cityName = $getDetailHotel["data"]["body"]["propertyDescription"]["address"]['cityName'];
         $locationHotel = $getDetailHotel["data"]["body"]["propertyDescription"]["address"]['fullAddress'];
         $latitudeHotel = $getDetailHotel["data"]["body"]["pdpHeader"]["hotelLocation"]['coordinates']["latitude"];
         $longitudeHotel = $getDetailHotel["data"]["body"]["pdpHeader"]["hotelLocation"]['coordinates']["longitude"];
@@ -105,7 +106,7 @@ class HotelController extends Controller
         $urlPhotoHotels3 = str_replace("{size}", $sizeImage, $baseUrl3);
         $urlPhotoHotels4 = str_replace("{size}", $sizeImage, $baseUrl4);
         
-        $currentWeather = $this->get_CURL("http://api.openweathermap.org/data/2.5/weather?q=Pekanbaru&appid=43099dc76f1ed752ffe8a7f761ecdaf1&units=metric");
+        $currentWeather = $this->get_CURL("http://api.openweathermap.org/data/2.5/weather?q=$cityName&appid=43099dc76f1ed752ffe8a7f761ecdaf1&units=metric");
         $currentTemp = $currentWeather["main"]["temp"];
         $currentHumidity = $currentWeather["main"]["humidity"];
         $currentWindSpeed = $currentWeather["wind"]["speed"];

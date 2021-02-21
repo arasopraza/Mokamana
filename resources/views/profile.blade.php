@@ -7,7 +7,6 @@
         <section class="row">
             <section class="col-8">
                 <form method="POST" action="/users/{{ $user->id }}" class="container-profile-info">    
-                    @method('patch')
                     @csrf
                     <p class="text-tebal font-24">Info User</p>   
                     <hr>
